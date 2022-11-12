@@ -1,0 +1,2 @@
+<app-master-view [masterInitialData]="masterInitialData" [template]="1" *ngIf="viewMode === 'MASTER'"></app-master-view>
+<app-detail-view *ngIf="viewMode === 'DETAIL'" [detail]="detail"></app-detail-view>

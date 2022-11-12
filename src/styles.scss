@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/sass/style.scss";
+// Replace above style with this css file to enable RTL styles
+@import './assets/sass/plugins.scss';
+// @import "./assets/css/style.rtl.css";
+@import "./assets/sass/style.angular.scss";
+
+.btn-primary-blumer {
+    color: white;
+    background-color: #8364e2;
+    width: 140%;
+  }
+
+  .btn-green-blumer {
+    color: white;
+    background-color: #00b48f;
+    width: 140%;
+  }
+
+  body {
+    background: rgb(142,140,177);
+background: linear-gradient(180deg, rgba(142,140,177,1) 0%, rgba(255,255,255,1) 29%, rgba(236,252,255,1) 100%);
+  }
+
+  .btn-primary-blumer:hover {
+    color: white;
+    background-color: #00b48f;
+    width: 140%;
+  }
+

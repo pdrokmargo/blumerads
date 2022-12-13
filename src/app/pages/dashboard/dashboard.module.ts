@@ -9,11 +9,12 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { CampaignModule } from '../campaign/campaign.module';
 import { AdsModule } from '../ads/ads.module';
 import { TargetAudienceModule } from '../target-audience/target-audience.module';
+import { GenericModalComponent } from 'src/app/common/components/generic-modal/generic-modal.component';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, GenericModalComponent],
   imports: [
     NgbModule,
     CommonModule,

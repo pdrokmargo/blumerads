@@ -1,1 +1,29 @@
-<p>generic-modal works!</p>
+<div class="modal fade" id="genericModalToggle" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row wrapper-title" >
+                        <div class="col-12 text-center">
+                            <p class="text-title" >{{titleM}}</p>
+                        </div>
+                        <div class="col-12 wrapper-subtitle">{{subtitleM}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-grid gap-2 wrapper-action-btn">
+                                <button type="button" class="btn custom-btn-primary"
+                                    (click)="sendData()"
+                                    data-bs-dismiss="modal">{{titlePrimaryBtn}}</button>
+                                <button *ngIf="showSecundaryBtn" type="button" class="btn btn-secondary"
+                                    (click)="cancel()"
+                                    data-bs-dismiss="modal">{{titleSecundaryBtn}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

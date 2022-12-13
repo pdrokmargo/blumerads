@@ -19,7 +19,10 @@ export class DashboardComponent implements OnInit {
     this.chartOptions = getChartOptions(350);
   }
 
-  
+  callBack(event: any): void {
+    console.log('CALL BACK: ', event);
+  }
+
 }
 
 function getChartOptions(height: number) {

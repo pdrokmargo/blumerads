@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Button } from 'bootstrap';
 
 @Component({
   selector: 'app-purple-button',
@@ -13,5 +14,8 @@ export class PurpleButtonComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+	ClickAddPurplebutton() {
+		
+  }
 }

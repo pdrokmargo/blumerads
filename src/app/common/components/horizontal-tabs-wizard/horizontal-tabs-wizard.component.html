@@ -1,0 +1,9 @@
+<ul ngbNav #nav2="ngbNav" [(activeId)]="active" class="nav-tabs dashboard-general">
+    <li [ngbNavItem]="i+1" class="blumer-tab" *ngFor="let tabItem of tabsConfig; index as i"
+        [disabled]="tabItem.disabled" [style.width]="tabItem?.widthCell ?? '200px' " >
+        <a ngbNavLink class="blumer-content-tab" [ngClass]=" (i+1 === active) ? 'selected-tab-style' : ''"
+            (click)="switchTab(i+1)">{{tabItem.title}}
+            <i [style.color]="(i+1 === active) ? tabItem.colorIcon : ''"  [class]="tabItem.iconName"></i>
+        </a>
+    </li>
+</ul>

@@ -28,3 +28,16 @@ background: linear-gradient(180deg, rgba(142,140,177,1) 0%, rgba(255,255,255,1) 
     width: 140%;
   }
 
+  .new {
+    border-radius: 5px;
+    color: rgb(5, 5, 5);
+    font-weight: 200;
+    width: 140%;
+    height: 45px;
+    font-size: 15px;
+    border: 0px;
+
+    &:hover {
+      background-color: rgba(197, 195, 195, 0.781);
+    }
+  }

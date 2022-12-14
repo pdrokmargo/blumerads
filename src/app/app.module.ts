@@ -14,6 +14,8 @@ import { environment } from 'src/environments/environment';
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
 
+import { CancelButtonComponent } from './common/components/cancel-button/cancel-button.component';
+
 // #fake-end#
 
 function appInitializer(authService: AuthService) {

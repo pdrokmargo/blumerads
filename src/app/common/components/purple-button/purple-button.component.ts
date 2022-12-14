@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Button } from 'bootstrap';
 
 @Component({
@@ -6,16 +6,14 @@ import { Button } from 'bootstrap';
   templateUrl: './purple-button.component.html',
   styleUrls: ['./pruple-button.component.scss']
 })
-export class PurpleButtonComponent implements OnInit {
+export class PurpleButtonComponent {
 
   @Input() textDescription: String | undefined = 'Crear campaña guiada' ;
+  @Output() ClickAddPurplebutton = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit(): void {
+ 
+  Onclick(){
+    this.ClickAddPurplebutton.emit();
   }
-  
-	ClickAddPurplebutton() {
-		
-  }
+	
 }

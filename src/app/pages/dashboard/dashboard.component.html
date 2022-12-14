@@ -91,11 +91,5 @@
   </ul>
 
   <div [ngbNavOutlet]="nav"></div>
-  <app-generic-modal
-    [titleModal]="'¿Estas seguro que deseas eliminar?'"
-    [subtitle]="'Ten en cuenta que un vez que elimines tu publico, perderas toda la informacion'"
-    [titlePrimaryBtn]="'Aceptar'"
-    [titleSecundaryBtn]="'Cancelar'"
-    [showSecundaryBtn]="true"
-    (callBackModal)="callBack($event)">
-  </app-generic-modal>
+
+

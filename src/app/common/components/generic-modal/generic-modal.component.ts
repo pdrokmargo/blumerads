@@ -7,16 +7,18 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChange
 })
 export class GenericModalComponent implements OnInit, OnChanges {
 
-  @Input() titleModal: string;
-  @Input() subtitle: string;
-  @Input() titlePrimaryBtn = '';
-  @Input() titleSecundaryBtn = '';
+  @Input() titleModal: string = 'Mi Title';
+  @Input() subtitle: string = 'Mi Subtitle';
+  @Input() titlePrimaryBtn = 'Mi primary button';
+  @Input() titleSecundaryBtn = 'Mi secundary button';
+  @Input() modalId: string;
   @Input() showSecundaryBtn = false;
   @Output() callBackModal = new EventEmitter<GenericModalI>();
   @ViewChild('closeModal') public closeModal: ElementRef;
 
   titleM: string = '';
   subtitleM: string = '';
+  modalIdAttr: string = '';
 
   constructor() { }
 
@@ -31,12 +33,16 @@ export class GenericModalComponent implements OnInit, OnChanges {
     if (changes['subtitle'].currentValue && this.subtitle) {
       this.subtitleM = this.subtitle;
     }
+
+    if (changes['modalId'].currentValue && this.modalId) {
+      this.modalIdAttr = this.modalId;
+    }
   }
 
   sendData(): void {
     if (!this.showSecundaryBtn) {
       this.callBackModal.emit({
-        acept: true
+        accept: true
       });
     } else {
       this.callBackModal.emit({
@@ -55,5 +61,5 @@ export class GenericModalComponent implements OnInit, OnChanges {
 export interface GenericModalI {
   hasSend?: boolean,
   hasCancel?: boolean,
-  acept?: boolean
+  accept?: boolean
 }

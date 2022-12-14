@@ -9,6 +9,7 @@ import { DetailViewComponent } from './detail-view/detail-view.component';
 import { MasterDetailService } from './services/master-detail.service';
 import { DetailDirective } from './directives/detail.directive';
 import { ConfirmationButtonComponent } from '../confirmation-button/confirmation-button.component';
+import {PictureSelectorComponent} from "../picture-selector/picture-selector.component";
 
 
 
@@ -19,7 +20,8 @@ import { ConfirmationButtonComponent } from '../confirmation-button/confirmation
     MasterViewComponent,
     DetailViewComponent,
     DetailDirective,
-    ConfirmationButtonComponent
+    ConfirmationButtonComponent,
+    PictureSelectorComponent
   ],
   imports: [
     CommonModule,

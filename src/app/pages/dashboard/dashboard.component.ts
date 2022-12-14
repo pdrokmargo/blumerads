@@ -19,7 +19,6 @@ export class DashboardComponent implements OnInit {
     this.chartOptions = getChartOptions(350);
   }
 
-  
 }
 
 function getChartOptions(height: number) {

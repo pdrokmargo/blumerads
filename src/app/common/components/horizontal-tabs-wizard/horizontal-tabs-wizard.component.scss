@@ -1,0 +1,25 @@
+.dashboard-general {
+    background-color: #f5f7f8;
+
+    .blumer-tab {
+
+      .blumer-content-tab {
+        background-color: #efefef;
+        border-color: #e8e8e8;
+        color: gray;
+        text-align: center;
+        transition: background-color 700ms ease;
+
+        &:active {
+            background-color: #7dd9d4;
+            color: white;
+        }
+      }
+    }
+}
+
+.selected-tab-style {
+    background-color: #7dd9d4 !important;
+    color: white !important;
+}
+

@@ -1,6 +1,6 @@
 ## Implementation component:
 
-## 1) import component in the module of the parent component.
+## 1) import HorizontalTabsWizardModule module in the module of the parent component.
 
 ## 2) initialized tabsConfig property in parent component :
 tabsConfig = TABS_CONFIG;

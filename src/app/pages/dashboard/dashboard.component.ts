@@ -11,12 +11,20 @@ export class DashboardComponent implements OnInit {
   active = 1;
   chartOptions: any = {};
 
+  configSelOpt = [
+    { id: 'cuentaOpt', value: '001', backgroundColor: '#8364e2', widthCell: '250px', title: 'Cuenta', iconName: 'fa fa-sack-dollar', colorIcon: '#eef', disabled: false, checked: true },
+    { id: 'empresaOpt', value: '002', backgroundColor: '#8364e2', widthCell: '30%', title: 'Empresa', iconName: 'fa fa-business-time', colorIcon: '#eef', disabled: false, checked: false }
+  ]
   dashboardPages: DetailViewItem[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
     this.chartOptions = getChartOptions(350);
+  }
+
+  callbackSelectorOption(event: { value: any }): void {
+    console.log('CALL BACK SELECTOR OPTION: ', event.value);
   }
 
 }

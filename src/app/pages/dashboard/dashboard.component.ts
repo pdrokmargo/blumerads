@@ -13,10 +13,20 @@ export class DashboardComponent implements OnInit {
 
   dashboardPages: DetailViewItem[] = [];
 
+  data = [
+    { icon: 'fa fa-circle', name: 'Activo', color: 'green', value: 1 },
+    { icon: 'fa fa-circle', name: 'En Pausa', color: 'yellow', value: 2 },
+    { icon: 'fa fa-circle', name: 'Inactivo', color: 'red', value: 3 }
+  ]
+
   constructor() {}
 
   ngOnInit(): void {
     this.chartOptions = getChartOptions(350);
+  }
+
+  callbackSelectoOption(event: any): void {
+    console.log(event);
   }
 
 }

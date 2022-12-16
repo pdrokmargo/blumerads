@@ -24,10 +24,6 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./_metronic/layout/layout.module').then((m) => m.LayoutModule),
   },
-  {
-    path: 'ruta',
-    component: InputPhoneComponent
-  },
   { path: '**', redirectTo: 'error/404' },
 ];
 

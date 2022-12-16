@@ -17,6 +17,7 @@ import { TranslationModule } from '../i18n/translation.module';
     ForgotPasswordComponent,
     LogoutComponent,
     AuthComponent,
+
   ],
   imports: [
     CommonModule,
@@ -25,6 +26,7 @@ import { TranslationModule } from '../i18n/translation.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
   ],
 })
 export class AuthModule {}

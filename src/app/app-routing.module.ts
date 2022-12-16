@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './modules/auth/services/auth.guard';
-
+import { ConfirmationButtonComponent } from './common/components/confirmation-button/confirmation-button.component';
+import { FeatureAlternativeButtonComponent } from './common/components/feature-alternative-button/feature-alternative-button.component';
 export const routes: Routes = [
   {
     path: 'auth',

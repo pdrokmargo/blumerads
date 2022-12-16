@@ -124,6 +124,7 @@
   },
   "defaultProject": "blumerads",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "defaultCollection": "@angular-eslint/schematics",
+    "analytics": "286ef101-d91c-4392-bd2c-ff3430c0304f"
   }
 }

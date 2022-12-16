@@ -26,7 +26,7 @@ export const routes: Routes = [
   },
   {
     path: 'ruta',
-    component: InputEmailComponent,
+    component: InputPhoneComponent
   },
   { path: '**', redirectTo: 'error/404' },
 ];

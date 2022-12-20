@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './modules/auth/services/auth.guard';
-import { SearchfilterButtonComponent } from './common/components/searchfilter-button/searchfilter-button.component';
+
 
 export const routes: Routes = [
   {

@@ -13,6 +13,7 @@ import { AuthService } from './modules/auth/services/auth.service';
 import { environment } from 'src/environments/environment';
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
+import { AuxiliarButtonComponent } from './common/components/auxiliar-button/auxiliar-button.component';
 
 // #fake-end#
 
@@ -26,7 +27,7 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AuxiliarButtonComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

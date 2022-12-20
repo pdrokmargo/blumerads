@@ -1,0 +1,16 @@
+input {
+    text-align: center;
+}
+
+.code_validation_wrapper {
+    margin:1rem;
+    background: rgb(239, 239, 239);
+    background: linear-gradient(160deg, rgba(239, 239, 239, 1) 70%, rgba(125, 217, 212, 1) 100%);
+}
+
+.code_validation_link {
+    color: #7dd9d4;
+    &:hover{
+        cursor: pointer;
+    }
+}

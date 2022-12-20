@@ -9,6 +9,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { CampaignModule } from '../campaign/campaign.module';
 import { AdsModule } from '../ads/ads.module';
 import { TargetAudienceModule } from '../target-audience/target-audience.module';
+import { DropdownActionsModule } from '../../common/components/dropdown-actions/dropdown-actions.module';
 
 
 
@@ -28,7 +29,8 @@ import { TargetAudienceModule } from '../target-audience/target-audience.module'
     TargetAudienceModule,
     AdsModule,
     CardsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    DropdownActionsModule
   ],
 })
 export class DashboardModule {}

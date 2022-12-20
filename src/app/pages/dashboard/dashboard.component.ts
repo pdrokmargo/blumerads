@@ -1,6 +1,7 @@
 import { Component, ViewChild, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { getCSSVariableValue } from '../../_metronic/kt/_utils';
 import { DetailViewItem } from '../../common/components/master-detail/detail-view/detail-view-item';
+import { DropDownActionI } from '../../common/components/dropdown-actions/dropdown-actions.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,13 +11,42 @@ import { DetailViewItem } from '../../common/components/master-detail/detail-vie
 export class DashboardComponent implements OnInit {
   active = 1;
   chartOptions: any = {};
-
+  dropdown_action: DropDownActionI[] = [
+    { icon: 'fa fa-edit', name: 'Editar', method: 'update' },
+    { icon: 'fa fa-trash', name: 'Eliminar', method: 'eliminar' },
+    { icon: 'fa fa-flag', name: 'Finalizar', method: 'finalizar' },
+  ];
   dashboardPages: DetailViewItem[] = [];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     this.chartOptions = getChartOptions(350);
+  }
+
+  Update(): void {
+    console.log("Editando");
+  }
+
+  Eliminar(): void {
+    console.log("Eliminar");
+  }
+
+  Finalizar(): void {
+    console.log("Finalizar");
+  }
+
+  callbackDropDown(event: any): void {
+    switch (event.method) {
+      case 'update':
+        return this.Update();
+      case 'eliminar':
+        return this.Eliminar();
+      case 'finalizar':
+        return this.Finalizar();
+      default:
+        break;
+    }
   }
 
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './modules/auth/services/auth.guard';
-
+import { CheckinputConfirmationComponent } from './common/components/checkinput-confirmation/checkinput-confirmation.component';
 
 export const routes: Routes = [
   {

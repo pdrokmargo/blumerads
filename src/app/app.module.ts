@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
 import { AuxiliarButtonComponent } from './common/components/auxiliar-button/auxiliar-button.component';
+import { CheckinputConfirmationComponent } from './common/components/checkinput-confirmation/checkinput-confirmation.component';
 
 // #fake-end#
 
@@ -27,7 +28,7 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent, AuxiliarButtonComponent],
+  declarations: [AppComponent, AuxiliarButtonComponent, CheckinputConfirmationComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

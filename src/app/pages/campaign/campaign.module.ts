@@ -2,15 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CampaignComponent } from './campaign.component';
 import { CampaignDetailComponent } from './campaign-detail/campaign-detail.component';
-import {
-  DropdownMenusModule
-} from '../../_metronic/partials';
+import {DropdownMenusModule} from '../../_metronic/partials';
 
 import { MasterDetailModule } from 'src/app/common/components/master-detail/master-detail.module';
 
 @NgModule({
   declarations: [
-    CampaignComponent, 
+    CampaignComponent,
     CampaignDetailComponent,
   ],
   imports: [
@@ -19,7 +17,7 @@ import { MasterDetailModule } from 'src/app/common/components/master-detail/mast
     MasterDetailModule
   ],
   exports: [
-    CampaignComponent, 
+    CampaignComponent,
     CampaignDetailComponent
   ]
 })

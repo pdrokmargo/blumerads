@@ -27,6 +27,7 @@ import { PurpleButtonComponent } from 'src/app/common/components/purple-button/p
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
   ],
 })
 export class AuthModule {}

@@ -12,10 +12,10 @@ import { MasterDetailShape } from '../models/master-detail-shape.component';
 })
 export class DetailViewComponent implements OnInit {
   @Input() detail: DetailViewItem;
-  
+
   private viewMode$: MasterDetailService;
 
-  constructor(masterDetailService: MasterDetailService) { 
+  constructor(masterDetailService: MasterDetailService) {
     this.viewMode$ = masterDetailService;
   }
 

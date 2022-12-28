@@ -19,7 +19,7 @@
 
   body {
     background: rgb(142,140,177);
-background: linear-gradient(180deg, rgba(142,140,177,1) 0%, rgba(255,255,255,1) 29%, rgba(236,252,255,1) 100%);
+    background: linear-gradient(180deg, rgba(142,140,177,1) 0%, rgba(255,255,255,1) 29%, rgba(236,252,255,1) 100%);
   }
 
   .btn-primary-blumer:hover {
@@ -27,6 +27,89 @@ background: linear-gradient(180deg, rgba(142,140,177,1) 0%, rgba(255,255,255,1) 
     background-color: #00b48f;
     width: 140%;
   }
+
+  * {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    margin-top: 200px;
+
+}
+
+form .grupo_input  {
+position: relative;
+padding: 14px 12px 12px 42px;
+}
+form .grupo_input input {
+    padding: 14px 12px 12px 42px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+
+}
+form .grupo_input  i {
+    position: absolute;
+    margin-left: 17px;
+    margin-right: 15px;
+    top: 14px;
+    font-size: 18px;
+}
+.label {
+    display: block;
+    margin-bottom: .4rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #00000099;
+
+  }
+  form .name input {
+    padding: 5px 15px 7px 15px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    width: 50%;
+
+}
+form .passwords input {
+  padding: 5px 32px 7px 32px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+
+}
+
+form .passwords i.left  {
+  position: absolute;
+  padding: 11px 12px;
+  pointer-events: none;
+}
+
+form .passwords i.right  {
+    position: fixed;
+    right: 52.75rem;
+    padding: 12px 12px;
+    pointer-events: none;
+
+}
+.color {
+  color: red;
+}
+form .email input {
+  padding: 5px 32px 7px 12px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid rgb(255, 0, 0);
+
+}
+form .email i.rightt  {
+  position: fixed;
+  right: 53.75rem;
+  padding: 12px 12px;
+  pointer-events: none;
 
 :root {
   --green-blummer: #00b48f;

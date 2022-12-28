@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InlineSVGModule } from 'ng-inline-svg-2';
 
-
+import { InputFieldComponent } from '../input-name/input-field.component';
 import { MasterDetailComponent } from './master-detail.component';
 import { MasterViewComponent } from './master-view/master-view.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
@@ -12,11 +12,6 @@ import { ConfirmationButtonComponent } from '../confirmation-button/confirmation
 import {PictureSelectorComponent} from "../picture-selector/picture-selector.component";
 import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
 
-
-
-
-
-
 @NgModule({
   declarations: [
     MasterDetailComponent,
@@ -24,7 +19,7 @@ import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
     DetailViewComponent,
     DetailDirective,
     ConfirmationButtonComponent,
-    PictureSelectorComponent
+    PictureSelectorComponent,
     AvatarStatusComponent
   ],
   imports: [
@@ -34,10 +29,8 @@ import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
   providers: [
     MasterDetailService
   ],
-  exports: [
-    MasterDetailComponent,
-    MasterViewComponent,
-    DetailViewComponent
-  ]
+  imports: [CommonModule, InlineSVGModule],
+  providers: [MasterDetailService],
+  exports: [MasterDetailComponent, MasterViewComponent, DetailViewComponent],
 })
-export class MasterDetailModule { }
+export class MasterDetailModule {}

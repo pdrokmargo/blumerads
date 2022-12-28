@@ -29,8 +29,6 @@ import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
   providers: [
     MasterDetailService
   ],
-  imports: [CommonModule, InlineSVGModule],
-  providers: [MasterDetailService],
   exports: [MasterDetailComponent, MasterViewComponent, DetailViewComponent],
 })
 export class MasterDetailModule {}

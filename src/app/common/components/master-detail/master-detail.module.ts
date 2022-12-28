@@ -9,11 +9,8 @@ import { DetailViewComponent } from './detail-view/detail-view.component';
 import { MasterDetailService } from './services/master-detail.service';
 import { DetailDirective } from './directives/detail.directive';
 import { ConfirmationButtonComponent } from '../confirmation-button/confirmation-button.component';
-import { UserComponent } from '../input-user/user.component';
-import {InputPasswordComponent } from '../input-password/input-password.component'
-import { InputEmailComponent } from '../input-email/input-email.component';
-import { InputPhoneComponent } from '../input-phone/input-phone.component';
-
+import {PictureSelectorComponent} from "../picture-selector/picture-selector.component";
+import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
 
 @NgModule({
   declarations: [
@@ -22,13 +19,15 @@ import { InputPhoneComponent } from '../input-phone/input-phone.component';
     DetailViewComponent,
     DetailDirective,
     ConfirmationButtonComponent,
-    InputFieldComponent,
-    UserComponent,
-    InputPasswordComponent,
-    InputEmailComponent,
-    InputPhoneComponent
-
-
+    PictureSelectorComponent,
+    AvatarStatusComponent
+  ],
+  imports: [
+    CommonModule,
+    InlineSVGModule
+  ],
+  providers: [
+    MasterDetailService
   ],
   imports: [CommonModule, InlineSVGModule],
   providers: [MasterDetailService],

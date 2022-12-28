@@ -13,13 +13,20 @@ export class DashboardComponent implements OnInit {
 
   dashboardPages: DetailViewItem[] = [];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     this.chartOptions = getChartOptions(350);
   }
 
-  
+  callBackCode(event: any): void {
+    console.log(event);
+  }
+
+  callBackResend(event: any): void {
+    console.log(event);
+  }
+
 }
 
 function getChartOptions(height: number) {

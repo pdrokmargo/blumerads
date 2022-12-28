@@ -1,0 +1,26 @@
+.wrapper-title {
+    padding-top: 40px;
+    .text-title {
+        color: var(--violet-blummer);
+    }
+}
+
+.wrapper-subtitle {
+    padding: 0px 102px 20px 102px;
+    text-align: center;
+    word-spacing: 1px;
+}
+
+.wrapper-action-btn {
+    padding: 0 30px;
+}
+
+.custom-btn-primary {
+    color: white;
+    background-color: var(--violet-blummer);
+
+    &:hover {
+        color: white;
+        background-color: var(--green-blummer);
+    }
+}

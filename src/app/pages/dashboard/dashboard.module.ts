@@ -9,6 +9,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { CampaignModule } from '../campaign/campaign.module';
 import { AdsModule } from '../ads/ads.module';
 import { TargetAudienceModule } from '../target-audience/target-audience.module';
+import { CodeValidationModule } from '../../common/components/code-validation/code-validation.module';
 
 
 
@@ -28,7 +29,8 @@ import { TargetAudienceModule } from '../target-audience/target-audience.module'
     TargetAudienceModule,
     AdsModule,
     CardsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    CodeValidationModule
   ],
 })
 export class DashboardModule {}

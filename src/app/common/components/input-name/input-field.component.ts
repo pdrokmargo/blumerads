@@ -8,7 +8,8 @@ import { Component, OnInit , Input, EventEmitter} from '@angular/core';
 })
 export class InputFieldComponent implements OnInit {
 
-
+  @Input() label: String = 'Label';
+  @Input() placeholder: String = 'Placeholder';
   constructor() { }
 
   ngOnInit(): void {

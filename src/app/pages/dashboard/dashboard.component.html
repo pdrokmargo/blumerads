@@ -75,7 +75,9 @@
     <li [ngbNavItem]="2" class="blumer-tab">
       <a ngbNavLink class="blumer-content-tab">Campañas</a>
       <ng-template ngbNavContent>
-        <app-campaign></app-campaign>
+        <!-- <app-campaign></app-campaign> -->
+        <app-input-field label="Nombre" placeholder="Inserte nombre"></app-input-field>
+        <app-input-field label="Apellido" placeholder="Inserte apellido"></app-input-field>
       </ng-template>
     </li>
     <li [ngbNavItem]="3" class="blumer-tab">

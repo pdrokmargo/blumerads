@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InlineSVGModule } from 'ng-inline-svg-2';
 
-import { InputFieldComponent } from '../input-name/input-field.component';
 import { MasterDetailComponent } from './master-detail.component';
 import { MasterViewComponent } from './master-view/master-view.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';

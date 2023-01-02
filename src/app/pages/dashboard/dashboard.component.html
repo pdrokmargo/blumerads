@@ -75,9 +75,11 @@
     <li [ngbNavItem]="2" class="blumer-tab">
       <a ngbNavLink class="blumer-content-tab">Campañas</a>
       <ng-template ngbNavContent>
-        <!-- <app-campaign></app-campaign> -->
-        <app-input-field [(value)]="variable" label="Nombre" placeholder="Inserte nombre"></app-input-field>
-        <app-input-field label="Apellido" placeholder="Inserte apellido"></app-input-field>
+        <app-campaign></app-campaign>
+        <app-input-field [(value)]="variable" label="Nombre y apellido completo" placeholder="Nombre completo"></app-input-field>
+        <app-user [(value)]="variable" label="Coloca tu usuario de Blumer" placeholder="Usuario de Blumer"></app-user>
+        <app-input-email [(value)]="variable" placeholder="Correo electronico"></app-input-email>
+        <app-input-password [(value)]="variable" label="Confirmar contraseña" placeholder="Contraseña"></app-input-password>
       </ng-template>
     </li>
     <li [ngbNavItem]="3" class="blumer-tab">

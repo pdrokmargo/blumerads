@@ -1,4 +1,4 @@
-import { Component, OnInit , Input} from '@angular/core';
+import {  Component, OnInit , Input, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +7,18 @@ import { Component, OnInit , Input} from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
+  @Input() label: String = 'Label';
+  @Input() placeholder: String = 'Placeholder';
+  @Input() value: any;
+  @Output() valueChange = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  ngOnChanges(): void {
+    console.log(this.value)
+  }
+
 
 }

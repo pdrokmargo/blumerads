@@ -11,11 +11,11 @@ import { AdsModule } from '../ads/ads.module';
 import { TargetAudienceModule } from '../target-audience/target-audience.module';
 import { CodeValidationModule } from '../../common/components/code-validation/code-validation.module';
 import { InputFieldComponent } from 'src/app/common/components/input-name/input-field.component';
-
-
-
+import { UserComponent } from 'src/app/common/components/input-user/user.component';
+import { InputEmailComponent } from 'src/app/common/components/input-email/input-email.component';
+import { InputPasswordComponent } from 'src/app/common/components/input-password/input-password.component';
 @NgModule({
-  declarations: [DashboardComponent, InputFieldComponent],
+  declarations: [DashboardComponent, InputFieldComponent, UserComponent, InputEmailComponent, InputPasswordComponent],
   imports: [
     NgbModule,
     CommonModule,

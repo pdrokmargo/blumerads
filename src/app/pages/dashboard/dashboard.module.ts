@@ -31,7 +31,7 @@ import { InputPasswordComponent } from 'src/app/common/components/input-password
     AdsModule,
     CardsModule,
     NgApexchartsModule,
-    CodeValidationModule
+    CodeValidationModule,
   ],
 })
 export class DashboardModule {}

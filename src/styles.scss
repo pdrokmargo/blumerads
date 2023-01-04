@@ -114,6 +114,7 @@ form .passwords input {
   outline: none;
   border-radius: 10px;
   border: 1px solid gainsboro;
+  margin-left: -6%;
 
 }
 
@@ -123,17 +124,14 @@ form .passwords input {
   pointer-events: none;
   user-select: none;
   cursor: pointer;
-  display: block;
+
 }
 
 .passwords i.right  {
-    position: absolute;
-    right: 57.75rem;
-    padding: 12px 12px;
-    pointer-events: none;
-    user-select: none;
-    cursor: pointer;
-    display: block;
+  position: relative;
+  left: 15.75rem;
+  padding: 11px 15px 8px 9px;
+  cursor: pointer;
 }
 .color {
   color: red;
@@ -146,10 +144,10 @@ form .email input {
 
 }
 form .email i.rightt  {
-  position: fixed;
-  right: 53.75rem;
-  padding: 12px 12px;
-  pointer-events: none;
+  position: relative;
+  left: 17.75rem;
+  padding: 11px 15px 8px 9px;
+  cursor: pointer;
 
 :root {
   --green-blummer: #00b48f;

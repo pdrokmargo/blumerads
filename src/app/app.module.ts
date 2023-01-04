@@ -14,7 +14,8 @@ import { environment } from 'src/environments/environment';
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule} from '@angular/material/select';
+import { BusinessPositionComponent } from './common/components/business-position/business-position.component';
 
 
 // #fake-end#
@@ -29,7 +30,7 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, BusinessPositionComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

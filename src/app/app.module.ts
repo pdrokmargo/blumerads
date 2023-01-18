@@ -11,11 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './modules/auth/services/auth.service';
 import { environment } from 'src/environments/environment';
+import { FormsModule } from '@angular/forms';
+
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule} from '@angular/material/select';
-import { BusinessPositionComponent } from './common/components/business-position/business-position.component';
+
 
 
 // #fake-end#
@@ -30,7 +32,7 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent, BusinessPositionComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -39,6 +41,7 @@ function appInitializer(authService: AuthService) {
     ClipboardModule,
     MatSlideToggleModule,
     MatSelectModule,
+    FormsModule,
     // #fake-start#
     environment.isMockEnabled
       ? HttpClientInMemoryWebApiModule.forRoot(FakeAPIService, {

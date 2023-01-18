@@ -14,11 +14,18 @@ import { InputFieldComponent } from 'src/app/common/components/input-name/input-
 import { UserComponent } from 'src/app/common/components/input-user/user.component';
 import { InputEmailComponent } from 'src/app/common/components/input-email/input-email.component';
 import { InputPasswordComponent } from 'src/app/common/components/input-password/input-password.component';
+import { MaterialModule } from 'src/app/modules/material/material.module';
 @NgModule({
-  declarations: [DashboardComponent, InputFieldComponent, UserComponent, InputEmailComponent, InputPasswordComponent],
+  declarations: [
+    DashboardComponent,
+     InputFieldComponent,
+     UserComponent,
+     InputEmailComponent,
+     InputPasswordComponent],
   imports: [
     NgbModule,
     CommonModule,
+    MaterialModule,
     RouterModule.forChild([
       {
         path: '',

@@ -175,6 +175,15 @@
     "@angular-eslint/bundled-angular-compiler" "13.2.1"
     "@typescript-eslint/experimental-utils" "5.17.0"
 
+"@angular-slider/ngx-slider@^2.0.4":
+  "integrity" "sha512-EccMcGlb2bJJWikXZBjRwdWgRiYYmWd3UCgf8l3KAlyqPAxPVgxI73wqipp4/nZwidq53a9s3OB+KC79enfM2A=="
+  "resolved" "https://registry.npmjs.org/@angular-slider/ngx-slider/-/ngx-slider-2.0.4.tgz"
+  "version" "2.0.4"
+  dependencies:
+    "detect-passive-events" "^2.0.3"
+    "rxjs" "^6.5.2"
+    "tslib" "^1.9.0"
+
 "@angular/animations@^14.0.0 || ^15.0.0", "@angular/animations@14.0.0":
   "integrity" "sha512-HVcS4l0eStcA2RDDQcxqChFHVN3BfQdvx68HRTuVDYbUSS4xdL5Hsk8OMkczV1pFDn+URKH1A363bTy5juyDaQ=="
   "resolved" "https://registry.npmjs.org/@angular/animations/-/animations-14.0.0.tgz"
@@ -217,7 +226,7 @@
     "uuid" "8.3.2"
     "yargs" "17.4.1"
 
-"@angular/common@^13.0.0", "@angular/common@^14.0.0 || ^15.0.0", "@angular/common@>=13.0.0", "@angular/common@14.0.0":
+"@angular/common@^13.0.0", "@angular/common@^14.0.0 || ^15.0.0", "@angular/common@>=13.0.0", "@angular/common@>=6.1.0", "@angular/common@14.0.0":
   "integrity" "sha512-VYydSXelPlcAnWZs6SKkOxV+rNe8zOtHKLf9jBTYT5nP5P66+va4zITo1C9bs5tbK+mRssayf615+SIGEXyJFg=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-14.0.0.tgz"
   "version" "14.0.0"
@@ -247,14 +256,14 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/core@^13.0.0", "@angular/core@^14.0.0 || ^15.0.0", "@angular/core@>=13.0.0", "@angular/core@14.0.0":
+"@angular/core@^13.0.0", "@angular/core@^14.0.0 || ^15.0.0", "@angular/core@>=13.0.0", "@angular/core@>=6.1.0", "@angular/core@14.0.0":
   "integrity" "sha512-Mj3r8iMlWfMbY+9DRUFZx1gKnA27Jwx3ff/VXeXBgfxaEKDYmlZSnliZSV6ssiHSUwn/U6yxDXFgcZL090zNBQ=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-14.0.0.tgz"
   "version" "14.0.0"
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/forms@^13.0.0", "@angular/forms@^14.0.0 || ^15.0.0", "@angular/forms@14.0.0":
+"@angular/forms@^13.0.0", "@angular/forms@^14.0.0 || ^15.0.0", "@angular/forms@>=6.1.0", "@angular/forms@14.0.0":
   "integrity" "sha512-r2FHcJve+/rXU4wdCA50nwySGKB5/bxqpULOGeWs4FIdKcUoTnzHtqMsd7sUa7wOA40O4fBHAxKPDGPJPl5CEA=="
   "resolved" "https://registry.npmjs.org/@angular/forms/-/forms-14.0.0.tgz"
   "version" "14.0.0"
@@ -3230,10 +3239,22 @@
   "resolved" "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz"
   "version" "1.2.0"
 
+"detect-it@^4.0.1":
+  "integrity" "sha512-dg5YBTJYvogK1+dA2mBUDKzOWfYZtHVba89SyZUhc4+e3i2tzgjANFg5lDRCd3UOtRcw00vUTMK8LELcMdicug=="
+  "resolved" "https://registry.npmjs.org/detect-it/-/detect-it-4.0.1.tgz"
+  "version" "4.0.1"
+
 "detect-node@^2.0.4":
   "integrity" "sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g=="
   "resolved" "https://registry.npmjs.org/detect-node/-/detect-node-2.1.0.tgz"
   "version" "2.1.0"
+
+"detect-passive-events@^2.0.3":
+  "integrity" "sha512-QN/1X65Axis6a9D8qg8Py9cwY/fkWAmAH/edTbmLMcv4m5dboLJ7LcAi8CfaCON2tjk904KwKX/HTdsHC6yeRg=="
+  "resolved" "https://registry.npmjs.org/detect-passive-events/-/detect-passive-events-2.0.3.tgz"
+  "version" "2.0.3"
+  dependencies:
+    "detect-it" "^4.0.1"
 
 "di@^0.0.1":
   "integrity" "sha512-uJaamHkagcZtHPqCIHZxnFrXlunQXgBOsZSUOWwFw31QJCAbyTBoHMW75YOTur5ZNx8pIeAKgf6GWIgaqqiLhA=="
@@ -6452,6 +6473,13 @@
   "version" "0.0.2"
 
 "rxjs@^6.0.0", "rxjs@^6.5.4":
+  "integrity" "sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ=="
+  "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz"
+  "version" "6.6.7"
+  dependencies:
+    "tslib" "^1.9.0"
+
+"rxjs@^6.5.2":
   "integrity" "sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ=="
   "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz"
   "version" "6.6.7"

@@ -10,6 +10,9 @@ import { DetailDirective } from './directives/detail.directive';
 import { ConfirmationButtonComponent } from '../confirmation-button/confirmation-button.component';
 import {PictureSelectorComponent} from "../picture-selector/picture-selector.component";
 import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
+import {CategoryFeaturedComponent} from "../category-featured/category-featured.component";
+import {CategoryProgressComponent} from "../category-progress/category-progress.component";
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
     DetailDirective,
     ConfirmationButtonComponent,
     PictureSelectorComponent,
-    AvatarStatusComponent
+    AvatarStatusComponent,
+    CategoryFeaturedComponent,
+    CategoryProgressComponent
   ],
   imports: [
     CommonModule,
@@ -28,6 +33,6 @@ import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
   providers: [
     MasterDetailService
   ],
-  exports: [MasterDetailComponent, MasterViewComponent, DetailViewComponent],
+  exports: [MasterDetailComponent, MasterViewComponent, DetailViewComponent, CategoryFeaturedComponent, CategoryProgressComponent],
 })
 export class MasterDetailModule {}

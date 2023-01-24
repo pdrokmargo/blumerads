@@ -16,6 +16,8 @@ import { InputEmailComponent } from 'src/app/common/components/input-email/input
 import { InputPasswordComponent } from 'src/app/common/components/input-password/input-password.component';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { OneBlockSelectorComponent } from 'src/app/common/components/one-block-selector/one-block-selector.component';
+import {MasterDetailModule} from "../../common/components/master-detail/master-detail.module";
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -41,6 +43,7 @@ import { OneBlockSelectorComponent } from 'src/app/common/components/one-block-s
     CardsModule,
     NgApexchartsModule,
     CodeValidationModule,
+    MasterDetailModule,
   ],
 })
 export class DashboardModule {}

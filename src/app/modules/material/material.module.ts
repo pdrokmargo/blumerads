@@ -4,8 +4,8 @@ import {MatChipsModule } from "@angular/material/chips";
 import { TagSelectorComponent } from 'src/app/common/components/tag-selector/tag-selector.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from '@angular/material/form-field';
-
-
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -17,9 +17,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatChipsModule,
     MatIconModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports: [
-    TagSelectorComponent
+    TagSelectorComponent,
+    MatChipsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule { }

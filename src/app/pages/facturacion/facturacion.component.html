@@ -1,0 +1,45 @@
+<div class="mb-5">
+  <button class="btn btn-light" >Volver</button>
+</div>
+
+<div class="wrapper-componet" >
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z2">
+
+    <ng-container matColumnDef="nofactura">
+      <th mat-header-cell *matHeaderCellDef class="text-center"> Numero de Factura </th>
+      <td mat-cell *matCellDef="let element"> {{element.nofactura}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fechafactura">
+      <th mat-header-cell *matHeaderCellDef class="text-center"> Fecha de la factura </th>
+      <td mat-cell *matCellDef="let element" class="text-center"> {{element.fechafactura}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="monto">
+      <th mat-header-cell *matHeaderCellDef> Monto </th>
+      <td mat-cell *matCellDef="let element" class="text-end pe-5"> {{element.monto}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="interacciones">
+      <th mat-header-cell *matHeaderCellDef class="text-center"> Interacciones </th>
+      <td mat-cell *matCellDef="let element" class="text-end pe-5"> {{element.interacciones}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef class="text-center"> Estado </th>
+      <td mat-cell *matCellDef="let element" class="text-center"
+        [style]="statusColor(element)"> {{element.estado}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div class="mt-4">
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+      [pageSize]="5"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+</div>

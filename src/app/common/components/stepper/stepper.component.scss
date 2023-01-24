@@ -1,0 +1,19 @@
+::ng-deep .mat-step-header .mat-step-icon {
+  margin-right: 12px;
+  background-color: #00b48f !important;
+  border: 1px solid #90a19e;
+}
+
+::ng-deep .mat-stepper-vertical-line::before {
+  top: -25px;
+  bottom: -25px;
+}
+
+
+::ng-deep .mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false] {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::ng-deep .mat-step-header, .mat-primary, .ng-tns-c211-0 ,.mat-vertical-stepper-header, .ng-star-inserted {
+  width: 50%;
+}

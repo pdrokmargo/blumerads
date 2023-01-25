@@ -1,4 +1,4 @@
-<app-code-validation (callBackCodeValidation)="callBackCode($event)"  (callBackResendCode)=callBackResend($event)></app-code-validation>
+<app-code-validation (callBackCodeValidation)="callBackCode($event)"  (callBackResendCode)="callBackResend($event)"></app-code-validation>
 
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs dashboard-general">
     <li [ngbNavItem]="1" class="blumer-tab">
@@ -76,6 +76,7 @@
       <a ngbNavLink class="blumer-content-tab">Campañas</a>
       <ng-template ngbNavContent>
         <app-campaign></app-campaign>
+
       </ng-template>
     </li>
     <li [ngbNavItem]="3" class="blumer-tab">

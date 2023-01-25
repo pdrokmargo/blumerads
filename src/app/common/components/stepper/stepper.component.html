@@ -1,0 +1,21 @@
+<mat-stepper orientation="vertical">
+  <ng-template matStepperIcon="edit" let-index="index">{{index+1}}</ng-template>
+  <mat-step>
+    <ng-template matStepLabel>Crear nueva campaña</ng-template>
+    <ng-template matStepContent>
+      <li>Escoge el objetivo</li>
+      <li>Público</li>
+      <li>Presupuesto</li>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Formato del anuncio</ng-template>
+    <ng-template matStepContent>
+      <p>Contenio</p>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Publicación del anuncio</ng-template>
+    <p>Contenio</p>
+  </mat-step>
+</mat-stepper>

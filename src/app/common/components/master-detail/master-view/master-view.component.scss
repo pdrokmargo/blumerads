@@ -1,0 +1,39 @@
+.page-background {
+  background-color:#f5f7f8;
+}
+
+.card-bordered-white {
+  background-color: #F5F8F8;
+  border: 3px solid #FFFFFF;
+}
+
+.tab-item {
+  width: 50%;
+}
+
+.blummer-tabs {
+  border: 3px solid #FFFFFF;
+  background-color: #FCFEFF;
+}
+
+.blumer-content-tab-lg {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F7F8;
+  color: gray;
+  border: none;
+  padding: 1px;
+}
+
+.blumer-content-tab-lg.active {
+  background-color: #FFFFFF;
+  color: #5cd1ca;
+  font-weight: 600;
+}
+
+.hr{
+  background-color: #e7e4e4;
+  color: #6c6c6c;
+}

@@ -7,8 +7,9 @@ import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChange
 })
 export class DropdownActionsComponent implements OnInit {
 
-  selConfig: DropDownActionI[];;
+  selConfig: DropDownActionI[];
   selectedOption = 1;
+  label: String = 'Coloca el público existente';
 
 
   @Input() selectConfig: DropDownActionI[];

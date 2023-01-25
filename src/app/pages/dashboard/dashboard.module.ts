@@ -17,6 +17,8 @@ import { InputPasswordComponent } from 'src/app/common/components/input-password
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { OneBlockSelectorComponent } from 'src/app/common/components/one-block-selector/one-block-selector.component';
 import {MasterDetailModule} from "../../common/components/master-detail/master-detail.module";
+import { OneBlockSelectorComponent } from 'src/app/common/components/one-block-selector/one-block-selector.component';
+
 
 @NgModule({
   declarations: [

@@ -21,12 +21,13 @@
 </div>
 <!-- end::Header -->
 <!-- begin::Body -->
-<div class="card-body py-3">
-  <!-- begin::Table container -->
+<!--<div class="card-body py-3">
+  &lt;!&ndash; begin::Table container &ndash;&gt;
   <div class="table-responsive">
-    <!-- begin::Table -->
+    &lt;!&ndash; begin::Table &ndash;&gt;
+
     <table class="table align-middle gs-0 gy-4">
-      <!-- begin::Table head -->
+      &lt;!&ndash; begin::Table head &ndash;&gt;
       <thead>
         <tr class="fw-bolder text-muted bg-light">
           <ng-container
@@ -39,8 +40,8 @@
 
         </tr>
       </thead>
-      <!-- end::Table head -->
-      <!-- begin::Table body -->
+      &lt;!&ndash; end::Table head &ndash;&gt;
+      &lt;!&ndash; begin::Table body &ndash;&gt;
       <tbody>
         <tr *ngFor="let row of masterInitialData?.rows; index as i">
           <td>
@@ -82,10 +83,53 @@
           </td>
         </tr>
       </tbody>
-      <!-- end::Table body -->
+      &lt;!&ndash; end::Table body &ndash;&gt;
     </table>
-    <!-- end::Table -->
+    &lt;!&ndash; end::Table &ndash;&gt;
   </div>
-  <!-- end::Table container -->
-</div>
+  &lt;!&ndash; end::Table container &ndash;&gt;
+</div>-->
 <!-- begin::Body -->
+
+<div class=" container-fluid page-background ">
+  <div class="row">
+    <div class="col-sm-3 p-5">
+
+    </div>
+    <div class="col-sm-6 p-5">
+      <div class="card-body card-bordered-white">
+        <h3>Escoge el público de tu campaña</h3>
+        <p>Para comenzar selecciona el público al que se dirija tu campaña.</p>
+
+        <ul ngbNav #nav="ngbNav" class="nav-tabs blummer-tabs">
+          <li [ngbNavItem]="1" class="tab-item">
+            <a ngbNavLink class="blumer-content-tab-lg">Nuevo público</a>
+            <ng-template ngbNavContent>
+
+
+            </ng-template>
+          </li>
+          <li [ngbNavItem]="2" class="tab-item">
+            <a ngbNavLink class="blumer-content-tab-lg">Público existente</a>
+            <ng-template ngbNavContent>
+              <div class="mt-3">
+                <app-dropdown-actions [selectConfig]="dropDownList" label="Coloca el público existente"></app-dropdown-actions>
+                <hr class="hr">
+              </div>
+              <div class="mt-3">
+                <app-tag-selector></app-tag-selector>
+              </div>
+
+            </ng-template>
+          </li>
+        </ul>
+        <div [ngbNavOutlet]="nav"></div>
+      </div>
+
+    </div>
+    <div class="col-sm-3 p-5">
+
+    </div>
+  </div>
+</div>
+

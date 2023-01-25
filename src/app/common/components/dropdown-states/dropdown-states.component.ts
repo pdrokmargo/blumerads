@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 })
 export class DropdownStatesComponent implements OnInit, OnChanges {
 
-  selConfig: SelectoOptionI[];;
+  selConfig: SelectoOptionI[];
   selectedOption = 1;
   selectedOptionColor = 'green';
 

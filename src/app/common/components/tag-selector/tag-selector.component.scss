@@ -1,9 +1,5 @@
 .example-chip-list {
   width: 50%;
-  border-radius: 1px;
-  :focus {
-    outline: 0px solid gainsboro;
-  }
 }
 
 .nino {
@@ -32,7 +28,18 @@
     top: -4px;
 }
 .text {
-  font-family: 'Segoe UI';
-    font-size: 14px;
+  font-size: 1.05rem;
+    font-weight: 500;
+    color: #808080;
+}
+.text-p {
+  font-size: 1.05rem;
+    font-weight: 800;
+    color: #808080;
 }
 
+
+mat-form-field-flex {
+  border-radius: 4px 8px 0 0;
+  padding: 0.75em 0.75em 0 0.75em;
+}

@@ -16,13 +16,15 @@ import { InputEmailComponent } from 'src/app/common/components/input-email/input
 import { InputPasswordComponent } from 'src/app/common/components/input-password/input-password.component';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import {MasterDetailModule} from "../../common/components/master-detail/master-detail.module";
+import { PrevieAdBoxComponent } from 'src/app/common/components/previe-ad-box/previe-ad-box.component';
 @NgModule({
   declarations: [
     DashboardComponent,
      InputFieldComponent,
      UserComponent,
      InputEmailComponent,
-     InputPasswordComponent],
+     InputPasswordComponent,
+    PrevieAdBoxComponent],
   imports: [
     NgbModule,
     CommonModule,

@@ -7,9 +7,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 
+import {MatStepperModule} from '@angular/material/stepper';
+import { StepperComponent } from 'src/app/common/components/stepper/stepper.component';
+
+
 @NgModule({
   declarations: [
-    TagSelectorComponent
+    TagSelectorComponent,
+    StepperComponent,
+
     // tu componente de material
   ],
   imports: [
@@ -27,6 +33,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatFormFieldModule,
     MatTableModule,
     MatPaginatorModule
+    MatStepperModule,
+    TagSelectorComponent,
+    StepperComponent
   ]
 })
 export class MaterialModule { }

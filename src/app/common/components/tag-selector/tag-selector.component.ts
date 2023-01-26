@@ -13,7 +13,7 @@ export interface Category {
 })
 export class TagSelectorComponent {
 
-  @Input() label: String = 'Escrbe una categoría que prefieras para tu campaña.';
+  @Input() label: String = 'Escribe una categoría que prefieras para tu campaña.';
   @Input() placeholder: String = 'Placeholder';
   @Input() p: String = 'Categorías'
   addOnBlur = true;

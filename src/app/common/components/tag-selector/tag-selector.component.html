@@ -1,0 +1,18 @@
+<div>
+  <p class="text">{{p}}</p>
+  <label class="text">{{label}} </label>
+</div>
+<mat-form-field class="example-chip-list" appearance="fill">
+  <i class="fa-solid fa-magnifying-glass i"></i>
+  <mat-chip-list class="never" #chipList aria-label="Category selection">
+    <mat-chip class="position" *ngFor="let category of category" (removed)="remove(category)">
+      {{category.name}}
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip>
+    <input class="nino" placeholder="Escribe aquí" [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+      (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+</mat-form-field>

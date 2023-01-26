@@ -1,0 +1,15 @@
+.user input {
+  padding: 7px 14px 5px 31px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+  width: 30%;
+}
+
+.user i {
+  position: absolute;
+  padding: 11px 12px;
+  pointer-events: none;
+  user-select: none;
+  cursor: pointer;
+}

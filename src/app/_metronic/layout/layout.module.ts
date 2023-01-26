@@ -72,7 +72,7 @@ const routes: Routes = [
     ClassicComponent,
     ExtendedComponent,
     ReportsComponent,
-    SaasComponent,
+    SaasComponent
   ],
   imports: [
     CommonModule,

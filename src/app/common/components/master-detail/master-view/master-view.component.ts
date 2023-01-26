@@ -23,7 +23,7 @@ export class MasterViewComponent implements OnInit {
 
   private viewMode$: MasterDetailService;
 
-  constructor(masterDetailService: MasterDetailService) { 
+  constructor(masterDetailService: MasterDetailService) {
     this.viewMode$ = masterDetailService;
   }
 

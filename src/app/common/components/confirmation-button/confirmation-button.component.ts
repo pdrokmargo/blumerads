@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ConfirmationButtonComponent implements OnInit {
 
   @Input() textDescription: String | undefined = 'Aceptar' ;
+  
 
   constructor() { }
 

@@ -1,0 +1,14 @@
+<div class="">
+    <div class="dropdown" >
+      <button class="btn btn-secondary dropdown-toggle btn-selector-option" type="button"
+        id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+      </button>
+      <ul class="dropdown-menu menu-custom-style" aria-labelledby="dropdownMenu2">
+        <li *ngFor="let item of selectConfig; index as i">
+          <button (click)="selectedItem(item)" class="dropdown-item btn-selector-option-item" type="button">
+            <i [class]="item.icon" ></i> {{ item.name }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>

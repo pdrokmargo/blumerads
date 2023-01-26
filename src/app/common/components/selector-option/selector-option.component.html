@@ -1,0 +1,15 @@
+<div class="wrapper-selector-options">
+  <span *ngFor="let item of selectorConfig; index as i" >
+    <input type="radio" class="btn-check" name="options" autocomplete="off"
+      [attr.id]="item.id"
+      (change)="handleChange($event)"
+      [value]="item.value" [checked]="item.checked"
+      [disabled]="item.disabled">
+    <label class="btn btn-secondary"
+      [for]="item.id"
+      [style.color]="item.colorIcon"
+      [style.background-color]="item?.backgroundColor ?? 'transparent'"
+      [style.width]="item?.widthCell ?? '200px' ">
+        <i [style.color]="item.colorIcon" [class]="item.iconName"></i>{{item.title}}</label>
+  </span>
+</div>

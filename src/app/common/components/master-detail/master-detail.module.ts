@@ -2,17 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InlineSVGModule } from 'ng-inline-svg-2';
 
-
 import { MasterDetailComponent } from './master-detail.component';
 import { MasterViewComponent } from './master-view/master-view.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { MasterDetailService } from './services/master-detail.service';
 import { DetailDirective } from './directives/detail.directive';
 import { ConfirmationButtonComponent } from '../confirmation-button/confirmation-button.component';
+import {PictureSelectorComponent} from "../picture-selector/picture-selector.component";
 import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
-
-
-
+import {CategoryFeaturedComponent} from "../category-featured/category-featured.component";
+import {CategoryProgressComponent} from "../category-progress/category-progress.component";
 
 
 @NgModule({
@@ -22,7 +21,10 @@ import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
     DetailViewComponent,
     DetailDirective,
     ConfirmationButtonComponent,
-    AvatarStatusComponent
+    PictureSelectorComponent,
+    AvatarStatusComponent,
+    CategoryFeaturedComponent,
+    CategoryProgressComponent
   ],
   imports: [
     CommonModule,
@@ -31,10 +33,6 @@ import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
   providers: [
     MasterDetailService
   ],
-  exports: [
-    MasterDetailComponent,
-    MasterViewComponent,
-    DetailViewComponent
-  ]
+  exports: [MasterDetailComponent, MasterViewComponent, DetailViewComponent, CategoryFeaturedComponent, CategoryProgressComponent],
 })
-export class MasterDetailModule { }
+export class MasterDetailModule {}

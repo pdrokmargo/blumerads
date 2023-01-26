@@ -27,7 +27,7 @@ export class TargetAudienceComponent implements OnInit {
   }
 
   targetAudienceDetail: DetailViewItem;
-  
+
   constructor() { }
 
   ngOnInit(): void {

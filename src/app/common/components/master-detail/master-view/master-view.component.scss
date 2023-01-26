@@ -37,3 +37,24 @@
   background-color: #e7e4e4;
   color: #6c6c6c;
 }
+
+.hr-position {
+  position: relative;
+  top: 25px;
+}
+.color {
+  background-color: #f5f8f8;
+  width: 15%;
+  height: 41px;
+  color: #6c6c6c;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+  font-family: "Segoe UI";
+}
+.color:hover{
+  background-color: #5cd1ca;
+  color: #f5f8f8;
+}
+.color:focus {
+    outline: 0px solid gainsboro;
+}

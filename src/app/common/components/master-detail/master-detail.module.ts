@@ -12,6 +12,10 @@ import {PictureSelectorComponent} from "../picture-selector/picture-selector.com
 import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
 import {CategoryFeaturedComponent} from "../category-featured/category-featured.component";
 import {CategoryProgressComponent} from "../category-progress/category-progress.component";
+import {CardsModule} from "../../../_metronic/partials";
+import {NgbNavModule} from "@ng-bootstrap/ng-bootstrap";
+import {DropdownActionsModule} from "../dropdown-actions/dropdown-actions.module";
+import {MaterialModule} from "../../../modules/material/material.module";
 
 
 @NgModule({
@@ -26,10 +30,14 @@ import {CategoryProgressComponent} from "../category-progress/category-progress.
     CategoryFeaturedComponent,
     CategoryProgressComponent
   ],
-  imports: [
-    CommonModule,
-    InlineSVGModule
-  ],
+    imports: [
+        CommonModule,
+        InlineSVGModule,
+        CardsModule,
+        NgbNavModule,
+        DropdownActionsModule,
+        MaterialModule
+    ],
   providers: [
     MasterDetailService
   ],

@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { FakeAPIService } from './_fake/fake-api.service';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule} from '@angular/material/select';
+import { TranslatorMatPaginatorInt } from './modules/material/translator-mat-paginator.service';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 
 
 
@@ -55,6 +57,10 @@ function appInitializer(authService: AuthService) {
     NgbModule,
   ],
   providers: [
+    {
+      provide: MatPaginatorIntl,
+      useClass: TranslatorMatPaginatorInt
+    },
     {
       provide: APP_INITIALIZER,
       useFactory: appInitializer,

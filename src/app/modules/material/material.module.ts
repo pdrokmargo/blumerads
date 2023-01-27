@@ -4,6 +4,9 @@ import {MatChipsModule } from "@angular/material/chips";
 import { TagSelectorComponent } from 'src/app/common/components/tag-selector/tag-selector.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 import {MatStepperModule} from '@angular/material/stepper';
 import { StepperComponent } from 'src/app/common/components/stepper/stepper.component';
 
@@ -20,12 +23,19 @@ import { StepperComponent } from 'src/app/common/components/stepper/stepper.comp
     MatChipsModule,
     MatIconModule,
     MatFormFieldModule,
-    MatStepperModule,
-
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports: [
     TagSelectorComponent,
-    StepperComponent,
+    MatChipsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule
+    MatStepperModule,
+    TagSelectorComponent,
+    StepperComponent
   ]
 })
 export class MaterialModule { }

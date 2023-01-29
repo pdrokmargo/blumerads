@@ -8,15 +8,15 @@ import { DetailViewComponent } from './detail-view/detail-view.component';
 import { MasterDetailService } from './services/master-detail.service';
 import { DetailDirective } from './directives/detail.directive';
 import { ConfirmationButtonComponent } from '../confirmation-button/confirmation-button.component';
-import {PictureSelectorComponent} from "../picture-selector/picture-selector.component";
-import {AvatarStatusComponent} from "../avatar-status/avatar-status.component";
-import {CategoryFeaturedComponent} from "../category-featured/category-featured.component";
-import {CategoryProgressComponent} from "../category-progress/category-progress.component";
-import {CardsModule} from "../../../_metronic/partials";
-import {NgbNavModule} from "@ng-bootstrap/ng-bootstrap";
-import {DropdownActionsModule} from "../dropdown-actions/dropdown-actions.module";
-import {MaterialModule} from "../../../modules/material/material.module";
-
+import { PictureSelectorComponent } from '../picture-selector/picture-selector.component';
+import { AvatarStatusComponent } from '../avatar-status/avatar-status.component';
+import { CategoryFeaturedComponent } from '../category-featured/category-featured.component';
+import { CategoryProgressComponent } from '../category-progress/category-progress.component';
+import { CardsModule } from '../../../_metronic/partials';
+import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { DropdownActionsModule } from '../dropdown-actions/dropdown-actions.module';
+import { MaterialModule } from '../../../modules/material/material.module';
+import { InfoPublicComponent } from '../info-public/info-public.component';
 
 @NgModule({
   declarations: [
@@ -28,19 +28,24 @@ import {MaterialModule} from "../../../modules/material/material.module";
     PictureSelectorComponent,
     AvatarStatusComponent,
     CategoryFeaturedComponent,
-    CategoryProgressComponent
+    CategoryProgressComponent,
+    InfoPublicComponent,
   ],
-    imports: [
-        CommonModule,
-        InlineSVGModule,
-        CardsModule,
-        NgbNavModule,
-        DropdownActionsModule,
-        MaterialModule
-    ],
-  providers: [
-    MasterDetailService
+  providers: [MasterDetailService],
+  exports: [
+    MasterDetailComponent,
+    MasterViewComponent,
+    DetailViewComponent,
+    CategoryFeaturedComponent,
+    CategoryProgressComponent,
   ],
-  exports: [MasterDetailComponent, MasterViewComponent, DetailViewComponent, CategoryFeaturedComponent, CategoryProgressComponent],
+  imports: [
+    CommonModule,
+    InlineSVGModule,
+    CardsModule,
+    NgbNavModule,
+    DropdownActionsModule,
+    MaterialModule,
+  ],
 })
 export class MasterDetailModule {}

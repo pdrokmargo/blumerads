@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-code-validation',
@@ -13,7 +13,6 @@ export class CodeValidationComponent implements OnInit {
   @ViewChild('code5') code5!: ElementRef;
   @ViewChild('code6') code6!: ElementRef;
 
-  
   @Output() callBackCodeValidation = new EventEmitter<CodeValidationI>();
   @Output() callBackResendCode = new EventEmitter<boolean>();
 
@@ -53,7 +52,6 @@ export class CodeValidationComponent implements OnInit {
       case 6:
         if (event.key !== 'Backspace') {
           this.code = this.code1.nativeElement.value + this.code2.nativeElement.value + this.code3.nativeElement.value + this.code4.nativeElement.value + this.code5.nativeElement.value + this.code6.nativeElement.value;
-          console.log(this.code);
           this.callBackCodeValidation.emit({
             code: this.code
           });

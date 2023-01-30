@@ -9,7 +9,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 
 import {MatStepperModule} from '@angular/material/stepper';
 import { StepperComponent } from 'src/app/common/components/stepper/stepper.component';
-
+import {MatTabsModule} from '@angular/material/tabs'
 
 @NgModule({
   declarations: [
@@ -24,7 +24,9 @@ import { StepperComponent } from 'src/app/common/components/stepper/stepper.comp
     MatIconModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTabsModule,
+    MatStepperModule
   ],
   exports: [
     TagSelectorComponent,
@@ -32,10 +34,11 @@ import { StepperComponent } from 'src/app/common/components/stepper/stepper.comp
     MatIconModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
     MatStepperModule,
     TagSelectorComponent,
-    StepperComponent
+    StepperComponent,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }

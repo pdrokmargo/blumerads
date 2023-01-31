@@ -7,8 +7,8 @@ import {  Component, OnInit , Input, EventEmitter, Output} from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  @Input() label: String = 'Label';
-  @Input() placeholder: String = 'Placeholder';
+  @Input() label: String = 'Coloca tu usuario de Blumer';
+  @Input() placeholder: String = 'Carofernandez';
   @Input() value: any;
   @Output() valueChange = new EventEmitter<any>();
 

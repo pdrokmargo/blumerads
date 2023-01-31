@@ -4,9 +4,7 @@ import { InputPhoneComponent } from './common/components/input-phone/input-phone
 import { InputFieldComponent } from './common/components/input-name/input-field.component';
 import { AuthGuard } from './modules/auth/services/auth.guard';
 import { UserComponent } from './common/components/input-user/user.component';
-import { InputEmailComponent } from './common/components/input-email/input-email.component';
-import { InputPasswordComponent } from './common/components/input-password/input-password.component';
-import { BusinessPositionComponent } from './common/components/business-position/business-position.component';
+import { TagSelectPlacesComponent } from './common/components/tag-select-places/tag-select-places.component';
 
 export const routes: Routes = [
   {

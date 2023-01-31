@@ -12,6 +12,14 @@ const Routing: Routes = [
       import('./builder/builder.module').then((m) => m.BuilderModule),
   },
   {
+    path: 'perfil',
+    loadChildren: async () => (await import('./perfil/miperfil.module')).MiperfilModule
+  },
+  {
+    path: 'rutaprueba',
+    loadChildren: async () => (await import('../modules/auth/auth.module')).AuthModule
+  },
+  {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full',

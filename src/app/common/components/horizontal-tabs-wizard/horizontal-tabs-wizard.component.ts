@@ -7,9 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output, OnChanges, SimpleChange
 })
 export class HorizontalTabsWizardComponent implements OnInit, OnChanges {
 
-  active = 1;
   tabsConfig: HorizontalTabsWizardConfigI[];
-
+  @Input() active = 1;
   @Input() horizontalTabConfig: HorizontalTabsWizardConfigI[];
   @Output() callBackHorizontalTabs = new EventEmitter<HorizontalTabsWizardI>();
   constructor() { }
@@ -18,7 +17,7 @@ export class HorizontalTabsWizardComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['horizontalTabConfig'].currentValue && this.horizontalTabConfig.length) {
+    if (changes['horizontalTabConfig'] && changes['horizontalTabConfig'].currentValue && this.horizontalTabConfig.length) {
       this.tabsConfig = this.horizontalTabConfig;
     }
   }

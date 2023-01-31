@@ -12,6 +12,9 @@ import { MatSelect } from '@angular/material/select';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import {MatTabsModule} from '@angular/material/tabs'
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -26,11 +29,25 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatChipsModule,
     MatIconModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatTabsModule,
     MatStepperModule,
     MatOptionModule,
     MatSelectModule,
     ReactiveFormsModule
   ],
-  exports: [TagSelectorComponent, StepperComponent, TagselectorlugaresComponent],
+  exports: [
+    TagSelectorComponent,
+    MatChipsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatStepperModule,
+    TagSelectorComponent,
+    StepperComponent,
+    MatTabsModule
+  ]
 })
-export class MaterialModule {}
+export class MaterialModule { }

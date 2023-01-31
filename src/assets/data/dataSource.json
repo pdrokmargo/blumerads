@@ -1,0 +1,65 @@
+[
+  {
+    "nofactura": 1,
+    "fechafactura": "2023-01-23",
+    "monto": 100000,
+    "interacciones": 421,
+    "estado": "Rechazada"
+  },
+  {
+    "nofactura": 2,
+    "fechafactura": "2023-01-22",
+    "monto": 100001,
+    "interacciones": 420,
+    "estado": "Pendiente"
+  },
+  {
+    "nofactura": 3,
+    "fechafactura": "2023-01-21",
+    "monto": 100002,
+    "interacciones": 419,
+    "estado": "Completada"
+  },
+  {
+    "nofactura": 1,
+    "fechafactura": "2023-01-23",
+    "monto": 100003,
+    "interacciones": 421,
+    "estado": "Rechazada"
+  },
+  {
+    "nofactura": 2,
+    "fechafactura": "2023-01-22",
+    "monto": 100004,
+    "interacciones": 420,
+    "estado": "Pendiente"
+  },
+  {
+    "nofactura": 3,
+    "fechafactura": "2023-01-21",
+    "monto": 100000,
+    "interacciones": 419,
+    "estado": "Completada"
+  },
+  {
+    "nofactura": 1,
+    "fechafactura": "2023-01-23",
+    "monto": 100000,
+    "interacciones": 421,
+    "estado": "Rechazada"
+  },
+  {
+    "nofactura": 2,
+    "fechafactura": "2023-01-22",
+    "monto": 100000,
+    "interacciones": 420,
+    "estado": "Pendiente"
+  },
+  {
+    "nofactura": 3,
+    "fechafactura": "2023-01-21",
+    "monto": 100000,
+    "interacciones": 419,
+    "estado": "Completada"
+  }
+]

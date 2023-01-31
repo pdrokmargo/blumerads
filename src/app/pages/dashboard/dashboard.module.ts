@@ -17,20 +17,24 @@ import { InputPasswordComponent } from 'src/app/common/components/input-password
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { OneBlockSelectorComponent } from 'src/app/common/components/one-block-selector/one-block-selector.component';
 import {MasterDetailModule} from "../../common/components/master-detail/master-detail.module";
+import { PrevieAdBoxComponent } from 'src/app/common/components/previe-ad-box/previe-ad-box.component';
 import { BusinessPositionComponent } from 'src/app/common/components/business-position/business-position.component';
 import { InputPhoneComponent } from 'src/app/common/components/input-phone/input-phone.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent,
+     DashboardComponent,
      InputFieldComponent,
      UserComponent,
      InputEmailComponent,
+     InputPasswordComponent,
+     PrevieAdBoxComponent,
      OneBlockSelectorComponent,
      BusinessPositionComponent,
      InputPhoneComponent,
      InputPasswordComponent],
+
   imports: [
     NgbModule,
     CommonModule,

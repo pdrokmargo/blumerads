@@ -1,5 +1,295 @@
-<form class="form w-100" novalidate="novalidate" id="kt_login_signup_form" [formGroup]="registrationForm"
-  (ngSubmit)="submit()">
+<div class="container-fluid wrapper-container" style="width: calc(100vw - 60px);" >
+
+  <form [formGroup]="registrationForm" class="m-0 p-0" novalidate autocomplete="off">
+    <div class="wrapper-form-reg" >
+
+      <app-horizontal-tabs-wizard
+        [horizontalTabConfig]="tabsConfig"
+        (callBackHorizontalTabs)="switchTab($event)"
+        [active]="selectedTab">
+      </app-horizontal-tabs-wizard>
+
+      <div class="row">
+        <div class="col-12" >
+        <span [ngSwitch]="selectedTab">
+            <div *ngSwitchCase="1">
+
+              <mat-horizontal-stepper linear #stepper>
+                <mat-step>
+
+                  <h1 class="text-dark fw-bolder mb-3 mt-5 text-center">
+                    Regístrate a Blumer Ads
+                  </h1>
+
+                  <div class="text-gray-500 fw-semibold fs-6 text-center mb-5">
+                    Vamos a comenzar creando una cuenta. Completa los siguientes campos para continuar.
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-6 pt-4">
+                      <label class="form-label w-100 text-start fw-bolder text-dark fs-6 m-0">Nombre y apellido completo*</label>
+                      <input class="form-control form-control-sm bg-transparent" type="text" formControlName="fullname"
+                        placeholder="Nombre completo"
+                        [ngClass]="validatorClass('fullname') ? 'is-valid' : 'is-invalid'" />
+                    </div>
+
+                    <div class="col-6 pt-4">
+                      <label class="form-label w-100 text-start fw-bolder text-dark fs-6 m-0">Coloca tu usuario de blumer*</label>
+                      <input class="form-control form-control-sm bg-transparent" type="text" formControlName="usuario"
+                        placeholder="Usuario de Blumer"
+                        [ngClass]="validatorClass('usuario') ? 'is-valid' : 'is-invalid'" />
+                    </div>
+
+                    <div class="col-6 pt-4">
+                      <label class="form-label w-100 text-start fw-bolder text-dark fs-6 m-0">Correo corporativo*</label>
+                      <input class="form-control form-control-sm bg-transparent" type="email" formControlName="email"
+                        placeholder="Ingresa tu correo electrónico"
+                        [ngClass]="validatorClass('email') ? 'is-valid' : 'is-invalid'" />
+                    </div>
+
+                    <div class="col-6 pt-4">
+                      <label class="form-label w-100 text-start fw-bolder text-dark fs-6 m-0">Celular*</label>
+                      <input class="form-control form-control-sm bg-transparent" type="text" maxlength="12" formControlName="celular"
+                        placeholder="Numero de teléfono"
+                        [ngClass]="validatorClass('celular') ? 'is-valid' : 'is-invalid'" />
+                    </div>
+
+                    <div class="col-6 pt-4 wrapper-input-password">
+                      <label class="form-label w-100 text-start fw-bolder text-dark fs-6 m-0">Contraseña*</label>
+                      <input #pass class="form-control form-control-sm bg-transparent" type="text" formControlName="password"
+                        placeholder="Contraseña"
+                        [ngClass]="validatorClass('password') ? 'is-valid' : 'is-invalid'"/>
+                        <button (click)="toogleP = !toogleP; toogleP ? pass.type = 'text' : pass.type = 'password' " ><i class="fa fa-eye"></i></button>
+                    </div>
+
+                    <div class="col-6 pt-4 wrapper-input-password">
+                      <label class="form-label w-100 text-start fw-bolder text-dark fs-6 m-0">Confirmar contraseña*</label>
+                      <input #passC class="form-control form-control-sm bg-transparent" type="text" formControlName="cPassword"
+                        placeholder="Contraseña"
+                        [ngClass]="validatorClass('cPassword') ? 'is-valid' : 'is-invalid'"/>
+                        <button (click)="toogleCP = !toogleCP; toogleCP ? passC.type = 'text' : passC.type = 'password' " ><i class="fa fa-eye"></i></button>
+                    </div>
+
+                    <div class="col-12 pt-4">
+                      <label class="form-label w-100 text-start fw-bolder text-dark fs-6 m-0">Cargo empresarial*</label>
+                      <select class="form-select form-select-sm" aria-label="Default select example"
+                        formControlName="cargo"
+                        (change)="changeValueSelect()"
+                        [ngClass]="validatorClass('cargo') ? 'is-valid' : 'is-invalid'">
+                        <option value="null">Colocar cargo</option>
+                        <option value="1">Analista</option>
+                        <option value="2">Soporte</option>
+                        <option value="3">Contador</option>
+                      </select>
+                    </div>
+
+                  </div>
+
+                  <div class="row pt-5">
+                    <div class="col-12 text-center mb-3 mt-3">
+                      Acepto las condiciones de uso, la politica de privacidad y la politica de cookies de Blumer.
+                    </div>
+                    <div class="col-12 text-center">
+                      <button style="background-color:#00b48f;" type="button"
+                        class="btn btn-primary me-4 btn-stepper-first">
+                        ¿Ya tienes una cuenta? Inicia sesion
+                      </button>
+
+                      <button style="background-color:#00b48f;" type="button"
+                        class="btn btn-primary btn-stepper-first"
+                        [disabled]="!registrationForm.valid"
+                        (click)="nextStep()">
+                        Aceptar y unirme
+                      </button>
+                    </div>
+                  </div>
+                </mat-step>
+
+                <mat-step>
+                  <div class="text-center">
+                    <h2 class="mt-10" >Te enviaremos un codigo de verificacion</h2>
+                    <div class="mt-5 mb-10" >
+                      Selecciona por cual medio deseas recibirlo.
+                    </div>
+                  </div>
+
+                  <app-selector-option
+                    [selectorOptionsConfig]="selectorOptionsConfig"
+                    (callbackSelectorOption)="switchTabSecondStep($event)">
+                  </app-selector-option>
+
+                  <span [ngSwitch]="selectedTabSecondStep">
+                    <div *ngSwitchCase="1">
+                      <div class="mt-5 wrapper-input-second-step">
+                        <input class="input-second-step" type="text" maxlength="12"
+                          formControlName="celular"
+                          placeholder="Numero de teléfono"
+                          [ngClass]="validatorClass('celular') ? '' : 'is-invalid-input'" />
+
+                          <button class="bt-edit-input" type="button"
+                            (click)="editBtn('celular')"
+                            *ngIf="toogleActionBtnCel">
+                            <i class="fa fa-edit"></i>
+                          </button>
+                          <button class="bt-edit-input" type="button"
+                            (click)="editBtn('celular', true)"
+                            [disabled]="!celularCtrl.valid"
+                            *ngIf="!toogleActionBtnCel">
+                            <i class="fa fa-save"></i>
+                          </button>
+                      </div>
+                    </div>
+                    <div *ngSwitchDefault>
+                      <div class="mt-5 wrapper-input-second-step">
+                        <input class="input-second-step" type="text"
+                          formControlName="email"
+                          placeholder="Email"
+                          [ngClass]="validatorClass('email') ? '' : 'is-invalid-input'" />
+
+                          <button class="bt-edit-input" type="button"
+                            (click)="editBtn('email')"
+                            *ngIf="toogleActionBtnEmail">
+                            <i class="fa fa-edit"></i>
+                          </button>
+                          <button class="bt-edit-input" type="button"
+                            (click)="editBtn('email', true)"
+                            [disabled]="!emailCtrl.valid"
+                            *ngIf="!toogleActionBtnEmail">
+                            <i class="fa fa-save"></i>
+                          </button>
+                      </div>
+                    </div>
+                  </span>
+
+                  <div class="p-0 m-0" *ngIf="true then templateBootom"></div>
+
+                  <div class="row pt-5">
+                    <div class="col-12 text-center">
+                      <button style="background-color:#00b48f;" type="button"
+                        class="btn btn-primary btn-stepper-first me-2"
+                        (click)="previousStep()">
+                        Volver
+                      </button>
+
+                      <button style="background-color:#00b48f;" type="button"
+                        class="btn btn-primary btn-stepper-first"
+                        (click)="nextStep()">
+                        Validar
+                      </button>
+                    </div>
+                  </div>
+                </mat-step>
+
+                <mat-step>
+                  <h1 class="text-dark fw-bolder mb-3 mt-5 text-center">
+                    Vamos a validar tu número de teléfono
+                  </h1>
+
+                  <div class="text-gray-500 fw-semibold fs-6 text-center mb-5">
+                    Escribe el numero que te hemos enviado a tu télefono.
+                    <div class="danger">{{errorMsj}}</div>
+                  </div>
+
+                  <app-code-validation
+                  (callBackCodeValidation)="codeValidation($event)"
+                  (callBackResendCode)="resendCode($event)">
+                  </app-code-validation>
+
+                  <div class="p-0 m-0" *ngIf="true then templateBootom"></div>
+
+                  <div class="row pt-5">
+                    <div class="col-12 text-center">
+                      <button style="background-color:#00b48f;" type="button"
+                        class="btn btn-primary btn-stepper-first me-2"
+                        (click)="previousStep()">
+                        Volver
+                      </button>
+
+                      <button style="background-color:#00b48f;" type="button"
+                        class="btn btn-primary btn-stepper-first"
+                        (click)="validateCode()">
+                        Validar
+                      </button>
+                    </div>
+                  </div>
+                </mat-step>
+              </mat-horizontal-stepper>
+            </div>
+            <div *ngSwitchCase="2">
+              <h1 class="text-dark fw-bolder mb-3 mt-5 text-center">
+                ¡Genial! Ahora personalicemos tu cuenta
+              </h1>
+
+              <div class="text-gray-500 fw-semibold fs-6 text-center mb-5">
+                Ingresa una foto de tu marca, maximo de 1 MB.
+              </div>
+
+              <div class="row p-10" >
+                <div class="col-5 wrapper-img text-end">
+                  <img src="./assets/media/logos/blumerads-logo.png" alt="logo">
+                  <button class="" title="Subir foto"><i class="fa fa-camera"></i></button>
+                </div>
+                <div class="col-7 d-flex justify-content-center flex-column">
+                  <h2>{{ fullnameCtrl.value }}</h2>
+                  <div>{{ usuarioCtrl.value }}</div>
+                </div>
+
+                <div class="col-12 pt-5 pb-5">
+                  <label class="form-label w-100 text-start fw-bolder text-dark fs-6 m-0">
+                    Escoge una categoria para tu empresa
+                  </label>
+                  <select class="form-select form-select-sm"
+                    formControlName="categoria"
+                    [ngClass]="validatorClass('categoria') ? 'is-valid' : 'is-invalid'">
+                    <option value="1">Sistema</option>
+                    <option value="2">Telecomunicaciones</option>
+                    <option value="3">Finanzas</option>
+                  </select>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button style="background-color:#00b48f;" type="button"
+                    class="btn btn-primary btn-stepper-first me-2"
+                    (click)="sendForm()">
+                    Crear cuenta
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+            <div *ngSwitchCase="3">
+              componente 3
+            </div>
+            <div *ngSwitchDefault>
+              componente 4
+            </div>
+        </span>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+<ng-template #templateBootom>
+  <div class="wrapper-text-second-step">
+    <div class="icon-style">
+      <img src="" alt="Icono" title="Icono">
+    </div>
+
+    <div class="content-second-step">
+      <div class="title-second-step">Tus datos son muy importantes para nosotros.</div>
+      Podríamos encviarte actualizaciones de las funciones de la plataforma, recordatorios,
+      sugerencias de campañas y mensajes promocionales de nuestra parte o la de nuestros aliados.
+      Recuerda que puedes cambiar las preferencias en cualquier momento.
+    </div>
+  </div>
+</ng-template>
+
+<!-- Old Code -->
+  <form class="form w-100" novalidate="novalidate" id="kt_login_signup_form" [formGroup]="registrationForm"
+  (ngSubmit)="submit()" *ngIf="false">
   <!--begin::Heading-->
   <div class="text-center mb-11">
     <!--begin::Title-->
@@ -166,7 +456,7 @@
         message: 'Confirm Password should have maximum 100 symbols',
         control: registrationForm.controls['cPassword']
       }"></ng-container>
-    <ng-container *ngIf="
+    <!-- <ng-container *ngIf="
         registrationForm.controls['cPassword'].errors &&
         registrationForm.controls['cPassword'].errors.ConfirmPassword
       ">
@@ -175,7 +465,7 @@
           'Passsword' and 'Confirm Password' didn't match.
         </div>
       </div>
-    </ng-container>
+    </ng-container> -->
   </div>
   <!--end::Form group-->
 
@@ -219,7 +509,7 @@
   </div>
   <!--end::Sign up-->
 
-</form>
+  </form>
 
 <ng-template #formError let-control="control" let-message="message" let-validation="validation">
   <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
@@ -232,3 +522,6 @@
     </div>
   </ng-container>
 </ng-template>
+<!-- Old Code -->
+
+</div>

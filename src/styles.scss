@@ -101,38 +101,6 @@ form .grupo_input  i {
     color: #00000099;
 
   }
-  .name input {
-    padding: 5px 15px 7px 15px;
-    outline: none;
-    border-radius: 10px;
-    border: 1px solid gainsboro;
-    width: 30%;
-
-}
-form .passwords input {
-  padding: 5px 32px 7px 32px;
-  outline: none;
-  border-radius: 10px;
-  border: 1px solid gainsboro;
-  margin-left: -6%;
-
-}
-
-.passwords i.left  {
-  position: absolute;
-  padding: 11px 12px;
-  pointer-events: none;
-  user-select: none;
-  cursor: pointer;
-
-}
-
-.passwords i.right  {
-  position: relative;
-  left: 15.75rem;
-  padding: 11px 15px 8px 9px;
-  cursor: pointer;
-}
 .color {
   color: red;
 }

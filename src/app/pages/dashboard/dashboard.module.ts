@@ -17,6 +17,8 @@ import { InputPasswordComponent } from 'src/app/common/components/input-password
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { OneBlockSelectorComponent } from 'src/app/common/components/one-block-selector/one-block-selector.component';
 import {MasterDetailModule} from "../../common/components/master-detail/master-detail.module";
+import { BusinessPositionComponent } from 'src/app/common/components/business-position/business-position.component';
+import { InputPhoneComponent } from 'src/app/common/components/input-phone/input-phone.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import {MasterDetailModule} from "../../common/components/master-detail/master-d
      UserComponent,
      InputEmailComponent,
      OneBlockSelectorComponent,
+     BusinessPositionComponent,
+     InputPhoneComponent,
      InputPasswordComponent],
   imports: [
     NgbModule,

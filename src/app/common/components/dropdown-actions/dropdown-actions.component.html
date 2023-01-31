@@ -1,8 +1,7 @@
 <div class="">
   <label class="form-label label-select">{{label}}</label>
   <select class="form-select" aria-label="Default select example"
-          [style]="'background-color: #f5f7f8; border: 3px solid #ffff; color: #808080'"
-  >
+    [style]="'background-color: #f5f7f8; border: 3px solid #ffff; color: #808080'">
     <ng-container *ngFor="let item of selectConfig; index as i">
       <option selected>{{item.name}}</option>
     </ng-container>

@@ -46,6 +46,7 @@ import { InfoPublicComponent } from '../info-public/info-public.component';
     NgbNavModule,
     DropdownActionsModule,
     MaterialModule,
+
   ],
 })
 export class MasterDetailModule {}

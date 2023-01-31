@@ -12,11 +12,13 @@ import { MatSelect } from '@angular/material/select';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     TagSelectorComponent,
     StepperComponent,
     TagselectorlugaresComponent,
+
     // tu componente de material
   ],
   imports: [

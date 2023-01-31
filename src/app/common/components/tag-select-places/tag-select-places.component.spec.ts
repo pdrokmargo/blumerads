@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TagselectorlugaresComponent } from './tagselectorlugares.component';
+import { TagSelectPlacesComponent } from './tag-select-places.component';
 
 describe('TagselectorlugaresComponent', () => {
-  let component: TagselectorlugaresComponent;
-  let fixture: ComponentFixture<TagselectorlugaresComponent>;
+  let component: TagSelectPlacesComponent;
+  let fixture: ComponentFixture<TagSelectPlacesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TagselectorlugaresComponent ]
+      declarations: [ TagSelectPlacesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TagselectorlugaresComponent);
+    fixture = TestBed.createComponent(TagSelectPlacesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

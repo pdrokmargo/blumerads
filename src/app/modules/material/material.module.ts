@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { StepperComponent } from 'src/app/common/components/stepper/stepper.component';
-import { TagselectorlugaresComponent } from 'src/app/common/components/tagselectorlugares/tagselectorlugares.component';
+import { TagSelectPlacesComponent } from 'src/app/common/components/tag-select-places/tag-select-places.component';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelect } from '@angular/material/select';
 import { MatSelectModule } from '@angular/material/select';
@@ -20,7 +20,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
   declarations: [
     TagSelectorComponent,
     StepperComponent,
-    TagselectorlugaresComponent,
+    TagSelectPlacesComponent,
 
     // tu componente de material
   ],
@@ -47,7 +47,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatStepperModule,
     TagSelectorComponent,
     StepperComponent,
-    MatTabsModule
+    MatTabsModule,
+    TagSelectPlacesComponent
   ]
 })
 export class MaterialModule { }

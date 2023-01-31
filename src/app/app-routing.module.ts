@@ -4,7 +4,7 @@ import { InputPhoneComponent } from './common/components/input-phone/input-phone
 import { InputFieldComponent } from './common/components/input-name/input-field.component';
 import { AuthGuard } from './modules/auth/services/auth.guard';
 import { UserComponent } from './common/components/input-user/user.component';
-import { TagselectorlugaresComponent } from './common/components/tagselectorlugares/tagselectorlugares.component';
+import { TagSelectPlacesComponent } from './common/components/tag-select-places/tag-select-places.component';
 
 export const routes: Routes = [
   {

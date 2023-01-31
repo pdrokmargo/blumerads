@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-tagselectorlugares',
-  templateUrl: './tagselectorlugares.component.html',
-  styleUrls: ['./tagselectorlugares.component.scss'],
+  selector: 'app-tag-select-places',
+  templateUrl: './tag-select-places.component.html',
+  styleUrls: ['./tag-select-places.component.scss'],
 })
-export class TagselectorlugaresComponent {
+export class TagSelectPlacesComponent {
   toppingsControl = new FormControl([]);
   toppingList: String[] = [
     'Colombia',

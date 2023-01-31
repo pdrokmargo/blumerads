@@ -22,6 +22,7 @@ const TABS_CONFIG = [
 })
 export class RegistrationComponent implements OnInit, OnDestroy {
   @ViewChild('stepper') stepperControl: MatStepper;
+  @ViewChild('stepperBonus') stepperBonusControl: MatStepper;
   registrationForm: FormGroup;
   hasError: boolean;
   isLoading$: Observable<boolean>;
@@ -29,6 +30,10 @@ export class RegistrationComponent implements OnInit, OnDestroy {
   errorMsj = '';
   toogleP = true;
   toogleCP = true;
+  selectedAnswer = 0;
+  totalPercent = 0;
+  questionList = QUESTIONS_LIST;
+  blumerCount = 0;
 
   selectorOptionsConfig: SelectorOptionsConfigI[] = [
     {
@@ -205,13 +210,22 @@ export class RegistrationComponent implements OnInit, OnDestroy {
     }
   }
 
-  nextStep(): void {
-    if (this.registrationForm.valid) {
-      this.stepperControl.next();
-      this.celularCtrl.patchValue(this.celularCtrl.value);
-      this.emailCtrl.patchValue(this.emailCtrl.value);
-      this.celularCtrl.disable();
-      this.emailCtrl.disable();
+  nextStep(stepperId: number): void {
+    switch (stepperId) {
+      case EnumTabs.CUENTA:
+        if (this.registrationForm.valid) {
+          this.stepperControl.next();
+          this.celularCtrl.patchValue(this.celularCtrl.value);
+          this.emailCtrl.patchValue(this.emailCtrl.value);
+          this.celularCtrl.disable();
+          this.emailCtrl.disable();
+        }
+        break;
+      case EnumTabs.BONUS:
+        this.stepperBonusControl.next();
+        break;
+      default:
+        break;
     }
   }
 
@@ -281,9 +295,22 @@ export class RegistrationComponent implements OnInit, OnDestroy {
     this.codeVal = 0;
   }
 
+  goBonus(): void {
+    this.selectedTab = 3;
+  }
+
   sendForm(): void {
     const DATA_FORM = this.registrationForm.getRawValue();
     console.log('SEND FORM: ', DATA_FORM);
+    this.goBonus();
+  }
+
+  sendAnswer(item: { answer: any }, index: number): void {
+    this.selectedAnswer++;
+    const PERCENT_PARTS = 100 / this.questionList.length;
+
+    this.totalPercent += PERCENT_PARTS;
+    this.blumerCount += 10;
   }
 
   ngOnDestroy() {
@@ -295,3 +322,41 @@ export class RegistrationEnum {
   public static EMAIL = 'email';
   public static CELULAR = 'celular';
 }
+
+export enum EnumTabs {
+  CUENTA  = 1,
+  BONUS
+}
+
+const QUESTIONS_LIST = [
+  {
+    idQ: 1,
+    question: 'Cuanto tiempo tiene su empresa',
+    answers: [
+      { answer: '1 año' },
+      { answer: '2 año' },
+      { answer: '3 año' },
+      { answer: '4 año' }
+    ]
+  },
+  {
+    idQ: 2,
+    question: 'Cuantos empleados tiene su empresa',
+    answers: [
+      { answer: '10' },
+      { answer: '20' },
+      { answer: '30' },
+      { answer: '40' }
+    ]
+  },
+  {
+    idQ: 3,
+    question: 'Cuanto en que ciudad esta tu empresa',
+    answers: [
+      { answer: 'Ciudad 1' },
+      { answer: 'Ciudad 2' },
+      { answer: 'Ciudad 3' },
+      { answer: 'Ciudad 4' }
+    ]
+  }
+]

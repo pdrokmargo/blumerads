@@ -16,9 +16,10 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 50px;
-  min-height: 400px;
-  max-height: 450px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  width: 100%;
 
   .wrapper-form-reg {
     min-width: 600px;
@@ -26,6 +27,10 @@
     width: 100%;
     height: 100%;
     border: 1px solid rgb(230, 230, 230);
+
+    .custom-bg-transparent {
+      background-color: #ffffff72;
+    }
 
     .btn-stepper-first {
       width: 48%;
@@ -126,5 +131,40 @@
         }
 
     }
+
+    .wrapper-img-bonus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .wrapper-progress-bar {
+      height: 10px;
+
+      .style-progress-bar {
+        color: white;
+        font-size: 10px;
+      }
+    }
+
+    .wrapper-blummer-cash {
+      background-color: #f2f2f2;
+      height: 40px;
+      width: 70px;
+      border-radius: 4px;
+    }
   }
+}
+
+.green-blumer {
+  color: #00b48f;
+}
+
+.bg-green-blumer {
+  background-color: #00b48f !important;
+}
+
+.text-color {
+  color: #7b7b7b;
 }

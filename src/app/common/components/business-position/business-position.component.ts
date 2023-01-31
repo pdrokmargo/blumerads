@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output , EventEmitter } from '@angular/core';
 export class BusinessPositionComponent implements OnInit {
   selConfig: DropDownActionI[];
   selectedOption = 1;
-  label: String = 'Cargo empresarial';
+  @Input() title: String = '';
 
 
   @Input() selectConfig: DropDownActionI[];

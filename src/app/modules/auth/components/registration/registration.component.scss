@@ -1,13 +1,170 @@
-:host {
-  width: 100%;
-  @media (min-width: 992px) {
-    .login-form {
-      width: 100%;
-      max-width: 450px;
+// :host {
+//   width: 100%;
+//   @media (min-width: 992px) {
+//     .login-form {
+//       width: 100%;
+//       max-width: 450px;
 
-      .mat-form-field {
-        width: 100%;
+//       .mat-form-field {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+.wrapper-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  width: 100%;
+
+  .wrapper-form-reg {
+    min-width: 600px;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(230, 230, 230);
+
+    .custom-bg-transparent {
+      background-color: #ffffff72;
+    }
+
+    .btn-stepper-first {
+      width: 48%;
+    }
+
+    .wrapper-input-second-step {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .input-second-step {
+        width: auto;
+        border: none;
+        outline: none;
+        text-align: end;
+        border-radius: 6px;
+        padding-right: 6px;
+
+        &:disabled {
+          background-color: transparent;
+          user-select: none;
+          border: 1px solid transparent;
+        }
+      }
+
+      .is-invalid-input {
+        border: 1px solid red;
+      }
+
+      .bt-edit-input {
+        background-color: transparent;
+        border: none;
+        margin-left: 4px;
       }
     }
+
+    .wrapper-text-second-step {
+      display: grid;
+      grid-template-columns: 60px auto;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #f6f6f6;
+      margin-top: 10px;
+
+      .icon-style {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .content-second-step {
+        font-size: 11px;
+
+        .title-second-step {
+          color: plum;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .wrapper-input-password {
+      position: relative;
+
+      button {
+        position: absolute;
+        top: 38px;
+        right: 12px;
+        border: none;
+        outline: none;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: white;
+      }
+    }
+
+    &::ng-deep mat-horizontal-stepper {
+      .mat-horizontal-stepper-header-container { display: none; }
+    }
+
+    .wrapper-img {
+      position: relative;
+
+        img {
+          width: 90px;
+          height: 80px;
+          border-radius: 50px;
+        }
+
+        button {
+          position: absolute;
+          bottom: 0;
+          right: 15px;
+          border: none;
+          outline: none;
+          background-color: transparent;
+        }
+
+    }
+
+    .wrapper-img-bonus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .wrapper-progress-bar {
+      height: 10px;
+
+      .style-progress-bar {
+        color: white;
+        font-size: 10px;
+      }
+    }
+
+    .wrapper-blummer-cash {
+      background-color: #f2f2f2;
+      height: 40px;
+      width: 70px;
+      border-radius: 4px;
+    }
   }
+}
+
+.green-blumer {
+  color: #00b48f;
+}
+
+.bg-green-blumer {
+  background-color: #00b48f !important;
+}
+
+.text-color {
+  color: #7b7b7b;
 }

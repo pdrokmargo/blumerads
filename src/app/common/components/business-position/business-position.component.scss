@@ -1,27 +1,19 @@
-.color {
-  color: red;
+input {
+  text-align: center;
 }
-.txt {
-  font-weight: 400;
-  font-size: 14;
-  font-family: 'Segoe UI';
-}
-
-.possition {
-  color: rgb(8, 8, 8);
-  position: absolute;
-  top: 25px;
-  left: 0%;
+.select {
   width: 30%;
-  padding: 5px 4px 9px 3px;
-  border-radius: 6px;
-  border: 1px solid gainsboro;
-  font-weight: 400;
-  font-size: 14;
-  font-family: 'Segoe UI';
-
 }
 
-:focus {
-  outline: 0px solid gainsboro;
+.code_validation_wrapper {
+  margin:1rem;
+  background: rgb(239, 239, 239);
+  background: linear-gradient(160deg, rgba(239, 239, 239, 1) 70%, rgba(125, 217, 212, 1) 100%);
+}
+
+.code_validation_link {
+  color: #7dd9d4;
+  &:hover{
+      cursor: pointer;
+  }
 }

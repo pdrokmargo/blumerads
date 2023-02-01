@@ -17,6 +17,7 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { DropdownActionsModule } from '../dropdown-actions/dropdown-actions.module';
 import { MaterialModule } from '../../../modules/material/material.module';
 import { InfoPublicComponent } from '../info-public/info-public.component';
+import {SelectAgesComponent} from "../select-ages/select-ages.component";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { InfoPublicComponent } from '../info-public/info-public.component';
     CategoryFeaturedComponent,
     CategoryProgressComponent,
     InfoPublicComponent,
+    SelectAgesComponent
   ],
   providers: [MasterDetailService],
   exports: [
@@ -38,6 +40,7 @@ import { InfoPublicComponent } from '../info-public/info-public.component';
     DetailViewComponent,
     CategoryFeaturedComponent,
     CategoryProgressComponent,
+    SelectAgesComponent
   ],
   imports: [
     CommonModule,

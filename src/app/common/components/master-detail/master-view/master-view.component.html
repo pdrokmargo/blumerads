@@ -119,35 +119,10 @@
               <!-- <hr class="hr hr-position"> -->
               <div>
                 <label class="form-label label-select">Lugares</label>
-                <!-- <app-tag-selector></app-tag-selector> -->
                 <app-tag-select-places></app-tag-select-places>
               </div>
               <hr class="hr hr-position">
-              <div class="align-items-center d-flex gap-16 mt-11 ng-star-inserted">
-                <label class="form-label label-select">Edades</label>
-                <div class="align-items-center d-flex flex-fill gap-3">
-                  <label class="form-label label-select">Desde</label>
-                  <select class="form-select" style="width: 16%;">
-                    <option value="18">18</option>
-                  </select>
-                  <label class="form-label label-select ms-8">Hasta</label>
-                  <select class="form-select" style="width: 16%;">
-                    <option value="25">25</option>
-                  </select>
-                </div>
-              </div>
-              <!-- <hr class="hr"> -->
-              <!--Aqui va el componente genero-->
-              <hr class="hr hr-position">
-              <div class="align-items-center d-flex gap-16 mt-11 ng-star-inserted">
-                <label class="form-label label-select">Género</label>
-                <div class="align-items-center d-flex flex-fill gap-3">
-                  <button class="color new">Todos</button>
-                  <button class="color">Hombres</button>
-                  <button class="color">Mujeres</button>
-                  <button class="color">Otro</button>
-                </div>
-              </div>
+              <app-select-ages label="Género" [from]="from" [to]="to"></app-select-ages>
               <hr class="hr">
               <!--  -->
 

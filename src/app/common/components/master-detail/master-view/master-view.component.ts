@@ -35,6 +35,9 @@ export class MasterViewComponent implements OnInit {
     }
   ]
 
+  from: string[] = ['18'];
+  to: string[] = ['25'];
+
   private viewMode$: MasterDetailService;
 
   constructor(masterDetailService: MasterDetailService) {

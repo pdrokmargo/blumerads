@@ -1,0 +1,29 @@
+.emailinput {
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid gainsboro;
+  width: 100%;
+  height: 43px;
+  padding: 9px 41px 10px 16px;
+}
+.icon {
+  color: #6f6f6f;
+    font-size: 19px;
+    position: relative;
+    left: 20.8rem;
+    top: -2.2rem;
+    cursor: pointer;
+}
+
+.left-inner-addon {
+  position: relative;
+}
+
+.left-inner-addon i {
+  position: absolute;
+  padding: 12px 300px;
+  pointer-events: none;
+  color: #6f6f6f;
+  font-size: 19px;
+  cursor: pointer;
+}

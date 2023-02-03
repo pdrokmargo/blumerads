@@ -4,16 +4,29 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MiperfilRoutingModule } from './miperfil-routing.module';
 import { MaterialModule } from 'src/app/modules/material/material.module';
-
+import { AvatarprofileComponent } from 'src/app/common/components/avatarprofile/avatarprofile.component';
+import { InputFieldComponent } from 'src/app/common/components/input-name/input-field.component';
+import { InputPasswordComponent } from 'src/app/common/components/input-password/input-password.component';
+import { BusinessPositionComponent } from 'src/app/common/components/business-position/business-position.component';
+import { UserComponent } from 'src/app/common/components/input-user/user.component';
+import { PerfilDetailComponent } from './perfil-detail/perfil-detail.component';
+import { InputEmailComponent } from 'src/app/common/components/input-email/input-email.component';
 @NgModule({
   declarations: [
-    PerfilComponent
+    PerfilComponent,
+    AvatarprofileComponent,
+    InputFieldComponent,
+    InputPasswordComponent,
+    BusinessPositionComponent,
+    UserComponent,
+    PerfilDetailComponent,
+    InputEmailComponent,
   ],
   imports: [
     CommonModule,
     MiperfilRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class MiperfilModule { }

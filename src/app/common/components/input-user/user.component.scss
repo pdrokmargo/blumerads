@@ -1,25 +1,38 @@
-.user input {
-  padding: 9px 41px 10px 35px;
-  outline: none;
-  border-radius: 8px;
+.userinput {
+  position: relative;
+  width: 42%;
+  height: 45px;
+  margin-left: 56%;
+  top: -29.1em;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 10px 30px 9px 29px;
   border: 1px solid gainsboro;
-  width: 30%;
-  height: 44px;
+}
+
+.user input:focus {
+  outline: 0px solid gainsboro;
 }
 
 .right{
   color: #6f6f6f;
   font-size: 19px;
-  position: relative;
-  left: -29px;
-  top: 3px;
-  cursor: pointer;
-}
-.left {
-  color: #6f6f6f;
-  font-size: 19px;
   position: absolute;
+  top: 11.5rem;
+  left: 67%;
   cursor: pointer;
-  left: 38px;
-  top: 32rem;
+
+}
+.user-left {
+  position: relative;
+  font-size: 19px;
+  cursor: pointer;
+  top: -31.6rem;
+  left: 58.1%;
+}
+
+.parrafo {
+  position: absolute;
+  right: 477px;
+  top: 114px;
 }

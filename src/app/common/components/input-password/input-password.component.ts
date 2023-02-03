@@ -1,23 +1,24 @@
-import { Component, OnInit , Input, EventEmitter, Output} from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input-password',
   templateUrl: './input-password.component.html',
-  styleUrls: ['./input-password.component.scss']
+  styleUrls: ['./input-password.component.scss'],
 })
 export class InputPasswordComponent implements OnInit {
+  public showPassword: boolean;
+  public showPasswordOnPress: boolean;
+  name = 'Angular';
 
   @Input() label: String = 'Contraseña';
   @Input() placeholder: String = '';
   @Input() value: any;
   @Output() valueChange = new EventEmitter<any>();
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(): void {
-    console.log(this.value)
+    console.log(this.value);
   }
 }

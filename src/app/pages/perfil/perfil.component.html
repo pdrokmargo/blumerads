@@ -1,17 +1,15 @@
-<div class="main-wrapper" >
-
+<div class="main-wrapper validation_wrapper" >
   <div class="row">
-
-    <div class="col-10">
+    <div class="col-9">
       <router-outlet></router-outlet>
     </div>
 
-    <div class="col-2 d-flex flex-column">
-      <a class="btn btn-primary-blumer btn-sm w-100"
+    <div class="align-items-center col-3 d-flex flex-column">
+      <a class="btn btn-primary-blumer btn-sm btncustom"
         [routerLink]="url.fac"
         routerLinkActive="active-button"
         role="button">Facturacion</a>
-      <a class="btn btn-primary-blumer btn-sm w-100 mt-2"
+      <a class="btn btn-primary-blumer btn-sm btncustom mt-2"
         [routerLink]="url.serv"
         routerLinkActive="active-button"
         role="button">Servicio al cliente</a>

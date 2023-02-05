@@ -16,25 +16,28 @@ import { HorizontalTabsWizardModule } from 'src/app/common/components/horizontal
 import { SelectorOptionComponent } from 'src/app/common/components/selector-option/selector-option.component';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegistrationComponent,
-    ForgotPasswordComponent,
-    LogoutComponent,
-    AuthComponent,
-    PurpleButtonComponent,
-    SelectorOptionComponent
-  ],
-  imports: [
-    CommonModule,
-    TranslationModule,
-    AuthRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MaterialModule,
-    HorizontalTabsWizardModule,
-    CodeValidationModule
-  ],
+    declarations: [
+        LoginComponent,
+        RegistrationComponent,
+        ForgotPasswordComponent,
+        LogoutComponent,
+        AuthComponent,
+        PurpleButtonComponent,
+        SelectorOptionComponent
+    ],
+    imports: [
+        CommonModule,
+        TranslationModule,
+        AuthRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MaterialModule,
+        HorizontalTabsWizardModule,
+        CodeValidationModule
+    ],
+    exports: [
+        PurpleButtonComponent
+    ]
 })
 export class AuthModule {}

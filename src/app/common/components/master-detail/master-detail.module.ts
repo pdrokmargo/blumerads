@@ -18,6 +18,8 @@ import { DropdownActionsModule } from '../dropdown-actions/dropdown-actions.modu
 import { MaterialModule } from '../../../modules/material/material.module';
 import { InfoPublicComponent } from '../info-public/info-public.component';
 import {SelectAgesComponent} from "../select-ages/select-ages.component";
+import {GenderRadiosComponent} from "../gender-radios/gender-radios.component";
+import {SaveButtonComponent} from "../save-button/save-button.component";
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import {SelectAgesComponent} from "../select-ages/select-ages.component";
     CategoryFeaturedComponent,
     CategoryProgressComponent,
     InfoPublicComponent,
-    SelectAgesComponent
+    SelectAgesComponent,
+    GenderRadiosComponent,
+    SaveButtonComponent
   ],
   providers: [MasterDetailService],
   exports: [
@@ -40,7 +44,9 @@ import {SelectAgesComponent} from "../select-ages/select-ages.component";
     DetailViewComponent,
     CategoryFeaturedComponent,
     CategoryProgressComponent,
-    SelectAgesComponent
+    SelectAgesComponent,
+    GenderRadiosComponent,
+    SaveButtonComponent
   ],
   imports: [
     CommonModule,

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PreviewAdBoxComponent } from './preview-ad-box.component';
+import { PrevieAdBoxComponent } from './preview-ad-box.component';
 
 describe('PreviewAdBoxComponent', () => {
-  let component: PreviewAdBoxComponent;
-  let fixture: ComponentFixture<PreviewAdBoxComponent>;
+  let component: PrevieAdBoxComponent;
+  let fixture: ComponentFixture<PrevieAdBoxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PreviewAdBoxComponent ]
+      declarations: [ PrevieAdBoxComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PreviewAdBoxComponent);
+    fixture = TestBed.createComponent(PrevieAdBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

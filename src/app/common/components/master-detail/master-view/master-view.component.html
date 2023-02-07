@@ -115,11 +115,12 @@
                 <app-dropdown-actions [selectConfig]="dropDownList"
                   label="Coloca el público existente"></app-dropdown-actions>
               </div>
+              
               <!-- componete lugares -->
               <hr class="hr">
               <div class="container-lugar">
                 <label class="form-label label-select">Lugares</label> 
-                <app-tag-select-places></app-tag-select-places>          
+                <app-tag-select-places style="width: 100%"></app-tag-select-places>          
               </div>
               <hr class="hr">
               
@@ -128,11 +129,11 @@
                 <label class="form-label label-select">Edades</label>
                 <div class="align-items-center d-flex flex-fill gap-3">
                   <label class="form-label label-select">Desde</label>
-                  <select class="form-select" style="width: 16%;">
+                  <select class="form-select containerselect">
                     <option value="18">18</option>
                   </select>
                   <label class="form-label label-select ms-8">Hasta</label>
-                  <select class="form-select" style="width: 16%;">
+                  <select class="form-select containerselect">
                     <option
                      value="25">25</option>
                   </select>

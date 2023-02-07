@@ -75,6 +75,13 @@
   justify-content: flex-start;
   align-items: start;
   gap: 6px;
+  .mat-form-field-wrapper{
+    margin-left: auto;
+  }
+}
+.containerselect
+{
+  width: max-content;
 }
 .container-radio{
   display: flex;

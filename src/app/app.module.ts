@@ -22,6 +22,7 @@ import { TranslatorMatPaginatorInt } from './modules/material/translator-mat-pag
 import { MatPaginatorIntl } from '@angular/material/paginator';
 
 
+
 // #fake-end#
 
 function appInitializer(authService: AuthService) {
@@ -34,41 +35,44 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    TranslateModule.forRoot(),
-    HttpClientModule,
-    ClipboardModule,
-    MatSlideToggleModule,
-    MatSelectModule,
-    FormsModule,
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        TranslateModule.forRoot(),
+        HttpClientModule,
+        ClipboardModule,
+        MatSlideToggleModule,
+        MatSelectModule,
+        FormsModule,
 
-    // #fake-start#
-    environment.isMockEnabled
-      ? HttpClientInMemoryWebApiModule.forRoot(FakeAPIService, {
-          passThruUnknownUrl: true,
-          dataEncapsulation: false,
-        })
-      : [],
-    // #fake-end#
-    AppRoutingModule,
-    InlineSVGModule.forRoot(),
-    NgbModule,
-  ],
-  providers: [
-    {
-      provide: MatPaginatorIntl,
-      useClass: TranslatorMatPaginatorInt
-    },
-    {
-      provide: APP_INITIALIZER,
-      useFactory: appInitializer,
-      multi: true,
-      deps: [AuthService],
-    },
-  ],
-  bootstrap: [AppComponent],
+        // #fake-start#
+        environment.isMockEnabled
+            ? HttpClientInMemoryWebApiModule.forRoot(FakeAPIService, {
+                passThruUnknownUrl: true,
+                dataEncapsulation: false,
+            })
+            : [],
+        // #fake-end#
+        AppRoutingModule,
+        InlineSVGModule.forRoot(),
+        NgbModule,
+    ],
+    providers: [
+        {
+            provide: MatPaginatorIntl,
+            useClass: TranslatorMatPaginatorInt
+        },
+        {
+            provide: APP_INITIALIZER,
+            useFactory: appInitializer,
+            multi: true,
+            deps: [AuthService],
+        },
+    ],
+    bootstrap: [AppComponent],
+    exports: [
+
+    ]
 })
 export class AppModule {}

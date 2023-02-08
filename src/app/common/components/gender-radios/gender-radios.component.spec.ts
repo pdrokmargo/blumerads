@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrevieAdBoxComponent } from './preview-ad-box.component';
+import { GenderRadiosComponent } from './gender-radios.component';
 
-describe('PreviewAdBoxComponent', () => {
-  let component: PrevieAdBoxComponent;
-  let fixture: ComponentFixture<PrevieAdBoxComponent>;
+describe('GenderRadiosComponent', () => {
+  let component: GenderRadiosComponent;
+  let fixture: ComponentFixture<GenderRadiosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrevieAdBoxComponent ]
+      declarations: [ GenderRadiosComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrevieAdBoxComponent);
+    fixture = TestBed.createComponent(GenderRadiosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

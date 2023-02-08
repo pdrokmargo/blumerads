@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrevieAdBoxComponent } from './preview-ad-box.component';
+import { SelectAgesComponent } from './select-ages.component';
 
-describe('PreviewAdBoxComponent', () => {
-  let component: PrevieAdBoxComponent;
-  let fixture: ComponentFixture<PrevieAdBoxComponent>;
+describe('SelectAgesComponent', () => {
+  let component: SelectAgesComponent;
+  let fixture: ComponentFixture<SelectAgesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrevieAdBoxComponent ]
+      declarations: [ SelectAgesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrevieAdBoxComponent);
+    fixture = TestBed.createComponent(SelectAgesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

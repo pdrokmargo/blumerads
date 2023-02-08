@@ -8,7 +8,7 @@
     <label class="btn btn-secondary"
       [for]="item.id"
       [style.color]="item.colorIcon"
-      [style.background-color]="item?.backgroundColor ?? 'transparent'"
+      [style.background-color]="item?.backgroundColor ?? ''"
       [style.width]="item?.widthCell ?? '200px' ">
         <i [style.color]="item.colorIcon" [class]="item.iconName"></i>{{item.title}}</label>
   </span>

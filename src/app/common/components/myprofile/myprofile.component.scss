@@ -1,0 +1,59 @@
+.espacio{
+  margin: 5px;
+}
+
+.rew {
+height: 600px;
+}
+
+.color {
+  position: relative;
+    background-color: #cdd1d3;
+    width: 40%;
+    height: 47px;
+    color: #ffffff;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    top: -19.1rem;
+    left: 56%;
+
+}
+.color:focus {
+    outline: 0px solid gainsboro;
+}
+.btn {
+  color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    font-family: "Segoe UI";
+    position: relative;
+    background-color: #00b48f;
+    width: 26%;
+    height: 52px;
+    left: 29%;
+    top: -5rem;
+}
+
+.icon-left {
+  position: relative;
+  top: -19.1rem;
+  left: 22%;
+  color: white;
+}
+
+.btn-div {
+    width: 90%;
+    height: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    color: #6c6c6c;
+    font-size: 11px;
+    font-weight: 600;
+}
+.h3 {
+   color: #747579;
+}
+.p {
+    color:  #747579;;
+   }
+

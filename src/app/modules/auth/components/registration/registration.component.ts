@@ -10,9 +10,9 @@ import { MatStepper } from '@angular/material/stepper';
 import { SelectorOptionsConfigI } from 'src/app/common/components/selector-option/selector-option.component';
 
 const TABS_CONFIG = [
-  { widthCell: '33%', title: 'Cuenta', iconName: 'fa fa-sack-dollar', colorIcon: '#fff', disabled: true },
-  { widthCell: '33%', title: 'Empresa', iconName: 'fa fa-business-time', colorIcon: '#fff', disabled: true },
-  { widthCell: '34%', title: 'Bono', iconName: 'fa fa-money-check', colorIcon: '#fff', disabled: true }
+  { widthCell: '33%', title: 'Cuenta', iconName: 'fa-regular fa-heart', colorIcon: '#fff', disabled: true },
+  { widthCell: '33%', title: 'Empresa', iconName: 'fa-solid fa-user-group', colorIcon: '#fff', disabled: true },
+  { widthCell: '34%', title: 'Bono', iconName: 'fa-solid fa-star', colorIcon: '#fff', disabled: true }
 ]
 
 @Component({
@@ -21,6 +21,12 @@ const TABS_CONFIG = [
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent implements OnInit, OnDestroy {
+
+  public showPassword: boolean;
+  public showPasswordOnPress: boolean;
+  name = 'Angular';
+
+
   @ViewChild('stepper') stepperControl: MatStepper;
   @ViewChild('stepperBonus') stepperBonusControl: MatStepper;
   registrationForm: FormGroup;

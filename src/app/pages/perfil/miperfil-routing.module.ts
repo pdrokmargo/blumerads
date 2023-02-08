@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PerfilComponent } from './perfil.component';
+import { PerfilDetailComponent } from './perfil-detail/perfil-detail.component';
 
 const routes: Routes = [
   {
     path: '',
     component: PerfilComponent,
     children: [
+      { path: "detail",
+      component: PerfilDetailComponent
+      },
       {
         path: 'facturacion',
         loadChildren: async() => (await import('../facturacion/facturacion.module')).FacturacionModule

@@ -56,6 +56,7 @@ import {SaveButtonComponent} from "../save-button/save-button.component";
     DropdownActionsModule,
     MaterialModule,
 
+
   ],
 })
 export class MasterDetailModule {}

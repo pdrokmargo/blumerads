@@ -6,9 +6,9 @@
 tabsConfig = TABS_CONFIG;
 
 const TABS_CONFIG = [
-  { widthCell: '150px', title: 'Cuenta', iconName: 'fa fa-sack-dollar', colorIcon: '#fff', disabled: false },
-  { widthCell: '50%', title: 'Empresa', iconName: 'fa fa-business-time', colorIcon: '#fff', disabled: false },
-  { widthCell: '120px', title: 'Bono', iconName: 'fa fa-money-check', colorIcon: '#fff', disabled: false },
+  { widthCell: '150px', title: 'Cuenta', iconName: 'fa-regular fa-heart', colorIcon: '#fff', disabled: false },
+  { widthCell: '50%', title: 'Empresa', iconName: 'fa-regular fa-user-group', colorIcon: '#fff', disabled: false },
+  { widthCell: '120px', title: 'Bono', iconName: 'fa-solid fa-star-sharp', colorIcon: '#fff', disabled: false },
   { widthCell: '110px', title: 'Disabled', iconName: 'fa fa-lock', colorIcon: '#fff', disabled: true }
 ]
 

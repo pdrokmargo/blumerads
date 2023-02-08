@@ -2,6 +2,20 @@
   width: calc(100vw - 60px);
 
   .active-button {
-    background-color: #00b48f;
+    background-color:rgba(239, 239, 239, 1);
   }
 }
+
+.col-sm-2 {
+  height: 85rem;
+}
+
+.btncustom {
+  width: 61%;
+  margin-right: 1rem;
+  background: rgba(239, 239, 239, 1);
+  color: #747579;
+  border: 1px solid #ffff ;
+}
+
+

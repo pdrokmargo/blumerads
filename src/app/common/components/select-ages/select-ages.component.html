@@ -1,0 +1,13 @@
+<div class="align-items-center d-flex gap-16 mt-11 ng-star-inserted">
+  <label class="form-label label-select">Edades</label>
+  <div class="align-items-center d-flex flex-fill gap-3">
+    <label class="form-label label-select">Desde</label>
+    <select class="form-select" style="width: 16%;">
+      <option *ngFor="let item of from" value="{{item}}">{{item}}</option>
+    </select>
+    <label class="form-label label-select ms-8">Hasta</label>
+    <select class="form-select" style="width: 16%;">
+      <option *ngFor="let item of to" value="{{item}}">{{item}}</option>
+    </select>
+  </div>
+</div>

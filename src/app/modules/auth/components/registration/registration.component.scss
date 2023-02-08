@@ -19,9 +19,10 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 50px;
-  min-height: 400px;
-  max-height: 450px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  width: 100%;
 
   .wrapper-form-reg {
     min-width: 600px;
@@ -30,6 +31,10 @@
     height: 100%;
     border: 6px solid rgb(230, 230, 230);
     border-radius: 13px;
+
+    .custom-bg-transparent {
+      background-color: #ffffff72;
+    }
 
     .btn-stepper-first {
       width: 48%;
@@ -130,10 +135,31 @@
         }
 
     }
+
+    .wrapper-img-bonus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .wrapper-progress-bar {
+      height: 10px;
+
+      .style-progress-bar {
+        color: white;
+        font-size: 10px;
+      }
+    }
+
+    .wrapper-blummer-cash {
+      background-color: #f2f2f2;
+      height: 40px;
+      width: 70px;
+      border-radius: 4px;
+    }
   }
 }
-
-
 
 .custom {
   background: rgb(255,255,255);

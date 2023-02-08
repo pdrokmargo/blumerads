@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrevieAdBoxComponent } from './previe-ad-box.component';
+import { SaveButtonComponent } from './save-button.component';
 
-describe('PrevieAdBoxComponent', () => {
-  let component: PrevieAdBoxComponent;
-  let fixture: ComponentFixture<PrevieAdBoxComponent>;
+describe('SaveButtonComponent', () => {
+  let component: SaveButtonComponent;
+  let fixture: ComponentFixture<SaveButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrevieAdBoxComponent ]
+      declarations: [ SaveButtonComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrevieAdBoxComponent);
+    fixture = TestBed.createComponent(SaveButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

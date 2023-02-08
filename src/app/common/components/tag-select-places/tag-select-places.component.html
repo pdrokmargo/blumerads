@@ -1,15 +1,17 @@
-<mat-form-field>
-  <mat-select [formControl]="toppingsControl" multiple>
-    <mat-select-trigger>
-      <mat-chip-list>
-        <mat-chip *ngFor="let topping of toppingsControl.value"
-          [removable]="true" (removed)="onToppingRemoved(topping)">
-          {{ topping }}
-          <mat-icon matChipRemove>cancel</mat-icon>
-        </mat-chip>
-      </mat-chip-list>
-    </mat-select-trigger>
-    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-  </mat-select>
-</mat-form-field>
-
+<div class="content">
+  <mat-label>Lugares</mat-label>
+  <mat-form-field>
+    <mat-select [formControl]="toppingsControl" multiple>
+      <mat-select-trigger>
+        <mat-chip-list>
+          <mat-chip *ngFor="let topping of toppingsControl.value"
+            [removable]="true" (removed)="onToppingRemoved(topping)">
+            {{ topping }}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-select-trigger>
+      <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

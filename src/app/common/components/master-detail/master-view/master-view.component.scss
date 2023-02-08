@@ -20,7 +20,7 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background-color: #F5F7F8;
   color: gray;
   border: none;
@@ -31,6 +31,7 @@
   background-color: #FFFFFF;
   color: #5cd1ca;
   font-weight: 600;
+  gap: 6px;
 }
 
 .hr{
@@ -58,6 +59,7 @@
 .color:focus {
     outline: 0px solid gainsboro;
 }
+
 .boton {
   background-color: #d0d6d6;
   width: 84%;
@@ -68,3 +70,59 @@
   font-family: "Segoe UI";
 }
 
+.container-lugar{ 
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 6px;
+  .mat-form-field-wrapper{
+    margin-left: auto;
+  }
+}
+.containerselect
+{
+  width: max-content;
+}
+.container-radio{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+
+  input{
+    position: absolute;
+    left: -9999999999px;
+    
+  }
+  .contenedor-radio-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+  }
+
+label:first-child{
+  margin-right: 60px;
+}
+
+  div> label{
+
+    border: 1px solid pink;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 4px 16px;
+    cursor:pointer;
+
+  }
+
+  input[type="radio"]:checked + label {
+  
+    background-color: #7dd9d3;
+      color: #fff;
+  }
+  input[type="radio"] + label {
+  
+    background-color: #dadada;
+      color: #000;
+  }
+}

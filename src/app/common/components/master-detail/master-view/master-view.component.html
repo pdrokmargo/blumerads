@@ -114,14 +114,56 @@
               <div class="mt-3">
                 <app-dropdown-actions [selectConfig]="dropDownList"
                   label="Coloca el público existente"></app-dropdown-actions>
+              </div>            
+              <!-- componete lugares -->
+              <hr class="hr">
+              <div class="container-lugar">
+                <label class="form-label label-select">Lugares</label> 
+                <app-tag-select-places style="width: 100%"></app-tag-select-places>          
               </div>
               <hr class="hr">
-              <app-tag-select-places></app-tag-select-places>
-              <hr class="hr hr-position">
-              <app-select-ages label="Género" [from]="from" [to]="to"></app-select-ages>
+              
+
+              <div class="align-items-center d-flex gap-16 mt-11 ng-star-inserted">
+                <label class="form-label label-select">Edades</label>
+                <div class="align-items-center d-flex flex-fill gap-3">
+                  <label class="form-label label-select">Desde</label>
+                  <select class="form-select containerselect">
+                    <option value="18">18</option>
+                  </select>
+                  <label class="form-label label-select ms-8">Hasta</label>
+                  <select class="form-select containerselect">
+                    <option
+                     value="25">25</option>
+                  </select>
+                </div>
+              </div>
+           
+
               <hr class="hr">
-              <app-gender-radios></app-gender-radios>
-              <hr class="hr">
+               
+              <!--Aqui va el componente genero-->
+              
+       <div class="container-radio">
+        <label class="form-label label-select">Genero</label>
+        <div class="contenedor-radio-item">
+
+          <div class="Todos">
+            <input name="GRUPO" type="radio" id="radio1">
+            <label for="radio1">Todos</label>
+            </div>
+            <div class="Hombre">  
+              <input name="GRUPO" type="radio" id="radio2"><label for="radio2">Hombre</label>
+            </div> 
+            <div class="Mujer">  
+              <input name="GRUPO" type="radio" id="radio3"><label for="radio3">Mujer </label>
+            </div> 
+            <div class="Otros">
+              <input name="GRUPO" type="radio" id="radio4"><label for="radio4">Otros</label>
+            </div>
+            </div>
+        </div>
+        <hr class="hr">
               <div class="mt-3 mb-5">
                 <app-tag-selector></app-tag-selector>
               </div>

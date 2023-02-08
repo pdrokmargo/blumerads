@@ -126,7 +126,7 @@
 
   <!--begin::Action-->
   <div class="d-grid mb-10">
-    <button type="submit" id="kt_sign_in_submit" class="btn btn-secondary" [disabled]="loginForm.invalid">
+    <button [routerLink]="'/auth/registration'" type="submit" id="kt_sign_in_submit" class="btn btn-secondary" [disabled]="loginForm.invalid">
       <ng-container *ngIf="isLoading$ | async">
         <span class="indicator-progress" [style.display]="'block'">
           Please wait...

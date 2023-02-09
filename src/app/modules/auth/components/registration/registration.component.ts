@@ -331,7 +331,7 @@ export class RegistrationEnum {
 
 export enum EnumTabs {
   CUENTA  = 1,
-  BONUS = 2
+  BONUS
 }
 
 const QUESTIONS_LIST = [

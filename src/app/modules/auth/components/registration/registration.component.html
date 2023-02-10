@@ -27,16 +27,26 @@
                     <div class="row">
                       <div class="col-6 pt-4">
                         <label class="form-label size">Nombre y apellido completo</label>
-                        <input class="form-control form-control-sm" type="text" formControlName="fullname"
+                        <input
+                        class="form-control form-control-sm"
+                        type="text"
+                        [formControl]="fullname"
+                        formControlName="fullname"
                           placeholder="Nombre completo"
-                          [ngClass]="validatorClass('fullname') ? '' : ''" />
+                          [class.is-invalid]="fullname.invalid && (fullname.dirty || fullname.touched)">
+                <div *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)" class="invalid-feedback">
+                          <!-- [ngClass]="validatorClass('fullname') ? '' : ''" /> -->
+                          <div *ngIf="fullname.errors?.['required']">
+                            This field is required.
+                          </div>
+                          </div>
                       </div>
 
                       <div class="col-6 pt-4">
                         <label class="form-label size">Coloca tu usuario de Blumer</label>
                         <input class="form-control form-control-sm user" type="text" formControlName="usuario"
                           placeholder="Usuario de Blumer"
-                          [ngClass]="validatorClass('usuario') ? '' : ''" />
+                          [ngClass]="validatorClass('usuario') ? '' : '' " />
                           <button class="btnicon" ><i class="fa-solid fa-at"style="font-size: 17px; color: #6e6b6b;" ></i></button>
 
                       </div>
@@ -45,21 +55,22 @@
                         <label class="form-label size">Correo corporativo</label>
                         <input class="form-control form-control-sm" type="email" formControlName="email"
                           placeholder="Ingresa tu correo electrónico"
-                          [ngClass]="validatorClass('email') ? '' : ''" />
+                          [ngClass]="validatorClass('email') ? '' : '' " />
+
                       </div>
 
                       <div class="col-6 pt-4">
                         <label class="form-label size">Celular</label>
-                        <input class="form-control form-control-sm " type="text" maxlength="12" formControlName="celular"
+                        <input class="form-control form-control-sm " type="tel" maxlength="12" formControlName="celular"
                           placeholder="Numero de teléfono"
-                          [ngClass]="validatorClass('celular') ? '' : ''" />
+                          [ngClass]="validatorClass('celular') ? '' : '' "  />
                       </div>
 
                       <div class="col-6 pt-4 ">
                         <label class="form-label w-100 size">Contraseña</label>
                         <input #pass class="form-control form-control-sm user" [type]="showPassword ? 'text' : 'password'" formControlName="password"
                           placeholder="Contraseña" id="password-field"
-                          [ngClass]="validatorClass('password') ? '' : ''"/>
+                          [ngClass]="validatorClass('password') ? '' : '' "  />
                           <button class="btnicon" ><i class="fa-solid fa-lock"style="font-size: 15px; color: #6e6b6b;" ></i></button>
                           <button class="iconbtn">
                             <i alt="show"
@@ -77,7 +88,7 @@
                         <label class="form-label w-100 size">Confirmar contraseña</label>
                         <input #passC class="form-control form-control-sm user" [type]="showPassword ? 'text' : 'password'"  formControlName="cPassword"
                           placeholder="Contraseña"
-                          [ngClass]="validatorClass('password') ? '' : ''"/>
+                          [ngClass]="validatorClass('password') ?'' : '' " />
                           <button class="btnicon" ><i class="fa-solid fa-lock"style="font-size: 15px; color: #6e6b6b;" ></i></button>
                           <button class="iconbtn">
                             <i alt="show"
@@ -97,13 +108,16 @@
                         <select class="form-select form-select-sm" aria-label="Default select example"
                           formControlName="cargo"
                           (change)="changeValueSelect()"
-                          [ngClass]="validatorClass('cargo') ? '' : ''">
+                          [ngClass]="validatorClass('cargo') ? '' : '' ">
                           <option value="null">Colocar cargo</option>
                           <option value="1">Financiero</option>
                           <option value="2">Comercial</option>
                           <option value="3">Marketing</option>
                           <option value="4">Otro</option>
                         </select>
+                      </div>
+                      <div>
+                        <label style="color: red;">Debes completar todos los cambios solicitados.</label>
                       </div>
                     </div>
                     <div class="row pt-5">

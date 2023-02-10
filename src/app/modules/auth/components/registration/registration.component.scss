@@ -12,6 +12,8 @@
 //   }
 // }
 
+
+
 .text {
   color: #646469;
 }
@@ -29,8 +31,8 @@
     max-width: 800px;
     width: 100%;
     height: 100%;
-    border: 6px solid rgb(230, 230, 230);
     border-radius: 13px;
+    background-color: transparent !important;
 
     .custom-bg-transparent {
       background-color: #ffffff72;
@@ -162,19 +164,17 @@
 }
 
 .custom {
-  background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(224,230,229,1) 52%, rgba(203,255,254,1) 100%);
+  background: rgb(246,246,246);
+  background: linear-gradient(180deg, rgba(246,246,246,1) 0%, rgba(236,252,255,1) 100%);
 }
 ::ng-deep .mat-horizontal-content-container {
-  background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(224,230,229,1) 52%, rgba(203,255,254,1) 100%);
+  background: rgb(246,246,246);
+  background: linear-gradient(180deg, rgba(246,246,246,1) 0%, rgba(236,252,255,1) 100%);
 }
 .newbtn {
   font-size: 13px;
 }
-.form-control {
-border: 0px solid #ffff;
-}
+
 .class {
   top: 43px;
 }
@@ -191,13 +191,15 @@ border: 0px solid #ffff;
 .btnicon {
   position: relative;
   top: -2.1rem;
-  background-color: white;
+  background-color: transparent !important;
+  background: transparent !important;
   border: 0px solid #ffff;
 }
 
 .iconbtn {
   position: relative;
-  background: #fff;
+  background: transparent !important;
+  background-color: transparent !important;
   border: 0px;
   top: -2.2rem;
   left: 80%;
@@ -220,4 +222,26 @@ border: 0px solid #ffff;
 
 .rubri{
   padding-top: 4.25rem !important;
+}
+
+
+::ng-deep .was-validated, .form-control:invalid, .form-control.is-invalid {
+  border-color: red;
+  background-image: none;
+}
+::ng-deep .was-validated, .form-control:invalid, .form-control.is-valid {
+  background-image: none;
+  border-color: transparent !important;
+}
+
+.form-select.is-invalid {
+  background-image: none;
+}
+
+.was-validated .form-select:valid, .form-select.is-valid {
+  border-color: transparent !important;
+}
+
+.form-select.is-valid, .form-select.is-valid, .was-validated .form-select:valid, .was-validated .form-select:valid {
+  background-image: none;
 }

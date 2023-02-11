@@ -36,8 +36,9 @@ import { SelectorOptionComponent } from 'src/app/common/components/selector-opti
         HorizontalTabsWizardModule,
         CodeValidationModule
     ],
-    exports: [
-        PurpleButtonComponent
-    ]
+  exports: [
+    PurpleButtonComponent,
+    SelectorOptionComponent
+  ]
 })
 export class AuthModule {}

@@ -38,7 +38,6 @@ import {ButtonGreenComponent} from "../button-green/button-green.component";
     SelectAgesComponent,
     GenderRadiosComponent,
     SaveButtonComponent,
-    InputFieldComponent,
     CardInfoComponent,
     ButtonGreenComponent
   ],
@@ -52,7 +51,6 @@ import {ButtonGreenComponent} from "../button-green/button-green.component";
     SelectAgesComponent,
     GenderRadiosComponent,
     SaveButtonComponent,
-    InputFieldComponent,
     CardInfoComponent,
     ButtonGreenComponent
   ],

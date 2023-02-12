@@ -38,7 +38,7 @@ import { MasterDetailModule } from '../../common/components/master-detail/master
     CardsModule,
     NgApexchartsModule,
     CodeValidationModule,
-    MasterDetailModule,
+
   ],
 })
 export class DashboardModule {}

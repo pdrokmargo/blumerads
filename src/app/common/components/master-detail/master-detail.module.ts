@@ -22,6 +22,7 @@ import {GenderRadiosComponent} from "../gender-radios/gender-radios.component";
 import {SaveButtonComponent} from "../save-button/save-button.component";
 import { InputFieldComponent } from 'src/app/common/components/input-name/input-field.component';
 import {CardInfoComponent} from "../card-info/card-info.component";
+import {ButtonGreenComponent} from "../button-green/button-green.component";
 @NgModule({
   declarations: [
     MasterDetailComponent,
@@ -38,7 +39,8 @@ import {CardInfoComponent} from "../card-info/card-info.component";
     GenderRadiosComponent,
     SaveButtonComponent,
     InputFieldComponent,
-    CardInfoComponent
+    CardInfoComponent,
+    ButtonGreenComponent
   ],
   providers: [MasterDetailService],
   exports: [
@@ -51,7 +53,8 @@ import {CardInfoComponent} from "../card-info/card-info.component";
     GenderRadiosComponent,
     SaveButtonComponent,
     InputFieldComponent,
-    CardInfoComponent
+    CardInfoComponent,
+    ButtonGreenComponent
   ],
   imports: [
     CommonModule,

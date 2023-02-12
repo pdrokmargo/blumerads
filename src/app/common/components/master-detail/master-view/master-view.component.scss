@@ -20,7 +20,7 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background-color: #F5F7F8;
   color: gray;
   border: none;
@@ -31,6 +31,7 @@
   background-color: #FFFFFF;
   color: #5cd1ca;
   font-weight: 600;
+  gap: 6px;
 }
 
 .hr{
@@ -69,7 +70,19 @@
   font-family: "Segoe UI";
 }
 
-
+.container-lugar{ 
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 6px;
+  .mat-form-field-wrapper{
+    margin-left: auto;
+  }
+}
+.containerselect
+{
+  width: max-content;
+}
 .container-radio{
   display: flex;
   justify-content: flex-start;

@@ -1,5 +1,5 @@
 <!--begin::Form-->
-<form class="form w-100" [formGroup]="loginForm" novalidate="novalidate" id="kt_login_signin_form"
+<form class="form w-50" [formGroup]="loginForm" novalidate="novalidate" id="kt_login_signin_form"
   (ngSubmit)="submit()">
   <!--begin::Heading-->
   <div class="text-center mb-11">
@@ -126,7 +126,7 @@
 
   <!--begin::Action-->
   <div class="d-grid mb-10">
-    <button type="submit" id="kt_sign_in_submit" class="btn btn-secondary" [disabled]="loginForm.invalid">
+    <button [routerLink]="'/auth/registration'" type="submit" id="kt_sign_in_submit" class="btn btn-secondary" [disabled]="loginForm.invalid">
       <ng-container *ngIf="isLoading$ | async">
         <span class="indicator-progress" [style.display]="'block'">
           Please wait...

@@ -63,10 +63,7 @@ $blumerads-theme: mat.define-light-theme((
     width: 140%;
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-}
+
 
 form {
     width: 50%;
@@ -121,5 +118,18 @@ form .email i.rightt  {
   --green-blummer: #00b48f;
   --violet-blummer: #8364e2;;
 }
+
+}
+.container-lugar{ 
+  
+  .mat-form-field-wrapper{
+    margin-left: auto;
+  }
+}
+
+.example-chip-list{
+  .mat-form-field-wrapper{
+    margin-left: auto;
+  }
 
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrevieAdBoxComponent } from './previe-ad-box.component';
+import { AvatarprofileComponent } from './avatarprofile.component';
 
-describe('PrevieAdBoxComponent', () => {
-  let component: PrevieAdBoxComponent;
-  let fixture: ComponentFixture<PrevieAdBoxComponent>;
+describe('AvatarprofileComponent', () => {
+  let component: AvatarprofileComponent;
+  let fixture: ComponentFixture<AvatarprofileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrevieAdBoxComponent ]
+      declarations: [ AvatarprofileComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrevieAdBoxComponent);
+    fixture = TestBed.createComponent(AvatarprofileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

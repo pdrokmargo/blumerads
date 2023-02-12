@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrevieAdBoxComponent } from './preview-ad-box.component';
+import { PerfilDetailComponent } from './perfil-detail.component';
 
-describe('PreviewAdBoxComponent', () => {
-  let component: PrevieAdBoxComponent;
-  let fixture: ComponentFixture<PrevieAdBoxComponent>;
+describe('PerfilDetailComponent', () => {
+  let component: PerfilDetailComponent;
+  let fixture: ComponentFixture<PerfilDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrevieAdBoxComponent ]
+      declarations: [ PerfilDetailComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrevieAdBoxComponent);
+    fixture = TestBed.createComponent(PerfilDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,14 +1,16 @@
 .dashboard-general {
-    background-color: #f5f7f8;
+    background-color: #fff;
 
     .blumer-tab {
 
       .blumer-content-tab {
         background-color: #efefef;
-        border-color: #e8e8e8;
+        border-color: #ffff;
         color: gray;
         text-align: center;
         transition: background-color 700ms ease;
+        margin: 1px;
+        height: 40px;
 
         &:active {
             background-color: #7dd9d4;
@@ -19,7 +21,7 @@
 }
 
 .selected-tab-style {
-    background-color: #7dd9d4 !important;
+    background-color: #dfbaff !important;
     color: white !important;
 }
 

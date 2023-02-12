@@ -17,6 +17,7 @@ export interface PeriodicElement {
 })
 export class FacturacionComponent implements OnInit, AfterViewInit {
 
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   displayedColumns: string[] = [

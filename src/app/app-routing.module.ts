@@ -5,6 +5,7 @@ import { InputFieldComponent } from './common/components/input-name/input-field.
 import { AuthGuard } from './modules/auth/services/auth.guard';
 import { UserComponent } from './common/components/input-user/user.component';
 import { TagSelectPlacesComponent } from './common/components/tag-select-places/tag-select-places.component';
+import { MyprofileComponent } from './common/components/myprofile/myprofile.component';
 
 export const routes: Routes = [
   {

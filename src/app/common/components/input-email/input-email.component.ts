@@ -7,8 +7,8 @@ import { Component, OnInit , Input, EventEmitter, Output} from '@angular/core';
 })
 export class InputEmailComponent implements OnInit {
 
-  @Input() label: String = 'Label';
-  @Input() placeholder: String = 'Placeholder';
+  @Input() label: String = 'Correo corporativo';
+  @Input() placeholder: String = 'car@gmail.com';
   @Input() value: any;
   @Output() valueChange = new EventEmitter<any>();
 

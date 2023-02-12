@@ -64,6 +64,7 @@ import {ButtonGreenComponent} from "../button-green/button-green.component";
     DropdownActionsModule,
     MaterialModule,
 
+
   ],
 })
 export class MasterDetailModule {}

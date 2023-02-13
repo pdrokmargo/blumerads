@@ -20,7 +20,12 @@ import { InfoPublicComponent } from '../info-public/info-public.component';
 import {SelectAgesComponent} from "../select-ages/select-ages.component";
 import {GenderRadiosComponent} from "../gender-radios/gender-radios.component";
 import {SaveButtonComponent} from "../save-button/save-button.component";
-
+import { InputFieldComponent } from 'src/app/common/components/input-name/input-field.component';
+import {CardInfoComponent} from "../card-info/card-info.component";
+import {ButtonGreenComponent} from "../button-green/button-green.component";
+import {RangeSliderComponent} from "../range-slider/range-slider.component";
+import {NgxSliderModule} from "@angular-slider/ngx-slider";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     MasterDetailComponent,
@@ -35,7 +40,10 @@ import {SaveButtonComponent} from "../save-button/save-button.component";
     InfoPublicComponent,
     SelectAgesComponent,
     GenderRadiosComponent,
-    SaveButtonComponent
+    SaveButtonComponent,
+    CardInfoComponent,
+    ButtonGreenComponent,
+    RangeSliderComponent
   ],
   providers: [MasterDetailService],
   exports: [
@@ -46,7 +54,10 @@ import {SaveButtonComponent} from "../save-button/save-button.component";
     CategoryProgressComponent,
     SelectAgesComponent,
     GenderRadiosComponent,
-    SaveButtonComponent
+    SaveButtonComponent,
+    CardInfoComponent,
+    ButtonGreenComponent,
+    RangeSliderComponent
   ],
   imports: [
     CommonModule,
@@ -55,6 +66,9 @@ import {SaveButtonComponent} from "../save-button/save-button.component";
     NgbNavModule,
     DropdownActionsModule,
     MaterialModule,
+    NgxSliderModule,
+    ReactiveFormsModule,
+    FormsModule,
 
 
   ],

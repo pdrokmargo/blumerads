@@ -1,1 +1,84 @@
-<p>campaign-detail works!</p>
+<mat-stepper #stepper orientation="vertical" class="w-75 card bordered">
+        <ng-template matStepperIcon="edit" let-index="index">{{index+1}}</ng-template>
+        <mat-step [editable]="false">
+          <ng-template matStepLabel>Crear nueva campaña</ng-template>
+            <div class="d-flex">
+              <div>
+                <ul>
+                  <li *ngFor="let item of list">
+                    {{item.tag}}
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-body card-bordered-white w-75">
+                <h3>Objetivo de la campañá</h3>
+                <app-horizontal-tabs-wizard
+                  [horizontalTabConfig]="tabsConfig"
+                  [active]="selectedTab"
+                  (callBackHorizontalTabs)="switchTab($event)"
+                >
+                </app-horizontal-tabs-wizard>
+                <div [ngSwitch]="selectedTab">
+                  <ng-container *ngSwitchCase="1">
+                    <!--Sub Step-->
+                    <div [ngSwitch]="subStep">
+                      <ng-container *ngSwitchCase="1">
+                          <div class="d-flex flex-column w-100">
+                            <div class="mt-5 mb-4">
+                              <label class="form-label w-100 text-start text-color m-0">Coloca el nombre de tu campaña</label>
+                              <input class="form-control form-control-lg" type="text"
+                                     placeholder="Escribe aquí"
+                              />
+                            </div>
+                            <div class="mt-5">
+                              <app-card-info
+                                width="50rem;"
+                                [backgroundColor]="'#7DD9D4'"
+                                title="Objetivo"
+                                description="En tu estrategia comercial, podras henerar recordación de tu marca, ampliar tu red
+                                            y transmitir tu mensaje al mayor de personas. Nosotros te guiaremos para hacerlo realidad"
+                              ></app-card-info>
+                            </div>
+                          </div>
+                          <div class="text-end">
+                            <app-button-green
+                              (onEmit)="nextSubStep($event)"
+                                        description="Siguiente">
+                            </app-button-green>
+                          </div>
+                      </ng-container>
+                      <ng-container *ngSwitchCase="2">
+                        <app-form-campaign
+                          (next)="nextSubStep($event)"></app-form-campaign>
+                      </ng-container>
+                      <ng-container *ngSwitchCase="3">
+                        <app-range-slider></app-range-slider>
+
+                      </ng-container>
+                    </div>
+                    <ng-container>
+
+                    </ng-container>
+                  </ng-container>
+                  <ng-container *ngSwitchCase="2">
+                    <h3>Escoge el público de tu campañá</h3>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+        </mat-step>
+        <mat-step [editable]="false">
+          <ng-template matStepLabel>Formato del anuncio</ng-template>
+          <ng-template matStepContent>
+            <p>Contenio</p>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Publicación del anuncio</ng-template>
+          <p>Contenio</p>
+        </mat-step>
+      </mat-stepper>
+

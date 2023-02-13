@@ -22,7 +22,11 @@ const TABS_CONFIG = [
 })
 export class RegistrationComponent implements OnInit, OnDestroy {
 
-  fullname = new FormControl('', Validators.required);
+
+
+  iniciar(): void {
+    console.log(this.registrationForm)
+  }
 
   public showPassword: boolean;
   public showPasswordOnPress: boolean;
@@ -91,6 +95,13 @@ export class RegistrationComponent implements OnInit, OnDestroy {
 
   get usuarioCtrl(): AbstractControl {
     return this.registrationForm.controls['usuario'];
+  }
+
+  get passwordCtrl(): AbstractControl {
+    return this.registrationForm.controls['password'];
+  }
+  get cpasswordCtrl(): AbstractControl {
+    return this.registrationForm.controls['cpassword'];
   }
 
   constructor(

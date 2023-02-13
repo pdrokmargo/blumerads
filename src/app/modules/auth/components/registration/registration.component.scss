@@ -12,10 +12,26 @@
 //   }
 // }
 
+input {
+  &.is-invalid {
+    border: 1px solid red;
+    background-image: none;
+  }
+  &.is-valid {
+    border: 0px solid #fff
+  }
+}
 
+.form-select:focus {
+  border-color: #fff;
+}
 
+h1, h2, h3, div, label, p {
+  font-family: 'DM Sans', sans-serif;
+}
 .text {
   color: #646469;
+  font-family: 'DM Sans', sans-serif;
 }
 .wrapper-container {
   display: flex;
@@ -174,7 +190,9 @@
 .newbtn {
   font-size: 13px;
 }
-
+.form-control{
+border: 0px solid;;
+}
 .class {
   top: 43px;
 }
@@ -214,7 +232,7 @@
   color: slateblue;
 }
 .politc {
-  background: #f6f6f6;
+  background: transparent !important;
     border: 0px;
     height: 78px;
     width: 91%;
@@ -225,23 +243,4 @@
 }
 
 
-::ng-deep .was-validated, .form-control:invalid, .form-control.is-invalid {
-  border-color: red;
-  background-image: none;
-}
-::ng-deep .was-validated, .form-control:invalid, .form-control.is-valid {
-  background-image: none;
-  border-color: transparent !important;
-}
 
-.form-select.is-invalid {
-  background-image: none;
-}
-
-.was-validated .form-select:valid, .form-select.is-valid {
-  border-color: transparent !important;
-}
-
-.form-select.is-valid, .form-select.is-valid, .was-validated .form-select:valid, .was-validated .form-select:valid {
-  background-image: none;
-}

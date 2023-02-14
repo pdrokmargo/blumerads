@@ -1,17 +1,28 @@
-<!--begin::Form-->
-<form class="form w-50 font-word" [formGroup]="loginForm" novalidate="novalidate" id="kt_login_signin_form"
-  (ngSubmit)="submit()">
-  <!--begin::Heading-->
-  <div class="text-center mb-11">
-    <h1 class="text-dark fw-bolder mb-3">
-      Bienvenido a Blumer
-    </h1>
-    <!--begin::Subtitle-->
-    <div class="text-gray-500 fw-semibold fs-6">
-      La plataforma de marketing digital para que puedas posicionar, dar a conocer y contarle al mundo cuál es tu marca.
+<div class="container">
+
+  <div class="row">
+    <div class="col-7">
+      <div class="wrapper-img">
+        <img src="./assets/media/logos/blumeards-login.png" alt="logo">
+      </div>
+      
     </div>
-    <!--end::Subtitle--->
-    <!-- <div class="text-gray-400 fw-bold fs-4">
+
+    <div class="col-5">
+      <form class="form w-100 font-word" [formGroup]="loginForm" novalidate="novalidate" id="kt_login_signin_form"
+        (ngSubmit)="submit()">
+        <!--begin::Heading-->
+        <div class="text-center mb-11">
+          <!-- <h1 class="font-word fw-bolder mb-3"> -->
+          <label class="m-3 welcome" >Bienvenido a Blumer Ads</label>  
+ 
+          <!--begin::Subtitle-->
+          <div class="font-word fw-semibold fs-6 m-5">
+            La plataforma de marketing digital para que puedas posicionar, dar a conocer y contarle al mundo cuál es tu
+            marca.
+          </div>
+          <!--end::Subtitle--->
+          <!-- <div class="text-gray-400 fw-bold fs-4">
       New Here?
       <a
         routerLink="/auth/registration"
@@ -20,136 +31,149 @@
         >{{ "AUTH.GENERAL.SIGNUP_BUTTON" | translate }}</a
       >
     </div> -->
-  </div>
-  <!--end::Heading-->
+        </div>
+        <!--end::Heading-->
 
 
 
 
 
-  <!-- begin::Alert error-->
-  <ng-container *ngIf="hasError">
-    <div class="mb-lg-15 alert alert-danger">
-      <div class="alert-text font-weight-bold">
-        The login details are incorrect
-      </div>
-    </div>
-  </ng-container>
-  <!-- end::Alert error-->
+        <!-- begin::Alert error-->
+        <ng-container *ngIf="hasError">
+          <div class="mb-lg-15 alert alert-danger">
+            <div class="alert-text font-weight-bold">
+              The login details are incorrect
+            </div>
+          </div>
+        </ng-container>
+        <!-- end::Alert error-->
 
-  <!--begin::Form group-->
-  <div class="fv-row mb-8">
-    <label class="form-label fs-6 fw-bolder text-dark">Ingresa tu correo electrónico o número de teléfono</label>
-    <input class="form-control bg-transparent" type="email" name="email" formControlName="email" autocomplete="off"
-      [ngClass]="{
+        <!--begin::Form group-->
+        <div class="fv-row mb-6">
+          <label class="form-label fs-6 fw-bolder text-dark">Ingresa tu correo, usuario o número de teléfono</label>
+          <input class="form-control bg-transparent" type="email" name="email" formControlName="email"
+            autocomplete="off" [ngClass]="{
         'is-invalid': loginForm.controls['email'].invalid,
         'is-valid': loginForm.controls['email'].valid
       }" />
-    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
         validation: 'required',
         message: 'Email es requerido',
         control: loginForm.controls['email']
       }"></ng-container>
-    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
         validation: 'email',
         message: 'Email es inválido',
         control: loginForm.controls['email']
       }"></ng-container>
-    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
         validation: 'minLength',
         message: 'Email debe contener al menos 3 caracteres',
         control: loginForm.controls['email']
       }"></ng-container>
-    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
         validation: 'maxLength',
         message: 'Email debe tener un máximo de 360 caracteres',
         control: loginForm.controls['email']
       }"></ng-container>
-  </div>
-  <!--end::Form group-->
+        </div>
+        <!--end::Form group-->
 
-  <!--begin::Form group-->
-  <div class="fv-row mb-3">
+        <!--begin::Form group-->
+        <div class="fv-row mb-3">
 
-    <label class="form-label fw-bolder text-dark fs-6 mb-0">Ingresa tu contraseña</label>
+          <label class="form-label fw-bolder text-dark fs-6 mb-0">Ingresa tu contraseña</label>
 
-    <input class="form-control bg-transparent" type="password" name="password" autocomplete="off"
-      formControlName="password" [ngClass]="{
+          <input class="form-control bg-transparent" type="password" name="password" autocomplete="off"
+            formControlName="password" [ngClass]="{
         'is-invalid': loginForm.controls['password'].invalid,
         'is-valid': loginForm.controls['password'].valid
       }" />
-    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
         validation: 'required',
         message: 'Password is required',
         control: loginForm.controls['password']
       }"></ng-container>
-    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
         validation: 'minlength',
         message: 'Password should have at least 3 symbols',
         control: loginForm.controls['password']
       }"></ng-container>
-    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
         validation: 'maxLength',
         message: 'Password should have maximum 100 symbols',
         control: loginForm.controls['password']
       }"></ng-container>
 
-  </div>
-  <!--end::Form group-->
+        </div>
+        <!--end::Form group-->
 
-  <!--begin::Wrapper-->
-  <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
-    <div></div>
+        <!--begin::Wrapper-->
+        <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
+          <div></div>
 
-    <!--begin::Link-->
-    <a routerLink="/auth/forgot-password" class="link-primary">
-      ¿Olvidaste tu contraseña?
-    </a>
-    <!--end::Link-->
-  </div>
-  <!--end::Wrapper-->
+          <!--begin::Link-->
+          <a routerLink="/auth/forgot-password" class="link-primary">
+            ¿Olvidaste tu contraseña?
+          </a>
+          <!--end::Link-->
+        </div>
+        <!--end::Wrapper-->
 
-  <!--begin::Action-->
-  <div class="d-grid mb-10">
-    <button style="background-color:#00b48f;" type="submit" id="kt_sign_in_submit" class="btn btn-primary" [disabled]="loginForm.invalid">
-      <ng-container *ngIf="isLoading$ | async">
-        <span class="indicator-progress" [style.display]="'block'">
-          Please wait...
-          <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-        </span>
-      </ng-container>
-      <ng-container *ngIf="(isLoading$ | async) === false">
-        <span class="indicator-label">Iniciar Sesión</span>
-      </ng-container>
-    </button>
-  </div>
+        <!--begin::Action-->
+        <div class="d-grid mb-10">
+          <button style="background-color:#00b48f;" type="submit" id="kt_sign_in_submit" class="btn btn-primary"
+            [disabled]="loginForm.invalid">
+            <ng-container *ngIf="isLoading$ | async">
+              <span class="indicator-progress" [style.display]="'block'">
+                Please wait...
+                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+              </span>
+            </ng-container>
+            <ng-container *ngIf="(isLoading$ | async) === false">
+              <span class="indicator-label">Iniciar Sesión</span>
+            </ng-container>
+          </button>
+        </div>
 
-  <!--begin::Action-->
-  <div class="d-grid mb-10">
-    <button [routerLink]="'/auth/registration'" type="submit" id="kt_sign_in_submit" class="btn btn-secondary" [disabled]="loginForm.invalid">
-      <ng-container *ngIf="isLoading$ | async">
-        <span class="indicator-progress" [style.display]="'block'">
-          Please wait...
-          <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-        </span>
-      </ng-container>
-      <ng-container *ngIf="(isLoading$ | async) === false">
-        <span class="indicator-label">Quiero Registrarme
-        </span>
-      </ng-container>
-    </button>
-  </div>
+        <!--begin::Action-->
+        <div class="d-grid mb-10">
+          <button [routerLink]="'/auth/registration'" type="submit" id="kt_sign_in_submit" class="btn btn-secondary"
+            [disabled]="loginForm.invalid">
+            <ng-container *ngIf="isLoading$ | async">
+              <span class="indicator-progress" [style.display]="'block'">
+                Please wait...
+                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+              </span>
+            </ng-container>
+            <ng-container *ngIf="(isLoading$ | async) === false">
+              <span class="indicator-label">Quiero Registrarme
+              </span>
+            </ng-container>
+          </button>
+        </div>
 
-  <!--end::Action-->
-</form>
-<!--end::Form-->
+        <!--end::Action-->
+      </form>
+      <!--end::Form-->
 
-<ng-template #formError let-control="control" let-message="message" let-validation="validation">
-  <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
-    <div class="fv-plugins-message-container">
-      <span role="alert">
-        {{ message }}
-      </span>
+      <ng-template #formError let-control="control" let-message="message" let-validation="validation">
+        <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
+          <div class="fv-plugins-message-container">
+            <span role="alert">
+              {{ message }}
+            </span>
+          </div>
+        </ng-container>
+      </ng-template>
+
     </div>
-  </ng-container>
-</ng-template>
+
+
+
+    <!--begin::Form-->
+
+
+  </div>
+
+</div>

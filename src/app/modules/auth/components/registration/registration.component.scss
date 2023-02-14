@@ -83,6 +83,7 @@ h1, h2, h3, div, label, p {
         border: 1px solid #fff;
       }
 
+
       .bt-edit-input {
         background-color: transparent;
         border: none;
@@ -165,7 +166,7 @@ h1, h2, h3, div, label, p {
       height: 10px;
 
       .style-progress-bar {
-        color: white;
+        color: black;
         font-size: 10px;
       }
     }
@@ -244,3 +245,6 @@ border: 0px solid;;
 
 
 
+.primary{
+  background: white;
+}

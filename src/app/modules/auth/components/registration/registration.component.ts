@@ -350,32 +350,75 @@ export enum EnumTabs {
 const QUESTIONS_LIST = [
   {
     idQ: 1,
-    question: 'Cuanto tiempo tiene su empresa',
+    question: '¿Cuanto tiempo tiene tu empresa?',
     answers: [
-      { answer: '1 año' },
-      { answer: '2 año' },
-      { answer: '3 año' },
-      { answer: '4 año' }
+      { answer: 'Menos de 1 año' },
+      { answer: 'Entre 1 y 3 años' },
+      { answer: 'Entre 4 y 10 años' },
+      { answer: 'Más de 10 años' }
     ]
   },
   {
     idQ: 2,
-    question: 'Cuantos empleados tiene su empresa',
+    question: '¿En qué redes sociales has pautado?',
     answers: [
-      { answer: '10' },
-      { answer: '20' },
-      { answer: '30' },
-      { answer: '40' }
+      { answer: 'Facebook' },
+      { answer: 'Tik Tok' },
+      { answer: 'Instagram' },
+      { answer: 'Twitter' },
+      { answer: 'Linkedin' },
+      { answer: 'Youtube' },
+      { answer: 'Nunca he pautado' }
     ]
   },
   {
     idQ: 3,
-    question: 'Cuanto en que ciudad esta tu empresa',
+    question: '¿Cuántos miembros tiene tu empresa?',
     answers: [
-      { answer: 'Ciudad 1' },
-      { answer: 'Ciudad 2' },
-      { answer: 'Ciudad 3' },
-      { answer: 'Ciudad 4' }
+      { answer: '1-5 empleados' },
+      { answer: '11-50 empleados' },
+      { answer: '6-10 empleados' },
+      { answer: 'Más de 50 empleados' }
+    ]
+  },
+  {
+    idQ: 4,
+    question: '¿Por dónde te encuentran tus clientes?',
+    answers: [
+      { answer: 'Redes sociales' },
+      { answer: 'Páginas Web' },
+      { answer: 'Aplicación externa' },
+      { answer: 'Correo electrónico' },
+      { answer: 'Tienda virtual' },
+      { answer: 'Whatsapp' },
+      { answer: 'Ninguna de las anteriores' }
+    ]
+  },
+  {
+    idQ: 5,
+    question: '¿Cuál es el alcance de tu empresa?',
+    answers: [
+      { answer: 'Local' },
+      { answer: 'Nacional' },
+      { answer: 'Regional' },
+      { answer: 'Internacional' }
+    ]
+  },
+  {
+    idQ: 6,
+    question: 'Escoge el sector de tu empresa',
+    answers: [
+      { answer: 'Tecnología' },
+      { answer: 'Salud' },
+      { answer: 'Productos y servicios' },
+      { answer: 'Educación' },
+      { answer: 'Fundación sin animo de lucro' },
+      { answer: 'Agropecuario' },
+      { answer: 'Servicios financieros' },
+      { answer: 'Ecommerce' },
+      { answer: 'Bebidas y aliementos' },
+      { answer: 'Otro' }
     ]
   }
+
 ]

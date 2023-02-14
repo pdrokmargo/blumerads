@@ -124,7 +124,7 @@
 
                     </div>
                     <div class="row pt-5">
-                      <div class="col-12 text-center mb-3 mt-3">
+                      <div class="col-12 text-center mb-3 mt-3 font-word">
                         <label>
                           Acepto
                         </label> <span style="color: #00b48f">
@@ -152,7 +152,7 @@
 
 
                 <mat-step>
-                  <div class="text-center">
+                  <div class="text-center font-word">
                     <h2 class="mt-10" style="color: #6d6c6c;">Te enviaremos un código de verificación</h2>
                     <div class="mt-5 mb-10">
                       Selecciona por cuál medio deseas recibirlo.
@@ -200,7 +200,7 @@
                   <div class="p-0 m-0" *ngIf="true then templateBootom"></div>
 
                   <div class="row pt-5">
-                    <div class="col-12 text-center">
+                    <div class="col-12 text-center font-word">
                       <button style="background-color:#00b48f; color: #fff" type="button"
                         class="btn btn-stepper-first m-1 newbtn" (click)="previousStep()">
                         Volver
@@ -215,11 +215,11 @@
                 </mat-step>
 
                 <mat-step>
-                  <h1 class="text fw-bolder mb-3 mt-5 text-center">
+                  <h1 class="text fw-bolder mb-3 mt-5 text-center font-word">
                     Vamos a validar tu número de teléfono
                   </h1>
 
-                  <div class="text-color fs-6 text-center mb-5">
+                  <div class="text-color fs-6 text-center mb-5 font-word">
                     Escribe el numero que te hemos enviado a tu télefono.
                     <div style="color: red;">{{errorMsj}}</div>
                   </div>
@@ -231,7 +231,7 @@
                   <div class="p-0 m-0" *ngIf="true then templateBootom"></div>
 
                   <div class="row pt-5">
-                    <div class="col-12 text-center">
+                    <div class="col-12 text-center font-word">
                       <button style="background-color:#00b48f; color: #fff" type="button"
                         class="btn btn-stepper-first m-1 newbtn" (click)="previousStep()">
                         Volver
@@ -246,16 +246,16 @@
               </mat-horizontal-stepper>
             </div>
             <div *ngSwitchCase="2">
-              <h1 class="text fw-bolder mb-3 mt-5 text-center">
+              <h1 class="text fw-bolder mb-3 mt-5 text-center font-word">
                 ¡Genial! Ahora personalicemos tu cuenta
               </h1>
 
-              <div class="text-color fs-6 text-center mb-5">
+              <div class="text-color fs-6 text-center mb-5 font-word">
                 Ingresa una foto de tu marca, maximo de 1 MB.
               </div>
 
-              <div class="row p-10">
-                <div class="col-5 wrapper-img text-end">
+              <div class="row p-10 font-word">
+                <div class="col-5 wrapper-img text-end font-word">
                   <img src="./assets/media/logos/blumerads-logo.png" alt="logo">
                   <button class="" title="Subir foto"><i class="fa fa-camera"></i></button>
                 </div>
@@ -286,7 +286,7 @@
             </div>
 
             <div *ngSwitchDefault>
-              <mat-horizontal-stepper linear #stepperBonus class="custom-bg-transparent">
+              <mat-horizontal-stepper linear #stepperBonus class="custom-bg-transparent font-word">
                 <mat-step>
                   <h1 class="text-color mb-3 pt-5 text-center">
                     ¡Felicidades, ya te encuentras registrado!
@@ -296,12 +296,12 @@
                     Nos alegra que seas parte de nuestra comunidad que impulsa su marca en Blumer.
                   </div>
 
-                  <div class="row mt-20">
+                  <div class="row mt-20 font-word">
                     <div class="col-6 wrapper-img-bonus">
                       <img src="./assets/media/logos/blumerads-logo.png" alt="logo">
                     </div>
                     <div class="col-6 text-color">
-                      <h2>¡Obtén un bono de 50.0000!</h2>
+                      <h2 style="color: #00b48f" >¡Obtén un bono de 60.0000!</h2>
                       <p>Estás a un paso de anuncia tu marca en la comunidad Blumer.
                         Valoramos tu información así como la de todos nuestros usuarios.<br>
                         Queremos darte un bono para que pruebes la plataforma por responder unas preguntas.
@@ -309,14 +309,14 @@
                     </div>
 
                     <div class="col-12 text-center pt-20">
-                      <button type="button" class="btn btn-primary btn-stepper-first me-2 bg-green-blumer"
+                      <button type="button" class="btn btn-stepper-first m-1 newbtn" style="background-color:#00b48f; color: #fff"
                         (click)="nextStep(2)">
                         Obtener bono
                       </button>
                     </div>
                     <div class="col-12 text-center pb-5">
                       <button style="background-color: transparent;" type="button"
-                        class="btn btn-primary btn-stepper-first me-2 green-blumer">
+                        class="btn btn-stepper-first m-1 newbtn" style="color: #7c06d3;">
                         Omitir este paso
                       </button>
                     </div>
@@ -324,7 +324,7 @@
                 </mat-step>
 
                 <mat-step>
-                  <h1 class="text-color mb-3 pt-5 text-center">
+                  <h1 class="text-color mb-3 pt-5 text-center m-8">
                     Responde las siguientes {{questionList.length}} preguntas
                   </h1>
 
@@ -359,7 +359,7 @@
                         </div>
                         <div class="col-6 d-flex justify-content-center align-items-center text-color pt-5"
                           *ngFor="let item of questionList[selectedAnswer]?.answers; index as i;">
-                          <button type="button" class="btn btn-primary bg-transparent me-2 green-blumer w-100"
+                          <button type="button" class="btn primary me-2 green-blumer w-100"
                             (click)="sendAnswer(item, i)">
                             {{ item?.answer }}
                           </button>
@@ -387,7 +387,7 @@
 
 
   <ng-template #templateBootom>
-    <div class="wrapper-text-second-step" style="background-color: #fff;">
+    <div class="wrapper-text-second-step m-10" style="background-color: #fff;">
       <div class="icon-style">
         <button class="politc">
           <i class="fa-sharp fa-solid fa-user-shield politc-i"></i>

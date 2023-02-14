@@ -1,0 +1,25 @@
+.li ul {
+  list-style: none;
+}
+
+.li li {
+  position: relative;
+}
+
+.li li:before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  bottom: -9px;
+  color: black;
+  font-size: 2rem;
+}
+
+.li li:after {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  bottom: -9px;
+  color: #8566E2;
+  font-size: 2rem;
+}

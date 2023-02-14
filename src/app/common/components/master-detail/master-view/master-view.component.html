@@ -1,7 +1,7 @@
 <!-- begin::Header -->
 <div class="card-header border-0 pt-5 font-word">
   <div *ngIf="template === 1" class="card-toolbar">
-    <app-confirmation-button [textDescription]="masterInitialData?.newButton"></app-confirmation-button>
+    <app-confirmation-button (click)="goToDetail()" [textDescription]="masterInitialData?.newButton"></app-confirmation-button>
   </div>
   <div class="card-title align-items-end flex-column">
     <div class="d-flex align-items-center position-relative me-4"><span
@@ -21,13 +21,13 @@
 </div>
 <!-- end::Header -->
 <!-- begin::Body -->
-<!--<div class="card-body py-3">
-  &lt;!&ndash; begin::Table container &ndash;&gt;
+<div class="card-body py-3">
+  <!-- begin::Table container -->
   <div class="table-responsive">
-    &lt;!&ndash; begin::Table &ndash;&gt;
+    <!-- begin::Table -->
 
     <table class="table align-middle gs-0 gy-4">
-      &lt;!&ndash; begin::Table head &ndash;&gt;
+      <!-- begin::Table head -->
       <thead>
         <tr class="fw-bolder text-muted bg-light">
           <ng-container
@@ -40,8 +40,8 @@
 
         </tr>
       </thead>
-      &lt;!&ndash; end::Table head &ndash;&gt;
-      &lt;!&ndash; begin::Table body &ndash;&gt;
+      <!-- end::Table head -->
+      <!-- begin::Table body -->
       <tbody>
         <tr *ngFor="let row of masterInitialData?.rows; index as i">
           <td>
@@ -83,7 +83,7 @@
           </td>
         </tr>
       </tbody>
-      &lt;!&ndash; end::Table body &ndash;&gt;
+      <!-- end::Table body -->
     </table>
     &lt;!&ndash; end::Table &ndash;&gt;
   </div>
@@ -180,5 +180,10 @@
     <div class="col-sm-3 p-5">
       <app-info-public ></app-info-public>
     </div>
+
+    <!-- end::Table -->
+
   </div>
+  <!-- end::Table container -->
 </div>
+<!-- begin::Body -->

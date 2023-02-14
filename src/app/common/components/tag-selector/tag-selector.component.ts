@@ -13,9 +13,9 @@ export interface Category {
 })
 export class TagSelectorComponent {
 
-  @Input() label: String = 'Escribe una categoría que prefieras para tu campaña.';
+  @Input() label: String;
   @Input() placeholder: String = 'Placeholder';
-  @Input() p: String = 'Categorías'
+  @Input() p!: String;
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   category: Category[] = [{name: 'Tecnologia'}, {name: 'Blockchain'}, {name: 'Crypto'} ];

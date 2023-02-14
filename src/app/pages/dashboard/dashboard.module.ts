@@ -9,6 +9,10 @@ import { CampaignModule } from '../campaign/campaign.module';
 import { AdsModule } from '../ads/ads.module';
 import { TargetAudienceModule } from '../target-audience/target-audience.module';
 import { CodeValidationModule } from '../../common/components/code-validation/code-validation.module';
+
+import { UserComponent } from 'src/app/common/components/input-user/user.component';
+import { InputEmailComponent } from 'src/app/common/components/input-email/input-email.component';
+import { InputPasswordComponent } from 'src/app/common/components/input-password/input-password.component';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { MasterDetailModule } from '../../common/components/master-detail/master-detail.module';
 
@@ -34,7 +38,7 @@ import { MasterDetailModule } from '../../common/components/master-detail/master
     CardsModule,
     NgApexchartsModule,
     CodeValidationModule,
-    MasterDetailModule,
+
   ],
 })
 export class DashboardModule {}

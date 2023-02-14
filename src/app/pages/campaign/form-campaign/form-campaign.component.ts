@@ -1,4 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {CampaignTypes} from "../enums/campaign-types";
 
 @Component({
   selector: 'app-form-campaign',
@@ -7,6 +8,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class FormCampaignComponent implements OnInit {
   @Output() next = new EventEmitter<any>();
+
+  @Input() types: string;
   from: string[] = ['18'];
   to: string[] = ['25'];
   constructor() { }

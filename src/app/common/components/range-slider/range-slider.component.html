@@ -10,6 +10,14 @@
            [(ngModel)]="minValue"
            [disabled]="true"
     />
+    <div class="text-end">
+      <button
+        class="btn btn-green-blumer w-25"
+        matStepperNext
+        (click)="onNext()"
+      >Siguiente
+      </button>
+    </div>
   </div>
 </form>
 

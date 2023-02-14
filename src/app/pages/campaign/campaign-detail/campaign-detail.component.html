@@ -5,21 +5,28 @@
             <div class="d-flex">
               <div>
                 <ul>
-                  <li *ngFor="let item of list">
+                  <li *ngFor="let item of list" >
                     {{item.tag}}
                   </li>
                 </ul>
               </div>
 
               <div class="card-body card-bordered-white w-75">
-                <h3>Objetivo de la campañá</h3>
-                <app-horizontal-tabs-wizard
-                  [horizontalTabConfig]="tabsConfig"
-                  [active]="selectedTab"
-                  (callBackHorizontalTabs)="switchTab($event)"
-                >
-                </app-horizontal-tabs-wizard>
+                <h3>
+                  {{  subStep === 1? 'Objetivo de la campaña' :
+                      subStep === 2? 'Escoge el público de tu campaña' :
+                                     'Escoge el presupuesto para tu campaña' }}
+                </h3>
+                <ng-container *ngIf="(subStep === 1) || (subStep === 2)">
+                  <app-horizontal-tabs-wizard
+                    [horizontalTabConfig]="tabsConfig"
+                    [active]="selectedTab"
+                    (callBackHorizontalTabs)="switchTab($event)"
+                  >
+                  </app-horizontal-tabs-wizard>
+                </ng-container>
                 <div [ngSwitch]="selectedTab">
+                  <!--Step 1-->
                   <ng-container *ngSwitchCase="1">
                     <!--Sub Step-->
                     <div [ngSwitch]="subStep">
@@ -50,22 +57,24 @@
                       </ng-container>
                       <ng-container *ngSwitchCase="2">
                         <app-form-campaign
+                          [types]="types"
                           (next)="nextSubStep($event)"></app-form-campaign>
                       </ng-container>
                       <ng-container *ngSwitchCase="3">
-                        <app-range-slider></app-range-slider>
-
+                        <app-range-slider (next)="nextSubStep($event)"></app-range-slider>
                       </ng-container>
                     </div>
-                    <ng-container>
-
-                    </ng-container>
+                    <!--End sub-step-->
                   </ng-container>
+                  <!--End step 1-->
                   <ng-container *ngSwitchCase="2">
                     <h3>Escoge el público de tu campañá</h3>
 
                   </ng-container>
                 </div>
+              </div>
+              <div>
+                <span>Card</span>
               </div>
             </div>
 
@@ -73,12 +82,39 @@
         <mat-step [editable]="false">
           <ng-template matStepLabel>Formato del anuncio</ng-template>
           <ng-template matStepContent>
-            <p>Contenio</p>
+            <div [ngSwitch]="subStep">
+              <ng-container *ngSwitchCase="4">
+                <div>
+                  <app-one-block-selector
+                       (selected)="onSelectFormat($event)"
+                  >
+                  </app-one-block-selector>
+                  <div class="text-end">
+                    <app-button-green
+                      (onEmit)="nextSubStep($event)"
+                      description="Siguiente">
+                    </app-button-green>
+                  </div>
+                </div>
+              </ng-container>
+              <ng-container *ngSwitchCase="5">
+                  <app-form-campaign
+                    [types]="types"
+                  ></app-form-campaign>
+                  <div class="mt-20 text-end">
+                    <button
+                      class="btn btn-green-blumer w-25"
+                      matStepperNext
+                    >Siguiente
+                    </button>
+                  </div>
+              </ng-container>
+            </div>
           </ng-template>
         </mat-step>
         <mat-step>
           <ng-template matStepLabel>Publicación del anuncio</ng-template>
           <p>Contenio</p>
         </mat-step>
-      </mat-stepper>
+</mat-stepper>
 

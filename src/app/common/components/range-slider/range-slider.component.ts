@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {LabelType, Options} from '@angular-slider/ngx-slider';
 import {FormControl, FormGroup} from "@angular/forms";
 
@@ -8,6 +8,8 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./range-slider.component.scss']
 })
 export class RangeSliderComponent implements OnInit {
+
+  @Output() next = new EventEmitter;
   sliderForm: FormGroup = new FormGroup({
     sliderControl: new FormControl([20, 80])
   });
@@ -37,6 +39,10 @@ export class RangeSliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onNext() {
+    this.next.emit(1);
   }
 
 }

@@ -10,8 +10,8 @@ export class UsersTable {
       roles: [1], // Administrator
       pic: './assets/media/avatars/300-1.jpg',
       fullname: 'Sean S',
-      firstname: 'Sean',
-      lastname: 'Stark',
+      firstname: 'Pedro',
+      lastname: 'Camargo',
       occupation: 'CEO',
       companyName: 'Keenthemes',
       phone: '456669067890',

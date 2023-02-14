@@ -5,7 +5,7 @@
 
       .blumer-content-tab {
         background-color: #efefef;
-        border-color: #ffff;
+        border-color: transparent !important;
         color: gray;
         text-align: center;
         transition: background-color 700ms ease;
@@ -21,7 +21,7 @@
 }
 
 .selected-tab-style {
-    background-color: #dfbaff !important;
+    background-color: #beb5df !important;
     color: white !important;
 }
 

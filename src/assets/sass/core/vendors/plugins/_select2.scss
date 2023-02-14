@@ -25,19 +25,19 @@ $select2-tag-clear-size: 0.6rem;
 
 $select2-tag-padding-y-sm: 0.1rem;
 $select2-tag-padding-x-sm: 0.35rem;
-$select2-input-padding-y-sm: $input-padding-y-sm - $select2-tag-padding-y-sm * 2; 
+$select2-input-padding-y-sm: $input-padding-y-sm - $select2-tag-padding-y-sm * 2;
 
 $select2-tag-padding-y: 0.1rem;
 $select2-tag-padding-x: 0.5rem;
-$select2-input-padding-y: $input-padding-y - $select2-tag-padding-y * 2; 
+$select2-input-padding-y: $input-padding-y - $select2-tag-padding-y * 2;
 
 $select2-tag-padding-y-lg: 0.15rem;
 $select2-tag-padding-x-lg: 0.65rem;
-$select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2; 
+$select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2;
 
 // Bootstrapa 5 Theme
 .select2-container--bootstrap5 {
-	// Selection 
+	// Selection
 	.select2-selection {
 		box-shadow: none !important;
 		height: auto;
@@ -59,10 +59,10 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 	// Search
 	.select2-search.select2-search--inline {
 		.select2-search__field {
-			color: var(--kt-input-color);	
+			color: var(--kt-input-color);
 			@include placeholder($input-placeholder-color);
-			font-weight: $input-font-weight;			
-			font-family: inherit !important;
+			font-weight: $input-font-weight;
+			font-family: 'DM Sans', sans-serif !important;
 			background-color: transparent;
 			border: 0;
 			box-shadow: none;
@@ -74,9 +74,9 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 	}
 
 	.form-select-solid .select2-search.select2-search--inline {
-		.select2-search__field {			
+		.select2-search__field {
 			color: var(--kt-input-solid-color);
-			font-family: inherit !important;
+			font-family: 'DM Sans', sans-serif !important;
 			@include placeholder(var(--kt-input-solid-placeholder-color));
 		}
 	}
@@ -85,7 +85,7 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 	.select2-selection--single {
 		display: flex;
 		align-items: center;
-		
+
 		// Selected
 		.select2-selection__rendered {
 			display: block;
@@ -163,7 +163,7 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 					@include svg-bg-icon(close, var(--kt-gray-700));
 					display: block;
 					position: absolute;
-					transform: translateY(-50%);					
+					transform: translateY(-50%);
 					opacity: 0.5;
 					border: 0;
 					transition: $transition-link;
@@ -171,7 +171,7 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 
 					span  {
 						display: none;
-					}					
+					}
 
 					&:hover {
 						opacity: 1;
@@ -184,7 +184,7 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 					font-weight: $font-weight-semibold;
 				}
 			}
-		}	
+		}
 
 		// Choice
 		.select2-selection__choice {
@@ -193,15 +193,15 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 				width: $select2-tag-clear-size;
 			}
 		}
-		
+
 		// Sizes
 		&.form-select-sm {
 			min-height: $input-height-sm;
         	padding-top: $select2-input-padding-y-sm;
-        	padding-bottom: $select2-input-padding-y-sm;			
+        	padding-bottom: $select2-input-padding-y-sm;
 
 			.select2-selection__choice {
-				border-radius: $btn-border-radius-sm;				
+				border-radius: $btn-border-radius-sm;
 				padding: $select2-tag-padding-y-sm $select2-tag-padding-x-sm;
 				margin-right: $select2-tag-padding-x-sm;
 				margin-top: $select2-tag-padding-y-sm;
@@ -210,11 +210,11 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 				.select2-selection__choice__display {
 					margin-left: $select2-tag-padding-x-sm + $select2-tag-clear-size;
 					font-size: $input-btn-font-size-sm;
-				} 
+				}
 			}
 
 			.select2-search__field {
-				height: 14px;	
+				height: 14px;
 			}
 		}
 
@@ -226,18 +226,18 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 			.select2-selection__choice {
 				border-radius: $btn-border-radius;
 				padding: $select2-tag-padding-y $select2-tag-padding-x;
-				margin-right: $select2-tag-padding-x;				
+				margin-right: $select2-tag-padding-x;
 				margin-top: $select2-tag-padding-y;
 				margin-bottom: $select2-tag-padding-y;
 
 				.select2-selection__choice__display {
 					margin-left: $select2-tag-padding-x + $select2-tag-clear-size;
 					font-size: $input-btn-font-size;
-				} 
+				}
 			}
 
 			.select2-search__field {
-				height: 16px;	
+				height: 16px;
 			}
 		}
 
@@ -247,7 +247,7 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
         	padding-bottom: $select2-input-padding-y-lg;
 
 			.select2-selection__choice {
-				border-radius: $btn-border-radius-lg;				
+				border-radius: $btn-border-radius-lg;
 				padding: $select2-tag-padding-y-lg $select2-tag-padding-x-lg;
 				margin-right: $select2-tag-padding-x-lg;
 				margin-top: $select2-tag-padding-y-lg;
@@ -256,15 +256,15 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 				.select2-selection__choice__display {
 					margin-left: $select2-tag-padding-x-lg + $select2-tag-clear-size;
 					font-size: $input-btn-font-size-lg;
-				} 
+				}
 			}
 
 			.select2-search__field {
-				height: 18px;	
+				height: 18px;
 			}
 		}
 	}
-		
+
 	// Dropdown
 	.select2-dropdown {
 		border: 0;
@@ -333,8 +333,8 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 					width: 0.75rem;
             		content: "";
 					@include svg-bg-icon(check, var(--kt-component-hover-color));
-					mask-position: center;	
-					-webkit-mask-position: center;					
+					mask-position: center;
+					-webkit-mask-position: center;
 					right: $select2-dropdown-option-check-padding;
 				}
 			}
@@ -395,5 +395,5 @@ $select2-input-padding-y-lg: $input-padding-y-lg - $select2-tag-padding-y-lg * 2
 .form-floating {
 	.form-select {
 		padding-top: $form-floating-input-padding-t !important;
-	}	
+	}
 }

@@ -12,8 +12,26 @@
 //   }
 // }
 
+input {
+  &.is-invalid {
+    border: 1px solid red;
+    background-image: none;
+  }
+  &.is-valid {
+    border: 0px solid #fff
+  }
+}
+
+.form-select:focus {
+  border-color: #fff;
+}
+
+h1, h2, h3, div, label, p {
+  font-family: 'DM Sans', sans-serif;
+}
 .text {
   color: #646469;
+  font-family: 'DM Sans', sans-serif;
 }
 .wrapper-container {
   display: flex;
@@ -29,8 +47,8 @@
     max-width: 800px;
     width: 100%;
     height: 100%;
-    border: 6px solid rgb(230, 230, 230);
     border-radius: 13px;
+    background-color: transparent !important;
 
     .custom-bg-transparent {
       background-color: #ffffff72;
@@ -64,6 +82,7 @@
       .is-invalid-input {
         border: 1px solid #fff;
       }
+
 
       .bt-edit-input {
         background-color: transparent;
@@ -147,7 +166,7 @@
       height: 10px;
 
       .style-progress-bar {
-        color: white;
+        color: black;
         font-size: 10px;
       }
     }
@@ -162,18 +181,18 @@
 }
 
 .custom {
-  background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(224,230,229,1) 52%, rgba(203,255,254,1) 100%);
+  background: rgb(246,246,246);
+  background: linear-gradient(180deg, rgba(246,246,246,1) 0%, rgba(236,252,255,1) 100%);
 }
 ::ng-deep .mat-horizontal-content-container {
-  background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(224,230,229,1) 52%, rgba(203,255,254,1) 100%);
+  background: rgb(246,246,246);
+  background: linear-gradient(180deg, rgba(246,246,246,1) 0%, rgba(236,252,255,1) 100%);
 }
 .newbtn {
   font-size: 13px;
 }
-.form-control {
-border: 0px solid #ffff;
+.form-control{
+border: 0px solid;;
 }
 .class {
   top: 43px;
@@ -191,13 +210,15 @@ border: 0px solid #ffff;
 .btnicon {
   position: relative;
   top: -2.1rem;
-  background-color: white;
+  background-color: transparent !important;
+  background: transparent !important;
   border: 0px solid #ffff;
 }
 
 .iconbtn {
   position: relative;
-  background: #fff;
+  background: transparent !important;
+  background-color: transparent !important;
   border: 0px;
   top: -2.2rem;
   left: 80%;
@@ -212,7 +233,7 @@ border: 0px solid #ffff;
   color: slateblue;
 }
 .politc {
-  background: #f6f6f6;
+  background: transparent !important;
     border: 0px;
     height: 78px;
     width: 91%;
@@ -220,4 +241,10 @@ border: 0px solid #ffff;
 
 .rubri{
   padding-top: 4.25rem !important;
+}
+
+
+
+.primary{
+  background: white;
 }

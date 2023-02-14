@@ -1,4 +1,4 @@
-<ul ngbNav #nav2="ngbNav" [(activeId)]="active" class="nav-tabs dashboard-general" style="font-size: 16px">
+<ul ngbNav #nav2="ngbNav" [(activeId)]="active" class="nav-tabs dashboard-general font-word" style="font-size: 16px">
     <li [ngbNavItem]="i+1" class="blumer-tab" *ngFor="let tabItem of tabsConfig; index as i"
         [disabled]="tabItem.disabled" [style.width]="tabItem?.widthCell ?? '200px' " >
         <a  ngbNavLink class="blumer-content-tab" [ngClass]=" (i+1 === active) ? 'selected-tab-style' : ''"

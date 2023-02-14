@@ -1,11 +1,11 @@
-<div class="wrapper-selector-options">
+<div class="wrapper-selector-options font-word">
   <span *ngFor="let item of selectorConfig; index as i" >
     <input type="radio" class="btn-check" name="options" autocomplete="off"
       [attr.id]="item.id"
       (change)="handleChange($event)"
       [value]="item.value" [checked]="item.checked"
       [disabled]="item.disabled">
-    <label class="btn btn-secondary"
+    <label class="btn btn-secondary radius"
       [for]="item.id"
       [style.color]="item.colorIcon"
       [style.background-color]="item?.backgroundColor ?? ''"

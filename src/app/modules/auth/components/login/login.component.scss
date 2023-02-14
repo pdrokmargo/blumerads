@@ -11,3 +11,38 @@
     }
   }
 }
+
+.form {
+  margin: 20px;
+  margin-top: 50px;
+  border-radius: 9px;
+  position: relative;
+  right: auto;
+}
+.welcome {
+  font-size: 23px;
+    font-weight: 600;
+    color: #797979;
+}
+
+.wrapper-img {
+  position: relative;
+
+    img {
+      top: 0px;
+      left: 82px;
+      width: 693px;
+      height: 782px;
+      
+    }
+
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 15px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
+
+}

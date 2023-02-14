@@ -26,6 +26,7 @@ import {ButtonGreenComponent} from "../button-green/button-green.component";
 import {RangeSliderComponent} from "../range-slider/range-slider.component";
 import {NgxSliderModule} from "@angular-slider/ngx-slider";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {OneBlockSelectorComponent} from "../one-block-selector/one-block-selector.component";
 @NgModule({
   declarations: [
     MasterDetailComponent,
@@ -43,7 +44,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     SaveButtonComponent,
     CardInfoComponent,
     ButtonGreenComponent,
-    RangeSliderComponent
+    RangeSliderComponent,
+    OneBlockSelectorComponent
   ],
   providers: [MasterDetailService],
   exports: [
@@ -57,7 +59,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     SaveButtonComponent,
     CardInfoComponent,
     ButtonGreenComponent,
-    RangeSliderComponent
+    RangeSliderComponent,
+    OneBlockSelectorComponent
   ],
   imports: [
     CommonModule,

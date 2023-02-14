@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatStepper} from "@angular/material/stepper";
+import {CampaignTypes} from "../enums/campaign-types";
 
 const TABS_CONFIG = [
   { widthCell: '50%', title: 'Nueva campaña', iconName: '', colorIcon: '#fff', disabled: false },
@@ -17,6 +18,7 @@ export class CampaignDetailComponent implements OnInit {
   tabsConfig = TABS_CONFIG;
   selectedTab = 1;
   subStep = 1;
+  types = 'CREATE';
 
   list = [
     {tag: 'Escoge el objetivo', step: 1},
@@ -42,6 +44,13 @@ export class CampaignDetailComponent implements OnInit {
 
   nextSubStep(event: any) {
     this.subStep = this.subStep + event;
+  }
+
+  onSelectFormat(format: string) {
+    this.types = 'FORMAT';
+    console.log(format)
+    console.log(this.types)
+
   }
 
 

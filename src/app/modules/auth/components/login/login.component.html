@@ -31,11 +31,7 @@
           </div> -->
         </div>
         <!--end::Heading-->
-      
-      
-      
-      
-      
+     
         <!-- begin::Alert error-->
         <ng-container *ngIf="hasError">
           <div class="mb-lg-15 alert alert-danger">
@@ -114,7 +110,6 @@
         <!--begin::Wrapper-->
         <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
           <div></div>
-      
           <!--begin::Link-->
           <a routerLink="/auth/forgot-password" class="link-primary">
             ¿Olvidaste tu contraseña?
@@ -122,7 +117,7 @@
           <!--end::Link-->
         </div>
         <!--end::Wrapper-->
-      
+     
         <!--begin::Action-->
         <div class="d-grid mb-10 content-button">
           <button type="submit" id="kt_sign_in_submit" class="btn btn-primary" [disabled]="loginForm.invalid">
@@ -163,12 +158,7 @@
 </div>
 <!--end::Form-->
 
-<ng-template #formError let-control="control" let-message="message" let-validation="validation">
-  <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
-    <div class="fv-plugins-message-container">
-      <span role="alert">
-        {{ message }}
-      </span>
-    </div>
-  </ng-container>
-</ng-template>
+
+  </div>
+
+</div>

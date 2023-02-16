@@ -11,6 +11,7 @@ mat-form-field {
   position: relative;
   margin-left: 100px;
   top: 0px;
+  padding: 0px !important;
 }
 
 ::ng-deep .mat-chip-list-wrapper {
@@ -27,4 +28,27 @@ mat-form-field {
 .content {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+mat-label {
+  color: #6F6F6F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+::ng-deep .mat-form-field-flex {
+  border: 2px solid #FFFFFF;
+  background-color: #EEF0F1;
+  color: #6F6F6F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 5px;
+  height: 47px;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: transparent;
 }

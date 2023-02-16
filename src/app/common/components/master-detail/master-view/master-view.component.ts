@@ -4,6 +4,7 @@ import { MasterDetailFieldModel } from '../models/master-detail-field.model';
 import { MasterInitialData } from '../models/master-initial-data.model';
 import { MasterDetailViewMode, MasterDetailService } from '../services/master-detail.service';
 import {DropDownActionI} from "../../dropdown-actions/dropdown-actions.component";
+import { Router } from '@angular/router';
 
 export enum TableTemplate {
   UNASSIGNED = 0,
@@ -40,7 +41,7 @@ export class MasterViewComponent implements OnInit {
 
   private viewMode$: MasterDetailService;
 
-  constructor(masterDetailService: MasterDetailService) {
+  constructor(masterDetailService: MasterDetailService, private route: Router) {
     this.viewMode$ = masterDetailService;
   }
 
@@ -48,7 +49,8 @@ export class MasterViewComponent implements OnInit {
   }
 
   goToDetail(){
-    this.viewMode$.setViewModeObservable = MasterDetailViewMode.DETAIL;
+    /* this.viewMode$.setViewModeObservable = MasterDetailViewMode.DETAIL; */
+    this.route.navigate(['campaing/escoge-objetiv']);
   }
 
 }

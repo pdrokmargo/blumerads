@@ -18,5 +18,9 @@ export class OneBlockSelectorComponent implements OnInit {
     this.selected.emit(format);
   }
 
+  nextSubStep(event: any) {
+    this.next.emit(3);
+  }
+
 
 }

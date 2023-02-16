@@ -9,6 +9,7 @@ import {MaterialModule} from "../../modules/material/material.module";
 import {HorizontalTabsWizardModule} from "../../common/components/horizontal-tabs-wizard/horizontal-tabs-wizard.module";
 import { FormCampaignComponent } from './form-campaign/form-campaign.component';
 import {DropdownActionsModule} from "../../common/components/dropdown-actions/dropdown-actions.module";
+import {NgxSimpleCalendarModule} from 'ngx-simple-calendar';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,13 @@ import {DropdownActionsModule} from "../../common/components/dropdown-actions/dr
         MasterDetailModule,
         MaterialModule,
         HorizontalTabsWizardModule,
-        DropdownActionsModule
+        DropdownActionsModule,
+        NgxSimpleCalendarModule,
     ],
   exports: [
     CampaignComponent,
-    CampaignDetailComponent
+    CampaignDetailComponent,
+    FormCampaignComponent,
   ]
 })
 export class CampaignModule { }

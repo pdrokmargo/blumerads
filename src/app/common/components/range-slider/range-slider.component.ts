@@ -42,7 +42,7 @@ export class RangeSliderComponent implements OnInit {
   }
 
   onNext() {
-    this.next.emit(1);
+    this.next.emit(2);
   }
 
 }

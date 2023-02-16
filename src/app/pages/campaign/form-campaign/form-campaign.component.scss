@@ -1,0 +1,163 @@
+.text-color {
+    color: #6F6F6F;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+input, textarea, select {
+    border: 2px solid #FFFFFF;
+    background-color: #EEF0F1;
+    color: #6F6F6F;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    &:focus {
+        border: 2px solid #FFFFFF !important;
+        background-color: #EEF0F1 !important;
+    }
+}
+
+textarea {
+    height: 135px;
+    resize: none;
+}
+
+
+.contect {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 54vw;
+
+    h3 {
+        color: #6F6F6F;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    form {
+        .content-file {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            div {
+                label {
+                    background-color: #F9FAFC;
+                    color: #6F6F6F;
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 12px;
+                    font-weight: bold;
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                    i {
+                        margin: 0 10px;
+                    }
+                }
+    
+                input {
+                    display: none;
+                }
+            }
+        }
+
+        .content-calendario {
+            width: 45%;
+            height: 250px;
+            position: relative;
+            box-shadow: 2px 5px 11px 0px rgba(0,0,0,0.75);
+            background-color: white;
+            border-radius: 10px;
+
+            ngx-simple-calendar {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+::ng-deep .ngx-calendar__top-bar {
+    justify-content: space-between !important;
+
+    .ngx-calendar__top-bar-icon {
+        margin: 0 !important;
+        background-color: transparent !important;
+        color: #39c5be !important;
+        font-size: 20px !important;
+    }
+
+    .ngx-calendar__title {
+        color: #39c5be !important;
+        font-size: 20px !important;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: bold;
+    }
+}
+
+.round-date {
+    position: absolute;  // The wrapper is positioned relative, so...
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    display: flex;  
+    flex-direction: column;   
+    background-color: #f5f5f5;  
+    border: 1px solid #dedede;  
+    border-radius: 25%;  
+    padding: 0.55rem; 
+    margin: 0.5rem; 
+    &.active {  
+        border: 2px dashed #adadad;  
+        background: #eaeaea;  
+   }  
+   &.weekend {  
+        background: #ffe8e8;  
+   }
+}
+
+::ng-deep .ngx-calendar__day {
+    height: 18% !important;
+    border: none !important;
+    .round-date {
+        background: transparent;
+        border: none;
+        padding: 0;
+        text-align: center;
+        cursor: pointer;
+        &.active {
+            margin: 0;
+        }
+    }
+}
+
+.content-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        border-radius: 10px;
+        margin-top: 15px;
+        padding: 15px 70px!important;
+    }
+    .sin-guardar {
+        background-color:#eef0f1;
+        color: #cecfd0;
+        &:hover {
+            background-color:#eef0f1 !important;
+            color: #cecfd0;
+        }
+    }
+
+    .btn-escojer {
+        background-color:#00b48f;
+        color: white;
+        &:hover {
+            background-color:#00b48f !important;
+            color: white;
+        }
+    }
+}

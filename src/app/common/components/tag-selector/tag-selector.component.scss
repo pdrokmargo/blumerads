@@ -34,8 +34,42 @@
     color: #808080;
 }
 
+mat-form-field {
+  margin-bottom: 20px !important;
+}
 
 mat-form-field-flex {
-  border-radius: 4px 8px 0 0;
+  border-radius: 7px;
   padding: 0.75em 0.75em 0 0.75em;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 7px !important;
+  background-color: #EEF0F1;
+  border: 1px solid white;
+  padding: 1em 0.75em 0.75em 0.75em !important;
+}
+
+::ng-deep .mat-chip-list-wrapper {
+  margin: -4px -14px !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.text {
+  p, label {
+    color: #6F6F6F;
+    font-family: 'DM Sans', sans-serif;
+  }
+  p {
+    font-size: 14px;
+    font-weight: bolder;
+  }
+
+  label {
+    font-size: 12px;
+    font-weight: normal;
+  }
 }

@@ -1,0 +1,221 @@
+.content-escojer {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 54vw;
+
+    h1, p {
+        color: #6F6F6F;
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    h1 {
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    .nav-tabs {
+        border: 1px solid;
+        /* background: red; */
+        border-radius: 5px;
+        .tab-item {
+            width: 50%;
+            .nav-link {
+                font-size: 12px;
+                color: #6F6F6F;
+                font-family: 'DM Sans', sans-serif;
+                font-weight: normal;
+                text-align: center;
+                border-radius: 5px;
+                margin: 2px;
+
+                &.active {
+                    background: white;
+                    color: #1EBEB5;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .tab-pane {
+        .content-nueva {
+            form {
+                margin: 0;
+                width: 100%;
+
+                label {
+                    color: #6F6F6F;
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 12px;
+                    font-weight: normal;
+                    margin: 15px 0 !important;
+                }
+
+                input {
+                    background: #EEF0F1;
+                    color: #6F6F6F;
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 12px;
+                    font-weight: normal;
+
+                    &.is-invalid {
+                        border-color: #FF6C6C;
+                    }
+                }
+                .fv-plugins-message-container {
+                    color: #FF6C6C;
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 12px;
+                    font-weight: normal;
+                }
+            }
+
+            .card {
+                background-color: white;
+                margin-top: 20px;
+                text-align: center;
+                border-radius: 5px;
+
+                .card-head {
+                    background-color: #7DD9D4;
+                    font-family: 'DM Sans', sans-serif;
+                    color: white;
+                    font-size: 14px;
+                    font-weight: bold;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5px 5px 0 0;
+                }
+
+                .card-body {
+                    font-family: 'DM Sans', sans-serif;
+                    color: #6F6F6F;
+                    font-size: 12px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+
+.card-adicional {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 210px;
+    padding: 20px;
+    label {
+        color: #6F6F6F;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        &:nth-child(3) {
+            margin-top: 15px;
+        }
+    }
+    .content-span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            color: #6F6F6F;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+        }
+    }
+}
+
+.tab-panel {
+    height: 0px;
+    display: none;
+    &.show {
+        height: 100%;
+        display: block;
+    }
+    &#publico {
+        &.show {
+            display: flex;
+        }
+    }
+}
+
+.btn-escojer {
+    background-color:#00b48f;
+    float: right;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 15px 70px!important;
+    &:hover {
+        background-color:#00b48f !important;
+        color: white;
+    }
+    &:disabled {
+        background: #6F6F6F !important;
+        color: white;
+        padding: 15px 70px!important;
+    }
+    &.pulicar {
+        background: url('../../../../../assets/imagen/campaing/Grupo\ 14080.png');
+        background-size: cover;
+        padding: 25px 42px !important;
+        background-repeat: no-repeat;
+        &:disabled {
+            background: #6F6F6F !important;
+            color: white;
+            padding: 15px 70px!important;
+        }
+    }
+}
+
+.content-img, .content-btn, .content-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-text {
+    color: #6F6F6F;
+    font-family: 'DM Sans', sans-serif;
+    flex-direction: column;
+    align-items: baseline;
+
+    label {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: normal;
+    }
+}
+
+.content-btn {
+    button {
+        background-color: #EEF0F1;
+        border: 1px solid #FFFFFF;
+        color: #74d3cd;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 7px 20px;
+        border-radius: 10px;
+
+        i {
+            color: #74d3cd;
+        }
+    }
+
+}

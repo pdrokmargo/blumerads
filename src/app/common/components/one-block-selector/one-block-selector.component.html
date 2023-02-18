@@ -2,48 +2,52 @@
 <div class="font-word">
   <div class="card-body card-bordered-white">
     <h3>Escoge el formato del anuncio</h3>
-    <div class="content-img">
-      <button class="btn1 custom" type="button" (click)="onNext('img')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="../../../../assets/imagen/campaing/imagen.png"> <span>Imágen</span>
-        </div>
-      </button>
-      <button class="custom" type="button" (click)="onNext('video')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="../../../../assets/imagen/campaing/camara.png"> <span>Video</span>
-        </div>
-      </button>
-    </div>
-    <div class="content-img">
-      <button class="btn3 custom" type="button" (click)="onNext('survey')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="../../../../assets/imagen/campaing/lista-de-deseos.png"> <span>Encuesta</span>
-        </div>
-      </button>
-      <button class="custom" type="button" (click)="onNext('albums')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="../../../../assets/imagen/campaing/album-de-fotos.png"> <span>Álbum</span>
-        </div>
-      </button>
-    </div>
-    <div class="content-img">
-      <button class="btn3 custom" type="button" (click)="onNext('encuesta')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="../../../../assets/imagen/campaing/chat.png"> <span>Encuesta</span>
-        </div>
-      </button>
-      <button class="custom" type="button" (click)="onNext('correo')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="../../../../assets/imagen/campaing/correo-electronico.png"> <span>Álbum</span>
-        </div>
-      </button>
-    </div>
-    <div class="content-img">
-      <button class="btn3 custom" type="button" (click)="onNext('push')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="../../../../assets/imagen/campaing/push-notification.png"> <span>Encuesta</span>
-        </div>
-      </button>
+    <div class="content-img row">
+      <div class="col-md-6 col-12" *ngFor="let item of arrayDataRadio">
+        <app-radio-img [data]="item" (out)="onNext($event)"></app-radio-img>
+      </div>
+      <!-- <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for2">
+        <label for="for2" (click)="onNext('video')">
+          <img class="img" src="../../../../assets/imagen/campaing/camara.png">
+          <span>Video</span>
+        </label>
+      </div>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for3">
+        <label for="for3" (click)="onNext('survey')">
+          <img class="img" src="../../../../assets/imagen/campaing/lista-de-deseos.png">
+          <span>Encuesta</span>
+        </label>
+      </div>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for4">
+        <label for="for4" (click)="onNext('albums')">
+          <img class="img" src="../../../../assets/imagen/campaing/album-de-fotos.png">
+          <span>Álbum</span>
+        </label>
+      </div>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for5">
+        <label for="for5" (click)="onNext('encuesta')">
+          <img class="img" src="../../../../assets/imagen/campaing/chat.png">
+          <span>SMS</span>
+        </label>
+      </div>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for6">
+        <label for="for6" (click)="onNext('correo')">
+          <img class="img" src="../../../../assets/imagen/campaing/correo-electronico.png">
+          <span>Correo electrónico</span>
+        </label>
+      </div>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for7">
+        <label for="for7" (click)="onNext('push')">
+          <img class="img" src="../../../../assets/imagen/campaing/push-notification.png">
+          <span>Push notification</span>
+        </label>
+      </div> -->
     </div>
     <label for="">Selecciona un formato</label>
   </div>

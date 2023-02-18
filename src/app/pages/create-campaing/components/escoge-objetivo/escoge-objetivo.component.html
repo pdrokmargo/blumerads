@@ -63,26 +63,33 @@
             </ul>
             <div [ngbNavOutlet]="nav2"></div>
         </div>
-        <div class="card-adicional">
+        <!-- <div class="card-adicional">
             <label for="">Tamaño del público</label>
             <div class="content-span">
                 <span>Segmentación basica</span>
                 <span>0</span>
             </div>
             <label for="">Datos específicos</label>
-        </div>
+        </div> -->
+        <app-info-public [datos]="arrayPrecios"></app-info-public>
     </div>
     <div class="tab-panel fade" id="presupuesto" role="tabpanel" aria-labelledby="presupuesto-tab">
         <div class="content-escojer">
             <h1>Escoge el presupuesto para tu campaña</h1>
             <app-range-slider (next)="nextSubStep($event)"></app-range-slider>
         </div>
+        <div>
+            <app-banner-presio></app-banner-presio>
+            <app-banner-info></app-banner-info>
+        </div>
     </div>
     <div class="tab-panel fade" id="formato-anuncio" role="tabpanel" aria-labelledby="formato-anuncio-tab">
         <app-one-block-selector (next)="nextSubStep($event)" (selected)="onSelectFormat($event)"></app-one-block-selector>
+        <app-info-public [datos]="arrayPrecios"></app-info-public>
     </div>
     <div class="tab-panel fade" id="datos-anuncio" role="tabpanel" aria-labelledby="datos-anuncio-tab">
         <app-form-campaign [types]="types" (next)="nextSubStep($event)"></app-form-campaign>
+        <app-previe-ad-box></app-previe-ad-box>
     </div>
     <div class="tab-panel fade" id="publicacion-anuncio" role="tabpanel" aria-labelledby="publicacion-anuncio-tab">
         <div class="content-escojer">
@@ -149,6 +156,7 @@
             </div>
             <button class="btn btn-escojer pulicar">Publicar campaña</button>
         </div>
+        <app-info-public [datos]="arrayPrecios"></app-info-public>
     </div>
 </div>
 

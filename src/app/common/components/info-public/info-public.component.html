@@ -1,25 +1,13 @@
 
-<div class="boder p-7 font-word" >
-<div class="container-info">   
-  <div>
-      <img src="../../../.../../../../assets/imagen/Grupo 14107.png" alt=""> 
-      <input class="input" placeholder="50.000 COP" type="text">
-      
+<div class="boder font-word" >
+  <label class="text">Tamaño del publico</label>
+  <div class="content-data">
+    <span>Segmentación basica</span>
+    <span for="">{{ total }}</span>
   </div>
-   <p>Equivale a 25.000 Internacionales</p>   
+  <label class="text">Datos especificos</label>
+  <div class="content-data" *ngFor="let item of arrayDatos">
+    <span>{{ item.nombre }}</span>
+    <span for="">{{ item.precio }}</span>
   </div>
-  <p class="text">{{titulo}}</p>
-  <label>{{text}}<span class="sp">24K</span></label>
-  <br>
-  <br>
-  <p class="text">{{datos}}</p>
-  <label>NFTs <span class="sp">5k</span></label>
-  <br>
-  <br>
-  <label>Crytp<span class="sp">10k</span></label>
-  <br>
-  <br>
-  <label>Tecnologia <span class="sp">9k</span></label>
-  <br>
-  <br>
 </div>

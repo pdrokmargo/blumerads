@@ -45,6 +45,8 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
 
   };
 
+  arrayPrecios:any = [];
+
   constructor(
     private fb: FormBuilder,
     private service: ServiceService
@@ -58,6 +60,7 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
       if (res === 1) {
         this.types = 'CREATE';
       } else {
+        this.arrayPrecios = [{nombre: 'NFTs', precio: 5000}, {nombre: 'Crypto', precio: 10000}, {nombre: 'Tecnología', precio: 9000}];
         this.types = 'FORMAT';
       }
     });

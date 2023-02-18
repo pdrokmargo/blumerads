@@ -141,7 +141,7 @@
         height: 100%;
         display: block;
     }
-    &#publico {
+    &#publico, &#presupuesto, &#formato-anuncio, &#publicacion-anuncio, &#datos-anuncio {
         &.show {
             display: flex;
         }

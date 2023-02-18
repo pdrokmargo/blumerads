@@ -1,6 +1,35 @@
 import { Component, ViewChild, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { getCSSVariableValue } from '../../_metronic/kt/_utils';
 import { DetailViewItem } from '../../common/components/master-detail/detail-view/detail-view-item';
+import { ChartComponent } from "ng-apexcharts";
+
+import {
+  ApexNonAxisChartSeries,
+  ApexResponsive,
+  ApexChart,
+  ApexDataLabels,
+  ApexXAxis,
+  ApexPlotOptions
+} from "ng-apexcharts";
+
+export type chartOption2 = {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  responsive: ApexResponsive[];
+  labels: any;
+  colors: string[];
+  theme: any;
+};
+
+export type ChartOption3 = {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  dataLabels: ApexDataLabels;
+  plotOptions: ApexPlotOptions;
+  xaxis: ApexXAxis;
+  colors: string[];
+};
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,16 +37,153 @@ import { DetailViewItem } from '../../common/components/master-detail/detail-vie
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
+  @ViewChild("chart") chart: ChartComponent;
+
   active = 1;
   chartOptions: any = {};
-  variable: any = {name: "hola"};
+  variable: any = { name: "hola" };
 
   dashboardPages: DetailViewItem[] = [];
+  chartOption3: any = {};
+  chartOption2: any = {};
+
+  // public chartOption2: Partial<chartOption2> | any;
+  // public chartOption3: Partial<ChartOption3> | any;;
 
   constructor() { }
-
   ngOnInit(): void {
     this.chartOptions = getChartOptions(350);
+    // this.chartOption3 = {
+    //   series: [
+    //     {
+
+    //       data: [3800, 4200, 12000, 25000]
+    //     }
+    //   ],
+    //   chart: {
+    //     type: "bar",
+    //     height: 350
+
+
+    //   },
+    //   plotOptions: {
+    //     bar: {
+    //       horizontal: true
+    //     }
+
+    //   },
+
+    //   colors: [
+    //     "#7dd9d4",
+    //     "#c5bce3",
+    //     "#8364e2",
+    //     "#00b48f"
+    //   ],
+
+
+
+
+    //   dataLabels: {
+    //     enabled: true
+    //   },
+    //   xaxis: {
+    //     categories: [
+    //       "41-61 años",
+    //       "23-40 años",
+    //       "25-23 años",
+    //       "18-24 años"
+
+    //     ]
+    //   }
+    // };
+    this.chartOption3 = {
+      series: [
+        {
+          data: [3800, 4200, 12000, 25000]
+        }
+      ],
+      chart: {
+        type: "bar",
+        height: 200
+      },
+      plotOptions: {
+        bar: {
+          barHeight: "60%",
+          distributed: true,
+          horizontal: true,
+          borderRadius: 8,
+          columnWidth: 12
+        }
+      },
+
+
+
+
+      colors: [
+        "#7dd9d4",
+        "#c5bce3",
+        "#8364e2",
+        "#00b48f"
+      ],
+      dataLabels: {
+        enabled: false,
+        textAnchor: "start",
+        style: {
+          colors: ["#fff"]
+        },
+
+        offsetX: 0,
+        dropShadow: {
+          enabled: true
+        }
+      },
+
+
+      xaxis: {
+
+        categories: [
+          "41-61 años",
+          "23-40 años",
+          "25-23 años",
+          "18-24 años"
+        ],
+
+        labels: {
+          formatter: function (val: any) {
+            return (val / 1000) + "K";
+          }
+        }
+
+      },
+
+
+    };
+
+
+    this.chartOption2 = {
+      series: [45.7, 29.3, 25],
+      chart: {
+        type: "donut"
+      },
+      labels: ["Hombres", "Mujeres", "Otros"],
+      colors: ['#00B48F', '#C5BCE3', '#FF6C6C'],
+
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: "bottom"
+            }
+          }
+        }
+      ]
+    };
+
   }
 
   callBackCode(event: any): void {
@@ -153,5 +319,7 @@ function getChartOptions(height: number) {
       strokeWidth: 3,
     },
   };
+
 }
+
 

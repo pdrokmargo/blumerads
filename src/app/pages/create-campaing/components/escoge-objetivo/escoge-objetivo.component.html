@@ -88,7 +88,8 @@
         <app-info-public [datos]="arrayPrecios"></app-info-public>
     </div>
     <div class="tab-panel fade" id="datos-anuncio" role="tabpanel" aria-labelledby="datos-anuncio-tab">
-        <app-form-campaign [types]="types" (next)="nextSubStep($event)" (outAnuncio)="onDataAuncio($event)"></app-form-campaign>
+        <!-- <app-form-campaign [types]="types" (next)="nextSubStep($event)" (outAnuncio)="onDataAuncio($event)"></app-form-campaign> -->
+        <app-form-campaign-data-anuncio (next)="nextSubStep($event)" (outAnuncio)="onDataAuncio($event)"></app-form-campaign-data-anuncio>
         <app-previe-ad-box [dataAnuncio]="dataAnuncio"></app-previe-ad-box>
     </div>
     <div class="tab-panel fade" id="publicacion-anuncio" role="tabpanel" aria-labelledby="publicacion-anuncio-tab">

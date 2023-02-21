@@ -1,39 +1,4 @@
-<div *ngIf="types === 'CREATE'">
-  <form class="mt-5 w-100">
-      <label class="form-label w-100 text-start text-color m-0">Coloca el nombre de tu nuevo público</label>
-      <input class="form-control form-control-lg" type="text"
-             placeholder="Escribe aquí"
-      />
-      <hr class="hr">
-      <div class="mt-3">
-        <app-tag-select-places></app-tag-select-places>
-      </div>
-      <hr class="hr hr-position">
-      <div class="mt-3">
-        <app-select-ages label="Género" [from]="from" [to]="to"></app-select-ages>
-      </div>
-      <hr class="hr">
-      <div class="mt-3">
-        <app-gender-radios></app-gender-radios>
-      </div>
-      <hr class="hr">
-      <div class="mt-3 mb-5">
-        <app-tag-selector p="Categorías"
-                          label="Escribe una categoría que prefieras para tu campaña.">
-        </app-tag-selector>
-      </div>
-      <div class="mt-10 mb-5">
-        <app-tag-selector p="Otra categoría"></app-tag-selector>
-      </div>
-    </form>
-    <div class="mt-20 text-end">
-      <app-button-green
-      (onEmit)="nextSubStep(1)" description="Siguiente">
-    </app-button-green>
-    </div>
-</div>
-<div *ngIf="types === 'FORMAT'">
-  <!-- <div class="contect">
+<div class="contect">
     <h3>Escoge el nombre y termina de personalizar tu anuncio</h3>
     <form class="mt-5 w-100">
       <label class="form-label w-100 text-start text-color m-0">Coloca el nombre a esta públicación</label>
@@ -130,5 +95,4 @@
       <button class="btn sin-guardar">Guadar y salir</button>
       <button class="btn btn-escojer" (click)="nextSubStep(4)">Siguiente</button>
     </div>
-  </div> -->
 </div>

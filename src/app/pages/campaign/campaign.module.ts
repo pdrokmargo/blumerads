@@ -11,12 +11,14 @@ import { FormCampaignComponent } from './form-campaign/form-campaign.component';
 import {DropdownActionsModule} from "../../common/components/dropdown-actions/dropdown-actions.module";
 import {NgxSimpleCalendarModule} from 'ngx-simple-calendar';
 import { FormsModule } from '@angular/forms';
+import { FormCampaignDataAnuncioComponent } from './form-campaign-data-anuncio/form-campaign-data-anuncio.component';
 
 @NgModule({
   declarations: [
     CampaignComponent,
     CampaignDetailComponent,
     FormCampaignComponent,
+    FormCampaignDataAnuncioComponent
   ],
     imports: [
         CommonModule,
@@ -32,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     CampaignComponent,
     CampaignDetailComponent,
     FormCampaignComponent,
+    FormCampaignDataAnuncioComponent
   ]
 })
 export class CampaignModule { }

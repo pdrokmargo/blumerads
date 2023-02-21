@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import {LabelType, Options} from '@angular-slider/ngx-slider';
-import * as $ from 'jquery';
+/* import * as $ from 'jquery'; */
 import { ServiceService } from '../../services/service.service';
+declare var $: any;
 
 @Component({
   selector: 'app-escoge-objetivo',
@@ -17,33 +18,18 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
   types = 'CREATE';
   subStep = 1;
   private $_stadoFormulario:any;
-
-  sliderForm: FormGroup = new FormGroup({
-    sliderControl: new FormControl([20, 80])
-  });
-  minValue: number = 20000;
-  options: Options = {
-    floor: 20000,
-    ceil: 1000000,
-    stepsArray: [
-      { value: 20000,  },
-      { value: 50000, },
-      { value: 100000,  },
-      { value: 500000 },
-      { value: 750000,  },
-      { value: 1000000 },
-    ],
-    translate: (value: number, label: LabelType): string => {
-      switch (value) {
-        default:
-          return "$" + value;
-      }
-    },
-    showTicks: true,
-    showTicksValues: true,
-
-
-  };
+  presio: number = 0;
+  dataAnuncio = {
+    nombre: '',
+    img: '',
+    titulo: '',
+    descripcion: ''
+  }
+  titleModal:string = '';
+  subtitle:string = '';
+  titlePrimaryBtn:string = '';
+  showSecundaryBtn:boolean = false;
+  modalId:string = 'modal';
 
   arrayPrecios:any = [];
 
@@ -92,11 +78,27 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
     console.log(this.types)
   }
 
+  onSelectPresio(precio: number) {
+    this.presio = precio;
+  }
+
+  onDataAuncio(event: any) {
+    this.dataAnuncio = event;
+    console.log(this.dataAnuncio);
+  }
+
   abirTab(id: string) {
     $('.tab-panel.fade').removeClass('show');
     $('.nav-link-stepper').removeClass('active');
     $('#'+id).addClass('show');
     $(`#${id}-tab`).addClass('active');
+  }
+
+  enviarCampaign() {
+    this.titleModal = 'Tu publicación está en revisión';
+    this.subtitle = 'Tu publicación pasará a revisión antes de 24 hrs, una vez aprobado se pondrá en circulación.';
+    this.titlePrimaryBtn = 'Aceptar';
+    $('#modal').modal('show');
   }
 
 }

@@ -1,4 +1,8 @@
 .mat-step-header {
+    width: 90% !important;
+    &.mat-vertical-stepper-header {
+        padding: 24px 12px !important;
+    }
     .mat-step-icon {
         margin-right: 12px;
         border: 1px solid #90a19e;
@@ -14,7 +18,7 @@
 }
 
 .mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false] {
-    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0); */
 }
 
 .card {

@@ -1,21 +1,25 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-previe-ad-box',
   templateUrl: './preview-ad-box.component.html',
   styleUrls: ['./preview-ad-box.component.scss']
 })
-export class PrevieAdBoxComponent implements OnInit {
+export class PrevieAdBoxComponent implements OnInit, OnChanges {
 
   motrarHeader = false;
   textBoton = '';
   flat: boolean = true;
   img = false;
   body = false;
-  @Input() title: String="";
+  @Input() dataAnuncio:any;
   constructor(
     private cdRef: ChangeDetectorRef
   ) { }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+  }
 
   ngOnInit(): void {
     setTimeout(() => {

@@ -31,6 +31,7 @@ import { BannerPresioComponent } from '../banner-presio/banner-presio.component'
 import { BannerInfoComponent } from '../banner-info/banner-info.component';
 import { PrevieAdBoxComponent } from '../preview-ad-box/preview-ad-box.component';
 import { RadioImgComponent } from '../radio-img/radio-img.component';
+import { GenericModalComponent } from '../generic-modal/generic-modal.component';
 @NgModule({
   declarations: [
     MasterDetailComponent,
@@ -53,7 +54,8 @@ import { RadioImgComponent } from '../radio-img/radio-img.component';
     BannerPresioComponent,
     BannerInfoComponent,
     PrevieAdBoxComponent,
-    RadioImgComponent
+    RadioImgComponent,
+    GenericModalComponent
   ],
   providers: [MasterDetailService],
   exports: [
@@ -73,7 +75,8 @@ import { RadioImgComponent } from '../radio-img/radio-img.component';
     BannerInfoComponent,
     InfoPublicComponent,
     PrevieAdBoxComponent,
-    RadioImgComponent
+    RadioImgComponent,
+    GenericModalComponent
   ],
   imports: [
     CommonModule,

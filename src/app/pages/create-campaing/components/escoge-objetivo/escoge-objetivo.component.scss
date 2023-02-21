@@ -20,7 +20,8 @@
     }
 
     .nav-tabs {
-        border: 1px solid;
+        border: 1px solid #ffffff;
+        background-color: #F5F8F8;
         /* background: red; */
         border-radius: 5px;
         .tab-item {
@@ -32,7 +33,7 @@
                 font-weight: normal;
                 text-align: center;
                 border-radius: 5px;
-                margin: 2px;
+                margin: 5px;
 
                 &.active {
                     background: white;
@@ -146,6 +147,17 @@
             display: flex;
         }
     }
+
+    &#publicacion-anuncio {
+        .container-info, .boder {
+            width: 110% !important;
+        }
+
+        .boder {
+            padding: 15px 20px !important;
+            margin-top: 10px !important;
+        }
+    }
 }
 
 .btn-escojer {
@@ -175,6 +187,10 @@
             background: #6F6F6F !important;
             color: white;
             padding: 15px 70px!important;
+        }
+        &:hover {
+            background-color: transparent !important;
+            color: white;
         }
     }
 }

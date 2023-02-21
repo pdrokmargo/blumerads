@@ -2,7 +2,7 @@
     <div>
         <img src="../../../.../../../../assets/imagen/Grupo 14107.png" alt=""> 
         <!-- <input class="input" placeholder="50.000 COP" type="text"> -->
-        <label for="">50.000 COP</label>
+        <label for="">{{ service.formatNumberInteger(precio) }} COP</label>
     </div>
-    <p>Equivale a 25.000 Internacionales</p>   
+    <p>Equivale a {{ service.formatNumberInteger(precio/2) }} Internacionales</p>   
 </div>

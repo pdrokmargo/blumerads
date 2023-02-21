@@ -38,6 +38,8 @@ textarea {
     }
 
     form {
+        width: 49vw !important;
+        margin: 0 20px;
         .content-file {
             display: flex;
             align-items: center;
@@ -51,6 +53,7 @@ textarea {
                     font-weight: bold;
                     padding: 10px 15px;
                     border-radius: 10px;
+                    cursor: pointer;
                     i {
                         margin: 0 10px;
                     }
@@ -59,21 +62,96 @@ textarea {
                 input {
                     display: none;
                 }
+
+                &.cont-img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    img {
+                        width: 66px;
+                        height: 60px;
+                        border-radius: 6px;
+                    }
+                    span {
+                        color: #FF6C6C;
+                        font-size: 12px;
+                        font-family: 'DM Sans', sans-serif;
+                        font-weight: normal;
+                        cursor: pointer;
+                    }
+                }
             }
         }
 
-        .content-calendario {
-            width: 45%;
-            height: 250px;
-            position: relative;
-            box-shadow: 2px 5px 11px 0px rgba(0,0,0,0.75);
-            background-color: white;
-            border-radius: 10px;
+        .content-data {
+            display: flex;
+            /* align-items: center; */
+            .content-day, .group-input-data {
+                margin: 0 10px;
+            }
+            .content-day {
+                label {
+                    font-family: 'DM Sans', sans-serif;
+                    font-weight: bold;
+                    font-size: 12px;
+                    color: #6F6F6F;
+                    margin: 10px 0 !important;
+                }
+                .content-calendario {
+                    width: 22vw;
+                    height: 250px;
+                    position: relative;
+                    box-shadow: 2px 5px 11px 0px rgba(0,0,0,0.75);
+                    background-color: white;
+                    border-radius: 10px;
+        
+                    ngx-simple-calendar {
+                        padding: 10px;
+                    }
+                }
+            }
 
-            ngx-simple-calendar {
-                padding: 10px;
+            .group-input-data {
+                .input-data {
+                    display: flex;
+                    flex-direction: column;
+                    label {
+                        font-family: 'DM Sans', sans-serif;
+                        font-weight: bold;
+                        font-size: 12px;
+                        color: #6F6F6F;
+                        margin: 10px 0 !important;
+
+                        &.input-date-label {
+                            width: 90%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            i {
+                                border: 1px solid #9B9A9A;
+                                border-radius: 6px;
+                                padding: 3px 5px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    input, .input-date-label {
+                        background-color: #EEF0F1;
+                        border: #FFFFFF 1px solid;
+                        color: #6F6F6F;
+                        font-size: 12px;
+                        font-family: 'DM Sans', sans-serif;
+                        font-weight: normal;
+                        border-radius: 6px;
+                        padding: 10px;
+                    }
+                }
             }
         }
+
     }
 }
 
@@ -109,8 +187,12 @@ textarea {
     padding: 0.55rem; 
     margin: 0.5rem; 
     &.active {  
-        border: 2px dashed #adadad;  
-        background: #eaeaea;  
+        border: none;  
+        background: #39c5be;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
    }  
    &.weekend {  
         background: #ffe8e8;  

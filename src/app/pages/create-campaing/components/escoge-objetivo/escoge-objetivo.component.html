@@ -76,10 +76,10 @@
     <div class="tab-panel fade" id="presupuesto" role="tabpanel" aria-labelledby="presupuesto-tab">
         <div class="content-escojer">
             <h1>Escoge el presupuesto para tu campaña</h1>
-            <app-range-slider (next)="nextSubStep($event)"></app-range-slider>
+            <app-range-slider (next)="nextSubStep($event)" (presio)="onSelectPresio($event)"></app-range-slider>
         </div>
         <div>
-            <app-banner-presio></app-banner-presio>
+            <app-banner-presio [precio]="presio"></app-banner-presio>
             <app-banner-info></app-banner-info>
         </div>
     </div>
@@ -88,8 +88,8 @@
         <app-info-public [datos]="arrayPrecios"></app-info-public>
     </div>
     <div class="tab-panel fade" id="datos-anuncio" role="tabpanel" aria-labelledby="datos-anuncio-tab">
-        <app-form-campaign [types]="types" (next)="nextSubStep($event)"></app-form-campaign>
-        <app-previe-ad-box></app-previe-ad-box>
+        <app-form-campaign [types]="types" (next)="nextSubStep($event)" (outAnuncio)="onDataAuncio($event)"></app-form-campaign>
+        <app-previe-ad-box [dataAnuncio]="dataAnuncio"></app-previe-ad-box>
     </div>
     <div class="tab-panel fade" id="publicacion-anuncio" role="tabpanel" aria-labelledby="publicacion-anuncio-tab">
         <div class="content-escojer">
@@ -154,11 +154,16 @@
                     <button (click)="abirTab('presupuesto')">Editar <i class="fa-solid fa-pen"></i></button>
                 </div>
             </div>
-            <button class="btn btn-escojer pulicar">Publicar campaña</button>
+            <button class="btn btn-escojer pulicar" (click)="enviarCampaign()">Publicar campaña</button>
         </div>
-        <app-info-public [datos]="arrayPrecios"></app-info-public>
+        <div>
+            <app-banner-presio></app-banner-presio>
+            <app-info-public [datos]="arrayPrecios"></app-info-public>
+        </div>
     </div>
 </div>
+
+<app-generic-modal [modalId]="modalId" [titleModal]="titleModal" [subtitle]="subtitle" [titlePrimaryBtn]="titlePrimaryBtn"></app-generic-modal>
 
 <ng-template #formError let-control="control" let-message="message" let-validation="validation">
     <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">

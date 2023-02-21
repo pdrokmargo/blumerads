@@ -10,6 +10,7 @@ import {HorizontalTabsWizardModule} from "../../common/components/horizontal-tab
 import { FormCampaignComponent } from './form-campaign/form-campaign.component';
 import {DropdownActionsModule} from "../../common/components/dropdown-actions/dropdown-actions.module";
 import {NgxSimpleCalendarModule} from 'ngx-simple-calendar';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {NgxSimpleCalendarModule} from 'ngx-simple-calendar';
         HorizontalTabsWizardModule,
         DropdownActionsModule,
         NgxSimpleCalendarModule,
+        FormsModule
     ],
   exports: [
     CampaignComponent,

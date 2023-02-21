@@ -8,6 +8,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class OneBlockSelectorComponent implements OnInit {
   @Output() next = new EventEmitter;
   @Output() selected = new EventEmitter;
+  type:string = '';
   arrayDataRadio = [
     {
       id: 1,
@@ -59,10 +60,11 @@ export class OneBlockSelectorComponent implements OnInit {
 
   onNext(format: string) {
     //this.next.emit(1);
-    this.selected.emit(format);
+    this.type = format;
   }
 
-  nextSubStep(event: any) {
+  nextSubStep(event: any, format: string) {
+    this.selected.emit(format);
     this.next.emit(3);
   }
 

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, OnChanges, SimpleChanges, ChangeDetectorRef } from '@angular/core';
 import * as $ from 'jquery';
+import { EscogeObjetivoComponent } from '../../create-campaing/components/escoge-objetivo/escoge-objetivo.component';
 
 @Component({
   selector: 'app-form-campaign',
@@ -8,15 +9,17 @@ import * as $ from 'jquery';
 })
 export class FormCampaignComponent implements OnInit, OnChanges {
   @Output() next = new EventEmitter<any>();
-  @Output() outAnuncio = new EventEmitter<any>();
+  @Output() outAnuncio = new EventEmitter;
   arrayWeekend = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
   arrayMonth = ['ener', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
   formatFecha:String;
   hourI:String;
   hourF:String;
+  mostrarImagen = true;
+  sw = 0;
   dataAnuncio = {
     nombre: '',
-    img: '',
+    imagen: '',
     titulo: '',
     descripcion: ''
   }
@@ -31,16 +34,18 @@ export class FormCampaignComponent implements OnInit, OnChanges {
   events = [];
   constructor(
     private cdRef: ChangeDetectorRef,
+    private escogeObjetivoComponent: EscogeObjetivoComponent
   ) { }
 
   ngOnInit(): void {
-    console.log(this.formatFecha);
     this.selectDia(undefined, new Date());
+    /* this.quitarImg(); */
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
-    this.changeCalendar();
+    setTimeout(() => {
+      this.changeCalendar();
+    }, 100);
   }
 
   nextSubStep(event: any) {
@@ -54,9 +59,11 @@ export class FormCampaignComponent implements OnInit, OnChanges {
   changeCalendar() {
     const calendarLang: any = ["L", "M", "M", "J", "V", "S", "D"];
     let pos = 0;
-    console.log($(".ngx-calendar__day-of-week"));
     $(".ngx-calendar__day-of-week").each(function () {
-      $(this).html(calendarLang);
+      if (pos == 7) {
+        pos = 0;
+      }
+      $(this).html(calendarLang[pos]);
       pos++;
     });
   }
@@ -81,27 +88,54 @@ export class FormCampaignComponent implements OnInit, OnChanges {
   async cambioArchivo(event:any) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
-      const res:any = await this.cargar_img(file);
-      this.dataAnuncio.img = res.toString();
-      this.cdRef.detectChanges();
+      if (file.size >= 1000000) {
+        this.escogeObjetivoComponent.titleModal = '';
+        this.escogeObjetivoComponent.subtitle = 'Solo se permite imagenes de maximo 1 mb';
+        this.escogeObjetivoComponent.titlePrimaryBtn = 'Aceptar';
+        this.escogeObjetivoComponent.abrirModal();
+        return;
+      } else if (file.type != 'image/jpeg' && file.type != 'image/png') {
+        this.escogeObjetivoComponent.titleModal = '';
+        this.escogeObjetivoComponent.subtitle = 'Solo se permite imagenes con formato jpg o png';
+        this.escogeObjetivoComponent.titlePrimaryBtn = 'Aceptar';
+        this.escogeObjetivoComponent.abrirModal();
+        return;
+      }
+      const resp:any = await this.cargar_img(file);
+      const base64 = resp;
+      this.dataAnuncio.imagen = base64;
       file.value = '';
       this.onDataAnuncio();
-      console.log(this.dataAnuncio);
+      this.cdRef.markForCheck();
     }
   }
 
   cargar_img(file:any) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => {
+      reader.addEventListener('loadend', () => {
         resolve(reader.result);
-      }
+      });
+      reader.readAsDataURL(file);
     });
   }
 
+  validarMesaje() {
+    console.log(this.sw);
+    if (this.sw == 0) {
+      this.escogeObjetivoComponent.titleModal = 'Aviso';
+      this.escogeObjetivoComponent.subtitle = 'No se a podido subir la imagen correctamente, vuelve a intentar';
+      this.escogeObjetivoComponent.titlePrimaryBtn = 'Aceptar';
+      setTimeout(() => {
+        this.escogeObjetivoComponent.abrirModal();
+      }, 100);
+    }
+    this.sw = 1;
+    console.log(this.sw);
+  }
+
   quitarImg() {
-    this.dataAnuncio.img = '';
+    this.dataAnuncio.imagen = '';
     this.onDataAnuncio();
   }
 

@@ -45,40 +45,49 @@ textarea {
             align-items: center;
             justify-content: space-between;
             div {
-                label {
-                    background-color: #F9FAFC;
-                    color: #6F6F6F;
-                    font-family: 'DM Sans', sans-serif;
-                    font-size: 12px;
-                    font-weight: bold;
-                    padding: 10px 15px;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    i {
-                        margin: 0 10px;
-                    }
-                }
-    
-                input {
-                    display: none;
-                }
-
-                &.cont-img {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    img {
-                        width: 66px;
-                        height: 60px;
-                        border-radius: 6px;
-                    }
+                &:nth-child(1) {
                     span {
-                        color: #FF6C6C;
-                        font-size: 12px;
+                        color: #6F6F6F;
                         font-family: 'DM Sans', sans-serif;
-                        font-weight: normal;
+                        font-size: 12px;
+                    }
+                }
+                &:nth-child(2) {
+                    label {
+                        background-color: #F9FAFC;
+                        color: #6F6F6F;
+                        font-family: 'DM Sans', sans-serif;
+                        font-size: 12px;
+                        font-weight: bold;
+                        padding: 10px 15px;
+                        border-radius: 10px;
                         cursor: pointer;
+                        i {
+                            margin: 0 10px;
+                        }
+                    }
+        
+                    input {
+                        display: none;
+                    }
+    
+                    &.cont-img {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        img {
+                            width: 66px;
+                            height: 60px;
+                            border-radius: 6px;
+                        }
+                        span {
+                            color: #FF6C6C;
+                            font-size: 12px;
+                            font-family: 'DM Sans', sans-serif;
+                            font-weight: normal;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -155,8 +164,16 @@ textarea {
     }
 }
 
+::ng-deep .ngx-calendar__day-of-week {
+    text-align: center !important;
+}
+
 ::ng-deep .ngx-calendar__top-bar {
     justify-content: space-between !important;
+
+    .ngx-calendar__day-of-week {
+        text-align: center !important;
+    }
 
     .ngx-calendar__top-bar-icon {
         margin: 0 !important;

@@ -26,14 +26,18 @@
         border-radius: 5px;
         .tab-item {
             width: 50%;
+            height: 55px;
             .nav-link {
                 font-size: 12px;
                 color: #6F6F6F;
                 font-family: 'DM Sans', sans-serif;
                 font-weight: normal;
-                text-align: center;
                 border-radius: 5px;
                 margin: 5px;
+                height: 85%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 &.active {
                     background: white;

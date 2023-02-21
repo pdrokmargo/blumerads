@@ -21,7 +21,7 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
   presio: number = 0;
   dataAnuncio = {
     nombre: '',
-    img: '',
+    imagen: '',
     titulo: '',
     descripcion: ''
   }
@@ -47,7 +47,7 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
         this.types = 'CREATE';
       } else {
         this.arrayPrecios = [{nombre: 'NFTs', precio: 5000}, {nombre: 'Crypto', precio: 10000}, {nombre: 'Tecnología', precio: 9000}];
-        this.types = 'FORMAT';
+        /* this.types = 'FORMAT'; */
       }
     });
   }
@@ -66,6 +66,8 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
     } else if (event == 2) {
       this.abirTab('formato-anuncio');
     } else if (event == 3) {
+      this.types = 'CREATE';
+      this.types = 'FORMAT';
       this.abirTab('datos-anuncio');    
     }  else if (event == 4) {
       this.abirTab('publicacion-anuncio');    
@@ -73,9 +75,8 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
   }
 
   onSelectFormat(format: string) {
-    this.types = 'FORMAT';
     console.log(format)
-    console.log(this.types)
+    this.types = 'FORMAT';
   }
 
   onSelectPresio(precio: number) {
@@ -84,7 +85,6 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
 
   onDataAuncio(event: any) {
     this.dataAnuncio = event;
-    console.log(this.dataAnuncio);
   }
 
   abirTab(id: string) {
@@ -98,6 +98,10 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
     this.titleModal = 'Tu publicación está en revisión';
     this.subtitle = 'Tu publicación pasará a revisión antes de 24 hrs, una vez aprobado se pondrá en circulación.';
     this.titlePrimaryBtn = 'Aceptar';
+    this.abrirModal();
+  }
+  
+  abrirModal() {
     $('#modal').modal('show');
   }
 

@@ -7,9 +7,10 @@
   <mat-chip-list class="never" #chipList aria-label="Category selection">
     <mat-chip class="position" *ngFor="let category of category" (removed)="remove(category)">
       {{category.name}}
-      <button matChipRemove>
+      <!-- <button matChipRemove>
         <mat-icon>cancel</mat-icon>
-      </button>
+      </button> -->
+      <i class="fa-solid fa-xmark" matChipRemove></i>
     </mat-chip>
     <input class="nino" placeholder="Escribe aquí" [matChipInputFor]="chipList"
       [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"

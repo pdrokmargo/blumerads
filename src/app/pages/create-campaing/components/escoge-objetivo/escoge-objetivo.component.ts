@@ -44,7 +44,7 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
     });
     this.$_stadoFormulario = this.service.stadoFormulario.subscribe(res => {
       if (res === 1) {
-        this.types = 'CREATE';
+        /* this.types = 'CREATE'; */
       } else {
         this.arrayPrecios = [{nombre: 'NFTs', precio: 5000}, {nombre: 'Crypto', precio: 10000}, {nombre: 'Tecnología', precio: 9000}];
         /* this.types = 'FORMAT'; */
@@ -66,8 +66,8 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
     } else if (event == 2) {
       this.abirTab('formato-anuncio');
     } else if (event == 3) {
-      this.types = 'CREATE';
-      this.types = 'FORMAT';
+      /* this.types = 'CREATE'; */
+      /* this.types = 'FORMAT'; */
       this.abirTab('datos-anuncio');    
     }  else if (event == 4) {
       this.abirTab('publicacion-anuncio');    
@@ -76,7 +76,7 @@ export class EscogeObjetivoComponent implements OnInit, OnDestroy {
 
   onSelectFormat(format: string) {
     console.log(format)
-    this.types = 'FORMAT';
+    /* this.types = 'CREATE'; */
   }
 
   onSelectPresio(precio: number) {

@@ -23,11 +23,6 @@ const TABS_CONFIG = [
 export class RegistrationComponent implements OnInit, OnDestroy {
 
 
-
-  iniciar(): void {
-    console.log(this.registrationForm)
-  }
-
   public showPassword: boolean;
   public showPasswordOnPress: boolean;
   name = 'Angular';

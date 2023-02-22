@@ -11,6 +11,7 @@ import { BusinessPositionComponent } from 'src/app/common/components/business-po
 import { UserComponent } from 'src/app/common/components/input-user/user.component';
 import { PerfilDetailComponent } from './perfil-detail/perfil-detail.component';
 import { InputEmailComponent } from 'src/app/common/components/input-email/input-email.component';
+import { PasswordDetailComponent } from './password-detail/password-detail.component';
 @NgModule({
   declarations: [
     PerfilComponent,
@@ -21,6 +22,7 @@ import { InputEmailComponent } from 'src/app/common/components/input-email/input
     UserComponent,
     PerfilDetailComponent,
     InputEmailComponent,
+    PasswordDetailComponent,
   ],
   imports: [
     CommonModule,

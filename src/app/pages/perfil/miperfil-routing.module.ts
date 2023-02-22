@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PerfilComponent } from './perfil.component';
 import { PerfilDetailComponent } from './perfil-detail/perfil-detail.component';
-
+import { PasswordDetailComponent } from './password-detail/password-detail.component';
 const routes: Routes = [
   {
     path: '',

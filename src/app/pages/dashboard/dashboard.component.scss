@@ -37,23 +37,102 @@
 
 .container-grafic {
   display: flex;
-  justify-content: center;
-
-
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F5F7F8;
 
   .barras {
 
-    width: 50%;
+    width: 30%;
     padding: 0;
 
     margin-right: auto;
   }
 
   .dona {
-    width: 50%;
-    padding: 0;
+    width: 30%;
+    padding: 10px;
     margin-left: auto;
 
   }
 
+}
+
+.container-paises {
+  .PAISES {}
+
+  padding: 15px;
+  display: flex;
+
+  .titulo {
+    font-size: 13px;
+    color: #6F6F6F;
+    font-weight: bold;
+    text-transform: capitalize;
+
+  }
+
+
+
+  table {
+    border-collapse: collapse;
+    width: 50vw;
+
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #EBE5FF;
+  }
+
+
+
+  .alcance {
+    background-color: #EBE5FF;
+    padding-left: 0%;
+
+  }
+
+  background-color: #F5F7F8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  box-shadow: 4px 4px 10px #EBE5FF;
+  font-family: 'Open Sans',
+  sans-serif;
+
+}
+
+
+
+
+
+
+.Container-1 {
+  display: flex;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
 }

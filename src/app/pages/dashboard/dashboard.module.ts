@@ -15,6 +15,9 @@ import { InputEmailComponent } from 'src/app/common/components/input-email/input
 import { InputPasswordComponent } from 'src/app/common/components/input-password/input-password.component';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { MasterDetailModule } from '../../common/components/master-detail/master-detail.module';
+import { Component, ViewChild } from "@angular/core";
+import { ChartComponent } from "ng-apexcharts";
+
 
 @NgModule({
   declarations: [
@@ -41,4 +44,4 @@ import { MasterDetailModule } from '../../common/components/master-detail/master
 
   ],
 })
-export class DashboardModule {}
+export class DashboardModule { }

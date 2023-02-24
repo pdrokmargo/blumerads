@@ -1,95 +1,263 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs dashboard-general font-word">
-    <li [ngbNavItem]="1" class="blumer-tab">
-      <a ngbNavLink class="blumer-content-tab">General</a>
-      <ng-template ngbNavContent>
-        <div class="mb-5 mb-xl-10 page-background container-fluid">
-            <div class="row">
-                <div class="col-sm p-5">
-                    <app-stats-card class="number-card"
-                        value="$1200"
-                        description="Total invertido"
-                        icon="./assets/media/icons/duotune/general/gen045.svg"
-                        >
-                    </app-stats-card>
-                </div>
+  <li [ngbNavItem]="1" class="blumer-tab">
+    <a ngbNavLink class="blumer-content-tab">General</a>
+    <ng-template ngbNavContent>
+      <div class="mb-5 mb-xl-10 page-background container-fluid">
+        <div class="row">
+          <div class="col-sm p-5">
+            <app-stats-card class="number-card" value="$1200" description="Total invertido"
+              icon="./assets/media/icons/duotune/general/gen045.svg">
+            </app-stats-card>
+          </div>
 
-                <div class="col-sm p-5">
-                    <app-stats-card class="number-card"
-                        value="$355"
-                        description="Saldo consumido"
-                        icon="./assets/media/icons/duotune/general/gen045.svg"
-                        >
-                    </app-stats-card>
-                </div>
-                <div class="col-sm p-5">
-                    <app-stats-card class="number-card"
-                        value="50"
-                        description="Impresiones"
-                        icon="./assets/media/icons/duotune/general/gen045.svg"
-                        >
-                    </app-stats-card>
-                </div>
-                <div class="col-sm p-5">
-                    <app-stats-card class="number-card"
-                        value="30"
-                        description="Clicks"
-                        icon="./assets/media/icons/duotune/general/gen045.svg"
-                        >
-                    </app-stats-card>
-                </div>
-            </div>
+          <div class="col-sm p-5">
+            <app-stats-card class="number-card" value="$355" description="Saldo consumido"
+              icon="./assets/media/icons/duotune/general/gen045.svg">
+            </app-stats-card>
+          </div>
+          <div class="col-sm p-5">
+            <app-stats-card class="number-card" value="50" description="Impresiones"
+              icon="./assets/media/icons/duotune/general/gen045.svg">
+            </app-stats-card>
+          </div>
+          <div class="col-sm p-5">
+            <app-stats-card class="number-card" value="30" description="Clicks"
+              icon="./assets/media/icons/duotune/general/gen045.svg">
+            </app-stats-card>
+          </div>
         </div>
+      </div>
 
 
 
-  <!-- begin::Body -->
-  <div class="card-body">
-    <!-- begin::Chart -->
-    <div #chartRef id="kt_charts_widget_3_chart" [style.height]="'350px'">
-      <apx-chart
-        [series]="chartOptions.series"
-        [chart]="chartOptions.chart"
-        [xaxis]="chartOptions.xaxis"
-        [yaxis]="chartOptions.yaxis"
-        [dataLabels]="chartOptions.dataLabels"
-        [stroke]="chartOptions.stroke"
-        [legend]="chartOptions.legend"
-        [fill]="chartOptions.fill"
-        [states]="chartOptions.states"
-        [tooltip]="chartOptions.tooltip"
-        [colors]="chartOptions.colors"
-        [markers]="chartOptions.markers"
-        [plotOptions]="chartOptions.plotOptions"
-      ></apx-chart>
-    </div>
-    <!-- end::Chart -->
+
+
+
+
+
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2" class="blumer-tab">
+    <a ngbNavLink class="blumer-content-tab">Campañas</a>
+    <ng-template ngbNavContent>
+      <app-campaign></app-campaign>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3" class="blumer-tab">
+    <a ngbNavLink class="blumer-content-tab">Público Objetivo</a>
+    <ng-template ngbNavContent>
+      <!-- <app-target-audience></app-target-audience> -->
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="4" class="blumer-tab">
+    <a ngbNavLink class="blumer-content-tab">Anuncios</a>
+    <ng-template ngbNavContent>
+      <!-- <app-ads></app-ads> -->
+    </ng-template>
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>
+<!-- begin::Body -->
+<div class="card-body">
+  <!-- begin::Chart -->
+  <div #chartRef id="kt_charts_widget_3_chart" [style.height]="'350px'">
+    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+      [yaxis]="chartOptions.yaxis" [dataLabels]="chartOptions.dataLabels" [stroke]="chartOptions.stroke"
+      [legend]="chartOptions.legend" [fill]="chartOptions.fill" [states]="chartOptions.states"
+      [tooltip]="chartOptions.tooltip" [colors]="chartOptions.colors" [markers]="chartOptions.markers"
+      [plotOptions]="chartOptions.plotOptions"></apx-chart>
   </div>
-  <!-- end::Body -->
+  <!-- end::Chart -->
+</div>
+
+<div class="container-grafic">
+  <!-- grafica barras -->
+  <div id="barra1" class="barras">
+    <div>Edades</div>
+    <hr>
+    <apx-chart [series]="chartOption3.series" [chart]="chartOption3.chart" [colors]="chartOption3.colors"
+      [dataLabels]="chartOption3.dataLabels" [plotOptions]="chartOption3.plotOptions"
+      [xaxis]="chartOption3.xaxis"></apx-chart>
+  </div>
+  <div class="dona">
+    <div>Genero</div>
+    <hr>
+    <apx-chart [series]="chartOption2.series" [theme]="chartOption2.theme" [chart]="chartOption2.chart"
+      [colors]="chartOption2.colors" [labels]="chartOption2.labels" [responsive]="chartOption2.responsive"></apx-chart>
 
 
 
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="2" class="blumer-tab">
-      <a ngbNavLink class="blumer-content-tab">Campañas</a>
-      <ng-template ngbNavContent>
-        <app-campaign></app-campaign>
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="3" class="blumer-tab">
-      <a ngbNavLink class="blumer-content-tab">Público Objetivo</a>
-      <ng-template ngbNavContent>
-        <!-- <app-target-audience></app-target-audience> -->
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="4" class="blumer-tab">
-        <a ngbNavLink class="blumer-content-tab">Anuncios</a>
-        <ng-template ngbNavContent>
-          <!-- <app-ads></app-ads> -->
-        </ng-template>
-      </li>
-  </ul>
+  </div>
 
-  <div [ngbNavOutlet]="nav"></div>
+</div>
+
+<div class="container-paises">
+  <div class="PAISES">
+
+    <p class="titulo">paises</p>
+
+    <table class="Pais">
 
 
+      <thead>
+
+
+        <tr>
+          <th>Pais con mayor alcance | Colombia </th>
+          <th> 50% </th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estados Unidos</td>
+          <td>10%</td>
+
+        </tr>
+        <tr>
+          <td>España</td>
+          <td>10%</td>
+
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Chile</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td>5%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="PAISES">
+
+    <p class="titulo">Ciudades</p>
+
+    <table class="Pais">
+
+
+      <thead>
+
+
+        <tr>
+          <th>Pais con mayor alcance | Barranquilla</th>
+          <th> 50% </th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Santa Marta</td>
+          <td>10%</td>
+
+        </tr>
+        <tr>
+          <td>Cartagena</td>
+          <td>10%</td>
+
+        </tr>
+        <tr>
+          <td>Maracaibo</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Villavicencio</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Pasto</td>
+          <td>5%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-- <div class="Container-1">
+    <table class="Pais">
+
+      <title>Paises</title>
+      <thead>
+
+
+        <tr>
+          <th>Pais con mayor alcance | Colombia </th>
+          <th> 50% </th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estados Unidos</td>
+          <td>10%</td>
+
+        </tr>
+        <tr>
+          <td>España</td>
+          <td>10%</td>
+
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Chile</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Canadas</td>
+          <td>5%</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- ciudades -->
+
+  <!-- <table class="table2">
+
+      <thead>
+
+        <tr>
+          <th>Ciudad con mayor alcance | Barranquilla </th>
+          <th> 50% </th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Santa Marta</td>
+          <td>10%</td>
+
+        </tr>
+        <tr>
+          <td>Cartagena</td>
+          <td>10%</td>
+
+        </tr>
+        <tr>
+          <td>Maracaibo</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Villavicencio</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Pasto</td>
+          <td>5%</td>
+        </tr>
+      </tbody>
+    </table> -->
+</div>

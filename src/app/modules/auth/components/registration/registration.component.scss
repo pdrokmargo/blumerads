@@ -1,17 +1,21 @@
-// :host {
-//   width: 100%;
-//   @media (min-width: 992px) {
-//     .login-form {
-//       width: 100%;
-//       max-width: 450px;
+body {
+  background: url("../../../../../assets/imagen/body-registro.png") !important;
+  /* overflow: hidden !important; */
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  height: auto !important;
+}
 
-//       .mat-form-field {
-//         width: 100%;
-//       }
-//     }
-//   }
-// }
+.options{
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 5px;
+}
 
+form {
+  border: 1px solid white;
+  border-radius: 6px;
+}
 input {
   &.is-invalid {
     border: 1px solid red;
@@ -220,6 +224,10 @@ border: 0px solid;;
   background-color: transparent !important;
   background: transparent !important;
   border: 0px solid #ffff;
+  cursor: auto;
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .iconbtn {
@@ -229,6 +237,9 @@ border: 0px solid;;
   border: 0px;
   top: -2.2rem;
   left: 80%;
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .hide {
@@ -252,4 +263,9 @@ border: 0px solid;;
 
 .primary{
   background: white;
+}
+
+h1, p {
+  color: #6F6F6F !important;
+  font-family: 'DM Sans', sans-serif;
 }

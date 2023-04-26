@@ -37,26 +37,35 @@
 
 .container-grafic {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 90%;
   background-color: #F5F7F8;
+  font-size: 13px;
+  color: #6F6F6F;
+  font-weight: bold;
+  text-transform: capitalize;
+  height: 35%;
+
+  padding: 10px;
+
+
 
   .barras {
+    height: 100%;
+    width: 80%;
 
-    width: 30%;
-    padding: 0;
-
-    margin-right: auto;
   }
 
   .dona {
-    width: 30%;
-    padding: 10px;
-    margin-left: auto;
+    height: 100%;
+    width: 40%;
+
 
   }
 
 }
+
+
+
 
 .container-paises {
   .PAISES {}
@@ -76,7 +85,7 @@
 
   table {
     border-collapse: collapse;
-    width: 50vw;
+    width: 45vw;
 
   }
 

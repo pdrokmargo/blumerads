@@ -26,15 +26,16 @@ export class GenericModalComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['titleModal'].currentValue && this.titleModal) {
+    console.log(changes);
+    if (changes['titleModal']) {
       this.titleM = this.titleModal;
     }
 
-    if (changes['subtitle'].currentValue && this.subtitle) {
+    if (changes['subtitle']) {
       this.subtitleM = this.subtitle;
     }
 
-    if (changes['modalId'].currentValue && this.modalId) {
+    if (this.modalId) {
       this.modalIdAttr = this.modalId;
     }
   }

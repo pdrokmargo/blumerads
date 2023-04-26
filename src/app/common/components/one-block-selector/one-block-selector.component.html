@@ -1,56 +1,55 @@
 
-<div class="font-word" style="text-align: center;">
-  <div class="div1">
-    <button class="btn1 custom" type="button">
-      <div class="d-flex flex-column items-center">
-        <img class="img" src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png"> <span>Imágen</span>
+<div class="font-word">
+  <div class="card-body card-bordered-white">
+    <h3>Escoge el formato del anuncio</h3>
+    <div class="content-img row">
+      <div class="col-md-6 col-12" *ngFor="let item of arrayDataRadio">
+        <app-radio-img [data]="item" (out)="onNext($event)"></app-radio-img>
       </div>
-    </button>
-    <button class="custom" type="button">
-      <div class="d-flex flex-column items-center">
-        <img class="img" src="https://cdn-icons-png.flaticon.com/512/4021/4021977.png"> <span>Video</span>
+      <!-- <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for2">
+        <label for="for2" (click)="onNext('video')">
+          <img class="img" src="../../../../assets/imagen/campaing/camara.png">
+          <span>Video</span>
+        </label>
       </div>
-    </button>
-  </div>
-  <div>
-    <button class="btn3 custom" type="button">
-      <div class="d-flex flex-column items-center">
-        <img class="img" src="https://cdn-icons-png.flaticon.com/512/1632/1632670.png"> <span>Encuesta</span>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for3">
+        <label for="for3" (click)="onNext('survey')">
+          <img class="img" src="../../../../assets/imagen/campaing/lista-de-deseos.png">
+          <span>Encuesta</span>
+        </label>
       </div>
-    </button>
-    <button class="custom" type="button">
-      <div class="d-flex flex-column items-center">
-        <img class="img" src="https://cdn-icons-png.flaticon.com/512/781/781273.png"> <span>Álbum</span>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for4">
+        <label for="for4" (click)="onNext('albums')">
+          <img class="img" src="../../../../assets/imagen/campaing/album-de-fotos.png">
+          <span>Álbum</span>
+        </label>
       </div>
-    </button>
-
-<div class="card-body card-bordered-white w-100 max-wid">
-  <h3>Escoge el formato del anuncio</h3>
-  <div style="text-align: center;">
-    <div class="div1">
-      <button class="btn1 custom" type="button" (click)="onNext('img')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png"> <span>Imágen</span>
-        </div>
-      </button>
-      <button class="custom" type="button" (click)="onNext('video')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="https://cdn-icons-png.flaticon.com/512/4021/4021977.png"> <span>Video</span>
-        </div>
-      </button>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for5">
+        <label for="for5" (click)="onNext('encuesta')">
+          <img class="img" src="../../../../assets/imagen/campaing/chat.png">
+          <span>SMS</span>
+        </label>
+      </div>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for6">
+        <label for="for6" (click)="onNext('correo')">
+          <img class="img" src="../../../../assets/imagen/campaing/correo-electronico.png">
+          <span>Correo electrónico</span>
+        </label>
+      </div>
+      <div class="col-md-6 col-12">
+        <input type="radio" name="formato" id="for7">
+        <label for="for7" (click)="onNext('push')">
+          <img class="img" src="../../../../assets/imagen/campaing/push-notification.png">
+          <span>Push notification</span>
+        </label>
+      </div> -->
     </div>
-    <div>
-      <button class="btn3 custom" type="button" (click)="onNext('survey')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="https://cdn-icons-png.flaticon.com/512/1632/1632670.png"> <span>Encuesta</span>
-        </div>
-      </button>
-      <button class="custom" type="button" (click)="onNext('albums')">
-        <div class="d-flex flex-column items-center">
-          <img class="img" src="https://cdn-icons-png.flaticon.com/512/781/781273.png"> <span>Álbum</span>
-        </div>
-      </button>
-    </div>
-
+    <label for="">Selecciona un formato</label>
   </div>
+  <button class="btn btn-escojer" (click)="nextSubStep($event, type)">Siguiente</button>
 </div>

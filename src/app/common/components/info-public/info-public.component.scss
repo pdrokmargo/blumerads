@@ -12,29 +12,33 @@
 .boder {
   border: 3px solid #FFFFFF;
   background-color: #F5F8F8;
-  border-radius: 7px;
-  width: 90%;
-  padding: 12px 20px 7px 13px;
+  border-radius: 10px;
+  width: 130%;
+  padding: 15px 30px;
+
+  label, span {
+    color: #6F6F6F;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  label {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .content-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
 }
 .espacio {
   position: relative;
     left: 12px;
-}
-
-
-
-.container-info{
-
-  background-image: url("../../../../assets/imagen/Grupo\ 13989.png");
-  background-size: 100% ;
-  color: white;
-  padding: 0.35rem;
- 
-}
-.input{
-  border: none;
-  background: transparent;
-  color: white;
- 
-
 }

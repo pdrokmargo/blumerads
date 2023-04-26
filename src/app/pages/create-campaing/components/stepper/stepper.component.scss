@@ -1,0 +1,69 @@
+.mat-step-header {
+    width: 90% !important;
+    &.mat-vertical-stepper-header {
+        padding: 24px 12px !important;
+    }
+    .mat-step-icon {
+        margin-right: 12px;
+        border: 1px solid #90a19e;
+    }
+    .mat-step-icon-selected, .mat-step-icon-state-edit {
+        background-color: #00b48f !important;
+    }
+}
+
+.mat-stepper-vertical-line::before {
+    top: -25px;
+    bottom: -25px;
+}
+
+.mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false] {
+    /* background-color: rgba(0, 0, 0, 0); */
+}
+
+.card {
+    background-color: #F5F8F8;
+}
+.bordered {
+    border: 2px solid #FFFFFF;
+}
+
+.mat-step {
+    .mat-step-text-label {
+        color: #6F6F6F;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .mat-vertical-stepper-content {
+        li {
+            color: #6F6F6F;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            &.active {
+                &::marker {
+                    color: #3f48cc;
+                }
+            }
+        }
+    }
+    &:nth-child(1) {
+        .mat-vertical-stepper-content, .mat-vertical-stepper-content-inactive {
+            visibility: inherit !important;
+            height: 100% !important;
+        }
+    }
+    &:nth-child(2), &:nth-child(3) {
+        .mat-vertical-stepper-content, .mat-vertical-stepper-content-inactive {
+            visibility: hidden !important;
+            height: 0px !important;
+        }
+    }
+}
+
+.fa-arrow-left {
+    color: #6F6F6F !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+}

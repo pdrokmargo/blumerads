@@ -5,13 +5,19 @@ import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChange
   templateUrl: './info-public.component.html',
   styleUrls: ['./info-public.component.scss']
 })
-export class InfoPublicComponent implements OnInit {
+export class InfoPublicComponent implements OnInit, OnChanges {
 
-  @Input() text: String = 'Segmentación basica' ;
-  @Input() titulo: String = 'Tamaño del publico' ;
-  @Input() datos: String = 'Datos especificos' ;
+  @Input() datos: any;
+  arrayDatos:any = [];
+  total = 0;
 
   constructor() { }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+    this.arrayDatos = changes.datos.currentValue;
+    this.total = this.arrayDatos.reduce((a:any,b:any) => a + b.precio, 0);
+  }
 
   ngOnInit(): void {
   }

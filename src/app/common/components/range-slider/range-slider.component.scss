@@ -1,0 +1,39 @@
+::ng-deep .ngx-slider-span{
+    &.ngx-slider-bar{
+        left: 11px !important;
+        width: 96% !important;
+        background: #EAEAEA !important;
+    }
+}
+
+::ng-deep .ngx-slider {
+    &.ngx-slider-bar{
+        left: 11px !important;
+        width: 96% !important;
+        background: #EAEAEA !important;
+    }
+
+    .ngx-slider-tick {
+        background: #9b9a9a !important;
+    }
+}
+
+form {
+    padding: 13px;
+
+    label {
+        color: #6F6F6F;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    input {
+        background-color: #EEF0F1;
+        color: #6F6F6F;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        background-color: white;
+    }
+}

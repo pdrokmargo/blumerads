@@ -20,13 +20,15 @@
         }
 
         .cabezera2 {
+            display: flex;
+            width: 40%;
             button {
                 border: none;
                 background-color: #7478eb;
                 color: #fff;
-                padding: 7px 24px;
+                padding: 3px 13px;
                 border-radius: 20px;
-                font-size: 12px;
+                font-size: 11px;
             }
 
             span {

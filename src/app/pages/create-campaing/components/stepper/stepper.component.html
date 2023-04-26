@@ -1,0 +1,26 @@
+<i class="fa-solid fa-arrow-left" (click)="url()"></i>
+<mat-stepper orientation="vertical" class="w-100 card bordered font-word">
+    <ng-template matStepperIcon="edit" let-index="index">{{index+1}}</ng-template>
+    <mat-step>
+      <ng-template matStepLabel>Crear nueva campaña</ng-template>
+      <ng-template matStepContent>
+        <li class="nav-link-stepper active" (click)="abirTab('escoger')" id="escoger-tab">Escoge el objetivo</li>
+        <li class="nav-link-stepper" (click)="abirTab('publico')" id="publico-tab">Público</li>
+        <li class="nav-link-stepper" (click)="abirTab('presupuesto')" id="presupuesto-tab">Presupuesto</li>
+      </ng-template>
+    </mat-step>
+    <mat-step (interacted)="hasTabs(1)">
+      <ng-template matStepLabel>
+        <div class="nav-link-stepper" (click)="abirTab('formato-anuncio')" id="formato-anuncio-tab">
+          Formato del anuncio
+        </div>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>
+        <div class="nav-link-stepper" (click)="abirTab('publicacion-anuncio')" id="publicacion-anuncio-tab">
+          Publicación del anuncio
+        </div>
+      </ng-template>
+    </mat-step>
+</mat-stepper>  

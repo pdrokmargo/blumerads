@@ -4,17 +4,34 @@ mat-form-field {
 
 ::ng-deep .mat-standard-chip, .mat-chip-with-trailing-icon {
   border-radius: 10px;
-  left: auto;
+  left: 15px;
 }
 
 ::ng-deep .mat-form-field-wrapper {
   position: relative;
   margin-left: 100px;
   top: 0px;
+  padding: 0px !important;
 }
 
 ::ng-deep .mat-chip-list-wrapper {
   margin: 4px;
+  .mat-chip {
+    color: #2B2B2B;
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: normal;
+    i {
+      padding: 3px;
+      color: #2B2B2B !important;
+      border: 1px solid #2B2B2B !important;
+      height: 19px !important;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .color :focus-visible {
@@ -27,4 +44,27 @@ mat-form-field {
 .content {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+mat-label {
+  color: #6F6F6F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+::ng-deep .mat-form-field-flex {
+  border: 2px solid #FFFFFF;
+  background-color: #EEF0F1;
+  color: #6F6F6F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 5px;
+  height: 47px;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: transparent;
 }

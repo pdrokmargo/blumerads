@@ -1,0 +1,24 @@
+.contect-banner-info {
+    background-color: #8364e2;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../../../assets/imagen/campaing/Enmascarar\ grupo\ 6.png');
+    background-size: cover;
+
+    label, span {
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    label {
+        color: white;
+        font-size: 14px;
+    }
+
+    span {
+        color: #7ec3d7;
+        font-size: 12px;
+    }
+}

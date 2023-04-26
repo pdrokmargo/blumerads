@@ -1,0 +1,177 @@
+<div class="tab-content">
+    <div class="tab-panel fade show" id="escoger" role="tabpanel" aria-labelledby="escoger-tab">
+        <div class="content-escojer">
+            <h1>Escoge el objetivo de tu campaña</h1>
+            <p>Para comenzar selecciona el objetivo que mejor se adapte a tus necesidades.</p>
+            <ul ngbNav #nav="ngbNav" class="nav-tabs blummer-tabs">
+                <li [ngbNavItem]="1" class="tab-item">
+                    <a ngbNavLink class="blumer-content-tab-lg">Nueva campaña</a>
+                    <ng-template ngbNavContent>
+                        <div class="content-nueva">
+                            <form [formGroup]="dataCampaign">
+                                <label class="form-label w-100 text-start text-color m-0">Coloca el nombre de tu campaña</label>
+                                <input class="form-control form-control-lg" formControlName="nombre" type="text"
+                                        placeholder="Escribe aquí" [ngClass]="{
+                                            'is-invalid': dataCampaign.controls['nombre'].invalid,
+                                            'is-valid': dataCampaign.controls['nombre'].valid
+                                          }"
+                                />
+                                <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                                    validation: 'required',
+                                    message: 'Escribe el nombre de tu campaña',
+                                    control: dataCampaign.controls['nombre']
+                                  }"></ng-container>
+                            </form>
+                            <div class="card">
+                                <div class="card-head">Objetivo</div>
+                                <div class="card-body">En tu estrategia comercial, podras henerar recordación de tu marca, ampliar tu red
+                                    y transmitir tu mensaje al mayor de personas. Nosotros te guiaremos para hacerlo realidad</div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="2" class="tab-item">
+                    <a ngbNavLink class="blumer-content-tab-lg">Campaña existente</a>
+                    <ng-template ngbNavContent>
+        
+                    </ng-template>
+                </li>
+            </ul>
+            <div [ngbNavOutlet]="nav"></div>
+        </div>
+        <button class="btn btn-escojer" (click)="abirTab('publico')">Siguiente</button>
+    </div>
+    <div class="tab-panel fade" id="publico" role="tabpanel" aria-labelledby="publico-tab">
+        <div class="content-escojer">
+            <h1>Escoge el público de tu campaña</h1>
+            <p>Para comenzar selecciona el público al que se dirija tu campaña.</p>
+            <ul ngbNav #nav2="ngbNav" class="nav-tabs blummer-tabs">
+                <li [ngbNavItem]="3" class="tab-item">
+                    <a ngbNavLink class="blumer-content-tab-lg">Nuevo público</a>
+                    <ng-template ngbNavContent>
+                        <app-form-campaign
+                          [types]="types"
+                          (next)="nextSubStep($event)"></app-form-campaign>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="4" class="tab-item">
+                    <a ngbNavLink class="blumer-content-tab-lg">Público existente</a>
+                    <ng-template ngbNavContent>
+        
+                    </ng-template>
+                </li>
+            </ul>
+            <div [ngbNavOutlet]="nav2"></div>
+        </div>
+        <!-- <div class="card-adicional">
+            <label for="">Tamaño del público</label>
+            <div class="content-span">
+                <span>Segmentación basica</span>
+                <span>0</span>
+            </div>
+            <label for="">Datos específicos</label>
+        </div> -->
+        <app-info-public [datos]="arrayPrecios"></app-info-public>
+    </div>
+    <div class="tab-panel fade" id="presupuesto" role="tabpanel" aria-labelledby="presupuesto-tab">
+        <div class="content-escojer">
+            <h1>Escoge el presupuesto para tu campaña</h1>
+            <app-range-slider (next)="nextSubStep($event)" (presio)="onSelectPresio($event)"></app-range-slider>
+        </div>
+        <div>
+            <app-banner-presio [precio]="presio"></app-banner-presio>
+            <app-banner-info></app-banner-info>
+        </div>
+    </div>
+    <div class="tab-panel fade" id="formato-anuncio" role="tabpanel" aria-labelledby="formato-anuncio-tab">
+        <app-one-block-selector (next)="nextSubStep($event)" (selected)="onSelectFormat($event)"></app-one-block-selector>
+        <app-info-public [datos]="arrayPrecios"></app-info-public>
+    </div>
+    <div class="tab-panel fade" id="datos-anuncio" role="tabpanel" aria-labelledby="datos-anuncio-tab">
+        <!-- <app-form-campaign [types]="types" (next)="nextSubStep($event)" (outAnuncio)="onDataAuncio($event)"></app-form-campaign> -->
+        <app-form-campaign-data-anuncio (next)="nextSubStep($event)" (outAnuncio)="onDataAuncio($event)"></app-form-campaign-data-anuncio>
+        <app-previe-ad-box [dataAnuncio]="dataAnuncio"></app-previe-ad-box>
+    </div>
+    <div class="tab-panel fade" id="publicacion-anuncio" role="tabpanel" aria-labelledby="publicacion-anuncio-tab">
+        <div class="content-escojer">
+            <h1>Resumen de tu campaña</h1>
+            <div class="row">
+                <div class="col-1 content-img">
+                    <img src="../../../../../assets/imagen/campaing/Grupo 14086.png" alt="">
+                </div>
+                <div class="col-8 content-text">
+                    <label for="">Tu objetivo</label>
+                    <p>Con tu objetivo definido lograrás recordación de tu marca en los usuarios.</p>
+                </div>
+                <div class="col-3 content-btn">
+                    <button (click)="abirTab('escoger')">Editar <i class="fa-solid fa-pen"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 content-img">
+                    <img src="../../../../../assets/imagen/campaing/Grupo 14086.png" alt="">
+                </div>
+                <div class="col-8 content-text">
+                    <label for="">Tu público objetivo es (Nombre del público)</label>
+                    <p>Con esta selección abarcarás 30.000 personas</p>
+                </div>
+                <div class="col-3 content-btn">
+                    <button (click)="abirTab('publico')">Editar <i class="fa-solid fa-pen"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 content-img">
+                    <img src="../../../../../assets/imagen/campaing/Grupo 14086.png" alt="">
+                </div>
+                <div class="col-8 content-text">
+                    <label for="">Formato de anuncio</label>
+                    <p>Haz seleccionado formato de una imagen.</p>
+                </div>
+                <div class="col-3 content-btn">
+                    <button (click)="abirTab('formato-anuncio')">Editar <i class="fa-solid fa-pen"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 content-img">
+                    <img src="../../../../../assets/imagen/campaing/Grupo 14086.png" alt="">
+                </div>
+                <div class="col-8 content-text">
+                    <label for="">Horario de publicación</label>
+                    <p>Haz seleccionado formato de lunes a viernes entre 07:00 y 14:00</p>
+                </div>
+                <div class="col-3 content-btn">
+                    <button (click)="abirTab('datos-anuncio')">Editar <i class="fa-solid fa-pen"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 content-img">
+                    <img src="../../../../../assets/imagen/campaing/Icon ionic-ios-checkmark-circle.png" alt="">
+                </div>
+                <div class="col-8 content-text">
+                    <label for="">Presupuesto</label>
+                    <p>Haz seleccionado 500 interacciones a 250 personas</p>
+                </div>
+                <div class="col-3 content-btn">
+                    <button (click)="abirTab('presupuesto')">Editar <i class="fa-solid fa-pen"></i></button>
+                </div>
+            </div>
+            <button class="btn btn-escojer pulicar" (click)="enviarCampaign()">Publicar campaña</button>
+        </div>
+        <div>
+            <app-banner-presio></app-banner-presio>
+            <app-info-public [datos]="arrayPrecios"></app-info-public>
+        </div>
+    </div>
+</div>
+
+<app-generic-modal [modalId]="modalId" [titleModal]="titleModal" [subtitle]="subtitle" [titlePrimaryBtn]="titlePrimaryBtn"></app-generic-modal>
+
+<ng-template #formError let-control="control" let-message="message" let-validation="validation">
+    <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
+      <div class="fv-plugins-message-container">
+        <span role="alert">
+          {{ message }}
+        </span>
+      </div>
+    </ng-container>
+</ng-template>

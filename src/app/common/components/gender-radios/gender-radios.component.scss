@@ -19,6 +19,11 @@
 
   label:first-child{
     margin-right: 60px;
+    color: #6F6F6F;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 0;
   }
 
   div> label{
@@ -41,9 +46,11 @@
     display: flex;
     align-items: center;
     background-color: #dadada;
-    color: #000;
     border: 2px solid #ffff;
     height: 6vh;
-
+    padding: 18px 30px;
+    color: #6F6F6F;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
   }
 }

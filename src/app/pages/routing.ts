@@ -7,6 +7,10 @@ const Routing: Routes = [
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
+    path: 'campaing',
+    loadChildren: () => import('./create-campaing/create-campaing.module').then((m) => m.CreateCampaingModule),
+  },
+  {
     path: 'builder',
     loadChildren: () =>
       import('./builder/builder.module').then((m) => m.BuilderModule),

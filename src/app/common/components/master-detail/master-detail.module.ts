@@ -27,6 +27,11 @@ import {RangeSliderComponent} from "../range-slider/range-slider.component";
 import {NgxSliderModule} from "@angular-slider/ngx-slider";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {OneBlockSelectorComponent} from "../one-block-selector/one-block-selector.component";
+import { BannerPresioComponent } from '../banner-presio/banner-presio.component';
+import { BannerInfoComponent } from '../banner-info/banner-info.component';
+import { PrevieAdBoxComponent } from '../preview-ad-box/preview-ad-box.component';
+import { RadioImgComponent } from '../radio-img/radio-img.component';
+import { GenericModalComponent } from '../generic-modal/generic-modal.component';
 @NgModule({
   declarations: [
     MasterDetailComponent,
@@ -45,7 +50,12 @@ import {OneBlockSelectorComponent} from "../one-block-selector/one-block-selecto
     CardInfoComponent,
     ButtonGreenComponent,
     RangeSliderComponent,
-    OneBlockSelectorComponent
+    OneBlockSelectorComponent,
+    BannerPresioComponent,
+    BannerInfoComponent,
+    PrevieAdBoxComponent,
+    RadioImgComponent,
+    GenericModalComponent
   ],
   providers: [MasterDetailService],
   exports: [
@@ -60,7 +70,13 @@ import {OneBlockSelectorComponent} from "../one-block-selector/one-block-selecto
     CardInfoComponent,
     ButtonGreenComponent,
     RangeSliderComponent,
-    OneBlockSelectorComponent
+    OneBlockSelectorComponent,
+    BannerPresioComponent,
+    BannerInfoComponent,
+    InfoPublicComponent,
+    PrevieAdBoxComponent,
+    RadioImgComponent,
+    GenericModalComponent
   ],
   imports: [
     CommonModule,

@@ -25,32 +25,110 @@
       <div class="mt-10 mb-5">
         <app-tag-selector p="Otra categoría"></app-tag-selector>
       </div>
-      <div class="mt-20 text-end">
-        <app-button-green
-        (onEmit)="nextSubStep(1)" description="Siguiente">
-      </app-button-green>
-      </div>
-  </form>
+    </form>
+    <div class="mt-20 text-end">
+      <app-button-green
+      (onEmit)="nextSubStep(1)" description="Siguiente">
+    </app-button-green>
+    </div>
 </div>
 <div *ngIf="types === 'FORMAT'">
-  <form class="mt-5 w-100">
-    <label class="form-label w-100 text-start text-color m-0">Coloca el nombre a esta públicación</label>
-    <input class="form-control form-control-lg" type="text"
-           placeholder="Escribe aquí"
-    />
-    <hr class="hr">
-    <div class="mt-3">
-
+  <!-- <div class="contect">
+    <h3>Escoge el nombre y termina de personalizar tu anuncio</h3>
+    <form class="mt-5 w-100">
+      <label class="form-label w-100 text-start text-color m-0">Coloca el nombre a esta públicación</label>
+      <input class="form-control form-control-lg" (keyup)="onDataAnuncio()" [(ngModel)]="dataAnuncio.nombre" [ngModelOptions]="{standalone: true}" type="text"
+             placeholder="Escribe aquí"
+      />
+      <hr class="hr">
+      <div class="mt-3 content-file">
+        <div>
+          <label class="form-label text-start text-color m-0">Carga imagen</label><br/>
+          <span>Formato jpg o png máximo de 1 mb.</span>
+        </div>
+        <div *ngIf="this.dataAnuncio.imagen == ''">
+          <label for="file1"><i class="fa-solid fa-arrow-up-from-bracket"></i> Subir imagen {{ dataAnuncio.imagen }}</label>
+          <input (change)="cambioArchivo($event)" type="file" id="file1" />
+        </div>
+        <div *ngIf="this.dataAnuncio.imagen != ''" class="cont-img">
+          <img [src]="dataAnuncio.imagen" alt="">
+          <span (click)="quitarImg()">Quitar imágen</span>
+        </div>
+      </div>
+      <hr class="hr hr-position">
+      <div class="mt-3">
+        <label class="form-label w-100 text-start text-color m-0">Coloca un título</label>
+        <input class="form-control form-control-lg" (keyup)="onDataAnuncio()" [(ngModel)]="dataAnuncio.titulo" [ngModelOptions]="{standalone: true}" type="text"
+              placeholder="Escribe aquí"
+        />
+      </div>
+      <hr class="hr">
+      <div class="mt-3">
+        <label class="form-label w-100 text-start text-color m-0">Descripción</label>
+        <textarea class="form-control form-control-lg" (keyup)="onDataAnuncio()" [(ngModel)]="dataAnuncio.descripcion" [ngModelOptions]="{standalone: true}" placeholder="Escribe una descripción"></textarea>
+      </div>
+      <hr class="hr hr-position">
+      <div class="mt-3">
+        <label class="form-label w-100 text-start text-color m-0">Escoja el botón que aparecerá en tu anuncio</label>
+        <select class="form-control form-control-lg" name="" id="">
+          <option value="">Escoja un botón</option>
+        </select>
+      </div>
+      <hr class="hr hr-position">
+      <div class="mt-3">
+        <label class="form-label w-100 text-start text-color m-0">Número de teléfono</label>
+        <input class="form-control form-control-lg" type="number"
+              placeholder="Escribe el número de teléfono"
+        />
+      </div>
+      <hr class="hr hr-position">
+      <div class="mt-3">
+        <label class="form-label w-100 text-start text-color m-0">Enlace</label>
+        <input class="form-control form-control-lg" type="text"
+              placeholder="https://blackhost.com.co/"
+        />
+      </div>
+      <hr class="hr hr-position">
+      <div class="mt-3">
+        <div class="content-data">
+          <div class="content-day">
+            <label class="form-label w-100 text-start text-color m-0">Día de publicación</label>
+            <div class="content-calendario">
+              <ngx-simple-calendar [options]="options2" [events]="events">
+                <ng-template #day 
+                     let-date="number"
+                     let-events="events"
+                     let-active="today"
+                     let-fecha="startDateTime"
+                     let-weekend="weekend">
+                     <div class="round-date"
+                      [class.active]="active"
+                      [class.weekend]="weekend">
+                    <span [class]="events.length>0?'active': ''" (click)="selectDia($event, fecha)">{{date}}</span>
+                  </div>
+                </ng-template>
+              </ngx-simple-calendar>
+            </div>
+          </div>
+          <div class="group-input-data" *ngIf="formatFecha != '' && formatFecha">
+            <div class="input-data">
+              <label for="">Seleccionado</label>
+              <label for="" class="input-date-label">{{ formatFecha }} <i class="fa-solid fa-xmark" (click)="deleteFecha()"></i></label>
+            </div>
+            <div class="input-data">
+              <label for="">Seleccionado</label>
+              <div>
+                <input type="time" name="" id="" [(ngModel)]="hourI" [ngModelOptions]="{standalone: true}">
+                <input type="time" name="" id="" [(ngModel)]="hourF" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="mt-20 content-button">
+      <button class="btn sin-guardar">Guadar y salir</button>
+      <button class="btn btn-escojer" (click)="nextSubStep(4)">Siguiente</button>
     </div>
-    <hr class="hr hr-position">
-    <div class="mt-3">
-
-    </div>
-    <hr class="hr">
-    <div class="mt-3">
-
-    </div>
-
-
-  </form>
+  </div> -->
 </div>

@@ -1,0 +1,5 @@
+<input type="radio" name="formato" id="for{{ data.id }}">
+<label for="for{{ data.id }}" (click)="selectTipo(data.tipo)">
+    <img class="img" [src]="data.img">
+    <span>{{ data.nombre }}</span>
+</label>

@@ -10,6 +10,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class RangeSliderComponent implements OnInit {
 
   @Output() next = new EventEmitter;
+  @Output() presio = new EventEmitter;
   sliderForm: FormGroup = new FormGroup({
     sliderControl: new FormControl([20, 80])
   });
@@ -39,10 +40,16 @@ export class RangeSliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.onPresio();
+  }
+
+  onPresio() {
+    console.log(this.minValue);
+    this.presio.emit(this.minValue);
   }
 
   onNext() {
-    this.next.emit(1);
+    this.next.emit(2);
   }
 
 }

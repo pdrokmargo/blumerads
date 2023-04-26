@@ -7,7 +7,8 @@
           <mat-chip *ngFor="let topping of toppingsControl.value"
             [removable]="true" (removed)="onToppingRemoved(topping)">
             {{ topping }}
-            <mat-icon matChipRemove>cancel</mat-icon>
+            <!-- <mat-icon matChipRemove>cancel</mat-icon> -->
+            <i class="fa-solid fa-xmark" matChipRemove></i>
           </mat-chip>
         </mat-chip-list>
       </mat-select-trigger>

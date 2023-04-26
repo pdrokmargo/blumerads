@@ -1,0 +1,23 @@
+label {
+    color: #6F6F6F;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.flex-fill {
+    label {
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    select {
+        border: 2px solid #FFFFFF;
+        background-color: #EEF0F1;
+        color: #6F6F6F;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        border-radius: 5px;
+    }
+}

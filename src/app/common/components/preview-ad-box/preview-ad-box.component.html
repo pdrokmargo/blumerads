@@ -3,7 +3,7 @@
       <div class="cabezera1">
         <img src="http://lapi.com.mx/web/image/product.template/4986/image_1024?unique=fee29bb" alt="" srcset="">
         <div>
-          <label *ngIf="motrarHeader" for="">Blackhost</label><br>
+          <label *ngIf="motrarHeader" for="">{{ dataAnuncio ? dataAnuncio.nombre : 'Blackhost' }}</label><br>
           <span *ngIf="motrarHeader">Publicidad</span>
         </div>
       </div>
@@ -13,10 +13,10 @@
       </div>
     </div>
     <div class="img">
-      <img *ngIf="img" src="https://img.freepik.com/vector-gratis/pack-iconos-perfil-dibujados-mano_52683-72353.jpg?w=2000" alt="">
+      <img *ngIf="img" [src]="dataAnuncio ? dataAnuncio.imagen : 'https://img.freepik.com/vector-gratis/pack-iconos-perfil-dibujados-mano_52683-72353.jpg?w=2000'" alt="">
     </div>
     <div class="body-text font-word">
-      <label for="" *ngIf="body">Lleva tu página web a otro nivel</label>
-      <p *ngIf="body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores blanditiis quia quidem numquam consequatur corrupti necessitatibus alias magnam itaque, recusandae ipsam, nihil enim obcaecati. Illo ab saepe ad eaque perferendis.</p>
+      <label for="" *ngIf="body">{{ dataAnuncio ? dataAnuncio.titulo : 'Lleva tu página web a otro nivel' }}</label>
+      <p *ngIf="body">{{dataAnuncio ? dataAnuncio.descripcion : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores blanditiis quia quidem numquam consequatur corrupti necessitatibus alias magnam itaque, recusandae ipsam, nihil enim obcaecati. Illo ab saepe ad eaque perferendis.' }}</p>
     </div>
   <div>

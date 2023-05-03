@@ -10,6 +10,7 @@ import {TranslationModule} from '../../../../modules/i18n';
 import {SearchResultInnerComponent} from "./dropdown-inner/search-result-inner/search-result-inner.component";
 import {NgbTooltipModule} from "@ng-bootstrap/ng-bootstrap";
 import {FormsModule} from "@angular/forms";
+import { AvatarNavComponent } from 'src/app/avatar-nav/avatar-nav.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import {FormsModule} from "@angular/forms";
     QuickLinksInnerComponent,
     SearchResultInnerComponent,
     UserInnerComponent,
+    AvatarNavComponent,
     LayoutScrollTopComponent,
+    
   ],
   imports: [CommonModule, FormsModule, InlineSVGModule, RouterModule, TranslationModule, NgbTooltipModule],
   exports: [
@@ -25,6 +28,7 @@ import {FormsModule} from "@angular/forms";
     QuickLinksInnerComponent,
     SearchResultInnerComponent,
     UserInnerComponent,
+    AvatarNavComponent,
     LayoutScrollTopComponent,
   ],
 })

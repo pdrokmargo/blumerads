@@ -18,7 +18,6 @@ import { MasterDetailModule } from '../../common/components/master-detail/master
 import { Component, ViewChild } from "@angular/core";
 import { ChartComponent } from "ng-apexcharts";
 
-
 @NgModule({
   declarations: [
     DashboardComponent,

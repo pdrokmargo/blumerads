@@ -1,25 +1,22 @@
 <div class="app-navbar-item" [ngClass]="itemClass">
   <!--begin::Menu wrapper-->
-  <button
-  class="btn btn-primary-blumer btn-sm px-10"
-  data-bs-toggle="tooltip"
->
-  Crear campaña guiada
-</button>
+  <button class="btn btn-primary-blumer btn-sm px-10" data-bs-toggle="tooltip">
+    Crear campaña guiada
+  </button>
 </div>
 
 <!--begin::User menu-->
 <div class="app-navbar-item" [ngClass]="itemClass">
   <!--begin::Menu wrapper-->
 
-  <div class="cursor-pointer symbol" [ngClass]="userAvatarClass"
-  data-kt-menu-trigger="{default: 'click'}"
-    data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end"
-  >
-    <img src="./assets/media/avatars/blumerads-avatar.png" />
+  <div class="cursor-pointer symbol" [ngClass]="userAvatarClass" data-kt-menu-trigger="{default: 'click'}"
+    data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+    <div class="avatar">
+      <span class="status-indicator"></span>
+    </div>
+
   </div>
   <app-user-inner data-kt-menu='true'></app-user-inner>
   <!--end::Menu wrapper-->
 </div>
 <!--end::User menu-->
-

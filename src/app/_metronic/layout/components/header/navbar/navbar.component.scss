@@ -1,0 +1,28 @@
+.avatar {
+    width: 43px; /* ancho del avatar */
+    height: 43px; /* altura del avatar */
+    border-radius: 50%; /* hace que el avatar sea circular */
+    position: relative;
+    background-image: url('https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block; /* permite colocar varios avatares en una sola línea */
+    
+}
+.status-indicator {
+    position: absolute;
+    bottom: -6px; /* coloca el indicador debajo del avatar */
+    right: -6px; /* coloca el indicador a la derecha del avatar */
+    width: 19px; /* ancho del indicador */
+    height: 18px; /* altura del indicador */
+    border-radius: 50%; /* hace que el indicador sea circular */
+    background-color: rgb(55, 202, 55); /* color de fondo del indicador para estado en línea */
+    border: 2px solid white; /* borde blanco para hacer el indicador más visible */
+}
+
+.avatar-container.online .status-indicator {
+    background-color: rgb(55, 202, 55); /* color de fondo del indicador para estado en línea */
+  }
+  .avatar-container.offline .status-indicator {
+    background-color: gray; /* color de fondo del indicador para estado fuera de línea */
+  }

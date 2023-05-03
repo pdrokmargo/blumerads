@@ -17,10 +17,11 @@
     bottom: -25px;
 }
 
-.mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false] {
-    /* background-color: rgba(0, 0, 0, 0); */
+.mat-vertical-content-container {
+    margin-left: 35px !important;
+    border: 0;
+    position: relative;
 }
-
 .card {
     background-color: #F5F8F8;
 }
@@ -66,4 +67,14 @@
     color: #6F6F6F !important;
     font-size: 20px !important;
     cursor: pointer !important;
+}
+
+.mi-clase-nueva {
+    position: relative;
+    top: -24px;
+}
+
+.new-team {
+    position: relative;
+    top: -24px;
 }

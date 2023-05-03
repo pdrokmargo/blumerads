@@ -3,10 +3,11 @@
     height: 43px; /* altura del avatar */
     border-radius: 50%; /* hace que el avatar sea circular */
     position: relative;
-    background-image: url('https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg');
+    background-image: url('https://media.istockphoto.com/id/492611032/es/foto/africana-con-cama-king.jpg?s=612x612&w=is&k=20&c=FPTi2IDGghqvwzmJzFJA4avU6zw8VjwMAhykRc3a2D8=');
     background-size: cover;
     background-position: center;
     display: inline-block; /* permite colocar varios avatares en una sola línea */
+    object-fit: cover;
     
 }
 .status-indicator {
